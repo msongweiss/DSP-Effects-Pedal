@@ -1,0 +1,19 @@
+!SESSION 2025-04-22 00:33:17.852 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/juno/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/juno/.eclipse_keyring
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-04-22 00:33:42.933
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-04-22 00:33:42.935
+!MESSAGE Log4j2 initialized with config file /Users/juno/github.com/DSP-Effects-Pedal/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-04-22 00:33:47.596
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-04-22 00:34:11.820
+!MESSAGE Indexed 'pedal_v1' (34 sources, 137 headers) in 8.32 sec: 14,218 declarations; 67,583 references; 1 unresolved inclusions; 92 syntax errors; 240 unresolved names (0.29%)
