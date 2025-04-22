@@ -34,7 +34,6 @@
 /* USER CODE BEGIN PD */
 #define AUDIO_BUFFER_SIZE 512
 uint16_t audio_buffer[AUDIO_BUFFER_SIZE];
-#define CODEC_ADDRESS 0x94  // 7-bit address left-shifted (0x4A << 1)
 
 extern I2C_HandleTypeDef hi2c1;
 extern I2S_HandleTypeDef hi2s3;
@@ -122,9 +121,10 @@ int main(void)
   MX_ADC1_Init();
   MX_USB_OTG_FS_PCD_Init();
   /* USER CODE BEGIN 2 */
-  cs43l22_Init(CODEC_ADDRESS, OUTPUT_DEVICE_HEADPHONE, 50, 48000);
-  cs43l22_SetMute(CODEC_ADDRESS, 0);
-  cs43l22_Play(CODEC_ADDRESS, (uint16_t*)audio_buffer, AUDIO_BUFFER_SIZE);
+  CS43_Init(hi2c1);
+  CS43_SetVolume(50);
+  CS43_Enable_RightLeft(CS43_RIGHT_LEFT);
+  CS43_Start();
 
   HAL_DAC_Start(&hdac, DAC_CHANNEL_1);
 
@@ -143,7 +143,7 @@ int main(void)
   /* USER CODE BEGIN 3 */
 
   /* USER CODE END 3 */
-}
+
 /**
   * @brief System Clock Configuration
   * @retval None

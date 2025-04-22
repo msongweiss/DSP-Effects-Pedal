@@ -32,13 +32,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define AUDIO_BUFFER_SIZE 512
-uint16_t audio_buffer[AUDIO_BUFFER_SIZE];
-#define CODEC_ADDRESS 0x94  // 7-bit address left-shifted (0x4A << 1)
 
-extern I2C_HandleTypeDef hi2c1;
-extern I2S_HandleTypeDef hi2s3;
-extern ADC_HandleTypeDef hadc1;
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -82,7 +76,14 @@ static void MX_USB_OTG_FS_PCD_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+#define SINE_RESOLUTION 32
 
+uint16_t sine_wave[SINE_RESOLUTION] = {
+  2048, 2447, 2831, 3185, 3495, 3750, 3939, 4056,
+  4095, 4056, 3939, 3750, 3495, 3185, 2831, 2447,
+  2048, 1649, 1265, 911, 601, 346, 157, 40,
+  0, 40, 157, 346, 601, 911, 1265, 1649
+};
 /* USER CODE END 0 */
 
 /**
@@ -122,28 +123,30 @@ int main(void)
   MX_ADC1_Init();
   MX_USB_OTG_FS_PCD_Init();
   /* USER CODE BEGIN 2 */
-  cs43l22_Init(CODEC_ADDRESS, OUTPUT_DEVICE_HEADPHONE, 50, 48000);
-  cs43l22_SetMute(CODEC_ADDRESS, 0);
-  cs43l22_Play(CODEC_ADDRESS, (uint16_t*)audio_buffer, AUDIO_BUFFER_SIZE);
-
   HAL_DAC_Start(&hdac, DAC_CHANNEL_1);
-
-  HAL_ADC_Start_DMA(&hadc1, (uint32_t*)audio_buffer, AUDIO_BUFFER_SIZE);
-  HAL_I2S_Transmit_DMA(&hi2s3, audio_buffer, AUDIO_BUFFER_SIZE);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
+    if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0))
+    {
+    	for (int i = 0; i < SINE_RESOLUTION; i++) {
+    		HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_12B_R, sine_wave[i]);
+    		HAL_Delay(1);  // change this to adjust tone frequency
+    	}
+    } else {
+    	HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_12B_R, 2048);
+    }
 
   }
-  /* USER CODE END WHILE */
-
-  /* USER CODE BEGIN 3 */
-
   /* USER CODE END 3 */
 }
+
 /**
   * @brief System Clock Configuration
   * @retval None

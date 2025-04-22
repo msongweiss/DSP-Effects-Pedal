@@ -744,3 +744,331 @@ Finished building: default.size.stdout
  
 Finished building: pedal_v1.list
  
+03:27:32 **** Incremental Build of configuration Debug for project pedal_v1 ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/BSP/Components/cs43l22 -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:124:3: warning: implicit declaration of function 'CS43_Init'; did you mean 'cs43l22_Init'? [-Wimplicit-function-declaration]
+  124 |   CS43_Init(hi2c1);
+      |   ^~~~~~~~~
+      |   cs43l22_Init
+../Core/Src/main.c:125:3: warning: implicit declaration of function 'CS43_SetVolume'; did you mean 'cs43l22_SetVolume'? [-Wimplicit-function-declaration]
+  125 |   CS43_SetVolume(50);
+      |   ^~~~~~~~~~~~~~
+      |   cs43l22_SetVolume
+../Core/Src/main.c:126:3: warning: implicit declaration of function 'CS43_Enable_RightLeft' [-Wimplicit-function-declaration]
+  126 |   CS43_Enable_RightLeft(CS43_RIGHT_LEFT);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:126:25: error: 'CS43_RIGHT_LEFT' undeclared (first use in this function)
+  126 |   CS43_Enable_RightLeft(CS43_RIGHT_LEFT);
+      |                         ^~~~~~~~~~~~~~~
+../Core/Src/main.c:126:25: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:127:3: warning: implicit declaration of function 'CS43_Start' [-Wimplicit-function-declaration]
+  127 |   CS43_Start();
+      |   ^~~~~~~~~~
+../Core/Src/main.c:197:13: error: invalid storage class for function 'MX_ADC1_Init'
+  197 | static void MX_ADC1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:249:13: error: invalid storage class for function 'MX_DAC_Init'
+  249 | static void MX_DAC_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:289:13: error: invalid storage class for function 'MX_I2C1_Init'
+  289 | static void MX_I2C1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:323:13: error: invalid storage class for function 'MX_I2S3_Init'
+  323 | static void MX_I2S3_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:357:13: error: invalid storage class for function 'MX_SPI1_Init'
+  357 | static void MX_SPI1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:395:13: error: invalid storage class for function 'MX_USB_OTG_FS_PCD_Init'
+  395 | static void MX_USB_OTG_FS_PCD_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:428:13: error: invalid storage class for function 'MX_DMA_Init'
+  428 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:453:13: error: invalid storage class for function 'MX_GPIO_Init'
+  453 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:563:1: error: expected declaration or statement at end of input
+  563 | }
+      | ^
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:70:13: warning: 'MX_GPIO_Init' used but never defined
+   70 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:71:13: warning: 'MX_DMA_Init' used but never defined
+   71 | static void MX_DMA_Init(void);
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:72:13: warning: 'MX_I2C1_Init' used but never defined
+   72 | static void MX_I2C1_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:73:13: warning: 'MX_SPI1_Init' used but never defined
+   73 | static void MX_SPI1_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:74:13: warning: 'MX_DAC_Init' used but never defined
+   74 | static void MX_DAC_Init(void);
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:75:13: warning: 'MX_I2S3_Init' used but never defined
+   75 | static void MX_I2S3_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:76:13: warning: 'MX_ADC1_Init' used but never defined
+   76 | static void MX_ADC1_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:77:13: warning: 'MX_USB_OTG_FS_PCD_Init' used but never defined
+   77 | static void MX_USB_OTG_FS_PCD_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:554:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  554 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:453:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  453 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:428:13: warning: 'MX_DMA_Init' defined but not used [-Wunused-function]
+  428 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:395:13: warning: 'MX_USB_OTG_FS_PCD_Init' defined but not used [-Wunused-function]
+  395 | static void MX_USB_OTG_FS_PCD_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:357:13: warning: 'MX_SPI1_Init' defined but not used [-Wunused-function]
+  357 | static void MX_SPI1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:323:13: warning: 'MX_I2S3_Init' defined but not used [-Wunused-function]
+  323 | static void MX_I2S3_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:289:13: warning: 'MX_I2C1_Init' defined but not used [-Wunused-function]
+  289 | static void MX_I2C1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:249:13: warning: 'MX_DAC_Init' defined but not used [-Wunused-function]
+  249 | static void MX_DAC_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:197:13: warning: 'MX_ADC1_Init' defined but not used [-Wunused-function]
+  197 | static void MX_ADC1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:151:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  151 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j9 all" terminated with exit code 2. Build might be incomplete.
+03:28:37 **** Incremental Build of configuration Debug for project pedal_v1 ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/BSP/Components/cs43l22 -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:124:16: error: incompatible type for argument 1 of 'cs43l22_Init'
+  124 |   cs43l22_Init(hi2c1);
+      |                ^~~~~
+      |                |
+      |                I2C_HandleTypeDef
+In file included from ../Core/Src/main.c:21:
+../Drivers/BSP/Components/cs43l22/cs43l22.h:169:32: note: expected 'uint16_t' {aka 'short unsigned int'} but argument is of type 'I2C_HandleTypeDef'
+  169 | uint32_t cs43l22_Init(uint16_t DeviceAddr, uint16_t OutputDevice, uint8_t Volume, uint32_t AudioFreq);
+      |                       ~~~~~~~~~^~~~~~~~~~
+../Core/Src/main.c:124:3: error: too few arguments to function 'cs43l22_Init'
+  124 |   cs43l22_Init(hi2c1);
+      |   ^~~~~~~~~~~~
+../Drivers/BSP/Components/cs43l22/cs43l22.h:169:10: note: declared here
+  169 | uint32_t cs43l22_Init(uint16_t DeviceAddr, uint16_t OutputDevice, uint8_t Volume, uint32_t AudioFreq);
+      |          ^~~~~~~~~~~~
+../Core/Src/main.c:125:3: error: too few arguments to function 'cs43l22_SetVolume'
+  125 |   cs43l22_SetVolume(50);
+      |   ^~~~~~~~~~~~~~~~~
+../Drivers/BSP/Components/cs43l22/cs43l22.h:176:10: note: declared here
+  176 | uint32_t cs43l22_SetVolume(uint16_t DeviceAddr, uint8_t Volume);
+      |          ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:126:3: warning: implicit declaration of function 'cs43l22_Enable_RightLeft' [-Wimplicit-function-declaration]
+  126 |   cs43l22_Enable_RightLeft(CS43_RIGHT_LEFT);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:126:28: error: 'CS43_RIGHT_LEFT' undeclared (first use in this function)
+  126 |   cs43l22_Enable_RightLeft(CS43_RIGHT_LEFT);
+      |                            ^~~~~~~~~~~~~~~
+../Core/Src/main.c:126:28: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:127:3: warning: implicit declaration of function 'cs43l22_Start'; did you mean 'cs43l22_Stop'? [-Wimplicit-function-declaration]
+  127 |   cs43l22_Start();
+      |   ^~~~~~~~~~~~~
+      |   cs43l22_Stop
+../Core/Src/main.c:197:13: error: invalid storage class for function 'MX_ADC1_Init'
+  197 | static void MX_ADC1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:249:13: error: invalid storage class for function 'MX_DAC_Init'
+  249 | static void MX_DAC_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:289:13: error: invalid storage class for function 'MX_I2C1_Init'
+  289 | static void MX_I2C1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:323:13: error: invalid storage class for function 'MX_I2S3_Init'
+  323 | static void MX_I2S3_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:357:13: error: invalid storage class for function 'MX_SPI1_Init'
+  357 | static void MX_SPI1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:395:13: error: invalid storage class for function 'MX_USB_OTG_FS_PCD_Init'
+  395 | static void MX_USB_OTG_FS_PCD_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:428:13: error: invalid storage class for function 'MX_DMA_Init'
+  428 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:453:13: error: invalid storage class for function 'MX_GPIO_Init'
+  453 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:563:1: error: expected declaration or statement at end of input
+  563 | }
+      | ^
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:70:13: warning: 'MX_GPIO_Init' used but never defined
+   70 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:71:13: warning: 'MX_DMA_Init' used but never defined
+   71 | static void MX_DMA_Init(void);
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:72:13: warning: 'MX_I2C1_Init' used but never defined
+   72 | static void MX_I2C1_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:73:13: warning: 'MX_SPI1_Init' used but never defined
+   73 | static void MX_SPI1_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:74:13: warning: 'MX_DAC_Init' used but never defined
+   74 | static void MX_DAC_Init(void);
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:75:13: warning: 'MX_I2S3_Init' used but never defined
+   75 | static void MX_I2S3_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:76:13: warning: 'MX_ADC1_Init' used but never defined
+   76 | static void MX_ADC1_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:77:13: warning: 'MX_USB_OTG_FS_PCD_Init' used but never defined
+   77 | static void MX_USB_OTG_FS_PCD_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:554:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  554 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:453:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  453 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:428:13: warning: 'MX_DMA_Init' defined but not used [-Wunused-function]
+  428 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:395:13: warning: 'MX_USB_OTG_FS_PCD_Init' defined but not used [-Wunused-function]
+  395 | static void MX_USB_OTG_FS_PCD_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:357:13: warning: 'MX_SPI1_Init' defined but not used [-Wunused-function]
+  357 | static void MX_SPI1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:323:13: warning: 'MX_I2S3_Init' defined but not used [-Wunused-function]
+  323 | static void MX_I2S3_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:289:13: warning: 'MX_I2C1_Init' defined but not used [-Wunused-function]
+  289 | static void MX_I2C1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:249:13: warning: 'MX_DAC_Init' defined but not used [-Wunused-function]
+  249 | static void MX_DAC_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:197:13: warning: 'MX_ADC1_Init' defined but not used [-Wunused-function]
+  197 | static void MX_ADC1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:151:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  151 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j9 all" terminated with exit code 2. Build might be incomplete.
+03:36:49 **** Incremental Build of configuration Debug for project pedal_v1 ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/BSP/Components/cs43l22 -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:197:13: error: invalid storage class for function 'MX_ADC1_Init'
+  197 | static void MX_ADC1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:249:13: error: invalid storage class for function 'MX_DAC_Init'
+  249 | static void MX_DAC_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:289:13: error: invalid storage class for function 'MX_I2C1_Init'
+  289 | static void MX_I2C1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:323:13: error: invalid storage class for function 'MX_I2S3_Init'
+  323 | static void MX_I2S3_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:357:13: error: invalid storage class for function 'MX_SPI1_Init'
+  357 | static void MX_SPI1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:395:13: error: invalid storage class for function 'MX_USB_OTG_FS_PCD_Init'
+  395 | static void MX_USB_OTG_FS_PCD_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:428:13: error: invalid storage class for function 'MX_DMA_Init'
+  428 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:453:13: error: invalid storage class for function 'MX_GPIO_Init'
+  453 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:563:1: error: expected declaration or statement at end of input
+  563 | }
+      | ^
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:71:13: warning: 'MX_GPIO_Init' used but never defined
+   71 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:72:13: warning: 'MX_DMA_Init' used but never defined
+   72 | static void MX_DMA_Init(void);
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:73:13: warning: 'MX_I2C1_Init' used but never defined
+   73 | static void MX_I2C1_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:74:13: warning: 'MX_SPI1_Init' used but never defined
+   74 | static void MX_SPI1_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:75:13: warning: 'MX_DAC_Init' used but never defined
+   75 | static void MX_DAC_Init(void);
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:76:13: warning: 'MX_I2S3_Init' used but never defined
+   76 | static void MX_I2S3_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:77:13: warning: 'MX_ADC1_Init' used but never defined
+   77 | static void MX_ADC1_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:78:13: warning: 'MX_USB_OTG_FS_PCD_Init' used but never defined
+   78 | static void MX_USB_OTG_FS_PCD_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:554:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  554 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:453:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  453 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:428:13: warning: 'MX_DMA_Init' defined but not used [-Wunused-function]
+  428 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:395:13: warning: 'MX_USB_OTG_FS_PCD_Init' defined but not used [-Wunused-function]
+  395 | static void MX_USB_OTG_FS_PCD_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:357:13: warning: 'MX_SPI1_Init' defined but not used [-Wunused-function]
+  357 | static void MX_SPI1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:323:13: warning: 'MX_I2S3_Init' defined but not used [-Wunused-function]
+  323 | static void MX_I2S3_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:289:13: warning: 'MX_I2C1_Init' defined but not used [-Wunused-function]
+  289 | static void MX_I2C1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:249:13: warning: 'MX_DAC_Init' defined but not used [-Wunused-function]
+  249 | static void MX_DAC_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:197:13: warning: 'MX_ADC1_Init' defined but not used [-Wunused-function]
+  197 | static void MX_ADC1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:151:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  151 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j9 all" terminated with exit code 2. Build might be incomplete.
+03:38:13 **** Incremental Build of configuration Debug for project pedal_v1 ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/BSP/Components/cs43l22 -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: pedal_v1.elf
+ 
+arm-none-eabi-size  pedal_v1.elf 
+arm-none-eabi-objdump -h -S pedal_v1.elf  > "pedal_v1.list"
+   text	   data	    bss	    dec	    hex	filename
+  28912	     20	   4556	  33488	   82d0	pedal_v1.elf
+Finished building: default.size.stdout
+ 
+Finished building: pedal_v1.list
+ 

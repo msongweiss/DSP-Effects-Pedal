@@ -1196,3 +1196,39 @@
 2025-04-22 02:38:13,342 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 2819mS.
 2025-04-22 02:38:13,347 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 3mS.
 2025-04-22 02:38:13,348 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 1mS.
+2025-04-22 03:38:49,058 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,091 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,092 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,093 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,094 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,095 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,097 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,100 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,100 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,100 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,101 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,101 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,101 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,101 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,309 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,575 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,591 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,592 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,593 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,593 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,593 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,593 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,594 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,595 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,595 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,595 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,596 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,596 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,596 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:38:49,661 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-22 03:59:23,955 [INFO] WebApp:194 - Connection lost
+2025-04-22 03:59:24,857 [INFO] WebApp:191 - Connection restablished
+2025-04-22 03:59:43,571 [INFO] WebApp:194 - Connection lost
+2025-04-22 03:59:47,322 [INFO] WebApp:191 - Connection restablished
+2025-04-22 12:41:31,496 [INFO] WebApp:194 - Connection lost
+2025-04-22 12:41:34,875 [INFO] WebApp:191 - Connection restablished
