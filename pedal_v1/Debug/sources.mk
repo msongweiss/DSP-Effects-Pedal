@@ -24,9 +24,13 @@ C_DEPS :=
 SUBDIRS := \
 Core/Src \
 Core/Startup \
+Drivers/BSP/Components/cs43l22 \
+Drivers/BSP/Components/lis302dl \
+Drivers/BSP/Components/lis3dsh \
+Drivers/BSP/STM32F4-Discovery \
 Drivers/STM32F4xx_HAL_Driver/Src \
-Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Src \
-Middlewares/ST/STM32_USB_Host_Library/Core/Src \
-USB_HOST/App \
-USB_HOST/Target \
+Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src \
+Middlewares/ST/STM32_USB_Device_Library/Core/Src \
+USB_DEVICE/App \
+USB_DEVICE/Target \
 
