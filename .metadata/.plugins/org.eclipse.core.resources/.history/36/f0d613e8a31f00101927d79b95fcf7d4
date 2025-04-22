@@ -1,0 +1,49 @@
+#include "audio.h"
+#include "cs43l22.h"
+
+extern I2C_HandleTypeDef hi2c1;
+extern I2S_HandleTypeDef hi2s3;
+extern ADC_HandleTypeDef hadc1;
+
+#define CODEC_ADDRESS 0x94  // 7-bit addr = 0x4A (AD0 = 0) → 8-bit = 0x94
+
+uint16_t adc_buffer[ADC_BUFFER_SIZE];
+uint16_t i2s_buffer[I2S_BUFFER_SIZE];
+
+void Audio_Init(void)
+{
+    // Init codec
+    cs43l22_Init(CODEC_ADDRESS, OUTPUT_DEVICE_HEADPHONE, 50, I2S_AUDIOFREQ_48K);
+    cs43l22_SetMute(CODEC_ADDRESS, 0);  // unmute
+    cs43l22_Play(CODEC_ADDRESS, (uint16_t*)i2s_buffer, I2S_BUFFER_SIZE);
+}
+
+void Audio_Start(void)
+{
+    // Start DMA streams
+    HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adc_buffer, ADC_BUFFER_SIZE);
+    uint16_t val = HAL_ADC_GetValue(&hadc1);
+    printf("ADC: %d\n", val);  // Should vary between ~0 to ~4095
+    HAL_I2S_Transmit_DMA(&hi2s3, i2s_buffer, I2S_BUFFER_SIZE);
+}
+
+// === DMA callbacks ===
+
+void HAL_ADC_ConvHalfCpltCallback(ADC_HandleTypeDef* hadc)
+{
+    for (int i = 0; i < AUDIO_BLOCK_SIZE; i++) {
+        uint16_t sample = adc_buffer[i];
+        i2s_buffer[2 * i]     = sample;
+        i2s_buffer[2 * i + 1] = sample;
+    }
+}
+
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
+{
+    for (int i = 0; i < AUDIO_BLOCK_SIZE; i++) {
+        uint16_t sample = adc_buffer[AUDIO_BLOCK_SIZE + i];
+        int j = AUDIO_BLOCK_SIZE + i;
+        i2s_buffer[2 * j]     = sample;
+        i2s_buffer[2 * j + 1] = sample;
+    }
+}
