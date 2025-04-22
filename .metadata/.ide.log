@@ -1007,3 +1007,192 @@
 2025-04-22 01:33:40,400 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 2797mS.
 2025-04-22 01:33:40,400 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
 2025-04-22 01:33:40,402 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
+2025-04-22 02:37:44,584 [WARN] IP:2250 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2025-04-22 02:37:44,592 [WARN] IP:2250 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2025-04-22 02:37:44,594 [WARN] IP:2250 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2025-04-22 02:37:57,105 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 604598896 Bytes (864026624)
+2025-04-22 02:37:57,917 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 629242480 Bytes (864026624)
+2025-04-22 02:38:05,090 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 723090032 Bytes (864026624)
+2025-04-22 02:38:05,626 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SPI
+2025-04-22 02:38:05,627 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2S
+2025-04-22 02:38:05,627 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-04-22 02:38:05,627 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: ADC
+2025-04-22 02:38:05,627 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-04-22 02:38:05,627 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2C
+2025-04-22 02:38:05,627 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USB_OTG_FS
+2025-04-22 02:38:05,627 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-04-22 02:38:05,627 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DMA
+2025-04-22 02:38:05,627 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DAC
+2025-04-22 02:38:05,631 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-04-22 02:38:05,632 [INFO] CodeGenerator:882 - code generatio: config db path: /Users/juno/.stm32cubemx/databases/DB.6.0.140/db/
+2025-04-22 02:38:05,675 [INFO] Argument:325 - Argument : hdmavalue: null
+2025-04-22 02:38:05,676 [INFO] Argument:327 - 	 sub Args: 
+2025-04-22 02:38:05,676 [INFO] Argument:325 - Argument : Instancevalue: DMA2_Stream0
+2025-04-22 02:38:05,679 [INFO] Argument:335 - Argument : Instancevalue: DMA2_Stream0
+2025-04-22 02:38:05,681 [INFO] Argument:325 - Argument : Initvalue: null
+2025-04-22 02:38:05,681 [INFO] Argument:327 - 	 sub Args: 
+2025-04-22 02:38:05,681 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2025-04-22 02:38:05,681 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2025-04-22 02:38:05,681 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-04-22 02:38:05,681 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-04-22 02:38:05,682 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-22 02:38:05,682 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-22 02:38:05,683 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-22 02:38:05,685 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-22 02:38:05,686 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-22 02:38:05,686 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-22 02:38:05,686 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-22 02:38:05,686 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-22 02:38:05,686 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-22 02:38:05,687 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-22 02:38:05,687 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-22 02:38:05,687 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-22 02:38:05,687 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-22 02:38:05,687 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-22 02:38:05,688 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2025-04-22 02:38:05,689 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2025-04-22 02:38:05,689 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2025-04-22 02:38:05,689 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2025-04-22 02:38:05,689 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2025-04-22 02:38:05,689 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2025-04-22 02:38:05,689 [INFO] Argument:325 - Argument : Lockvalue: null
+2025-04-22 02:38:05,689 [INFO] Argument:335 - Argument : Lockvalue: null
+2025-04-22 02:38:05,689 [INFO] Argument:325 - Argument : Statevalue: null
+2025-04-22 02:38:05,690 [INFO] Argument:335 - Argument : Statevalue: null
+2025-04-22 02:38:05,690 [INFO] Argument:325 - Argument : Parentvalue: null
+2025-04-22 02:38:05,691 [INFO] Argument:335 - Argument : Parentvalue: null
+2025-04-22 02:38:05,691 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2025-04-22 02:38:05,691 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2025-04-22 02:38:05,693 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-22 02:38:05,694 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-22 02:38:05,694 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2025-04-22 02:38:05,694 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2025-04-22 02:38:05,694 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2025-04-22 02:38:05,694 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2025-04-22 02:38:05,694 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2025-04-22 02:38:05,695 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2025-04-22 02:38:05,705 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-22 02:38:05,705 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-22 02:38:05,713 [INFO] Argument:325 - Argument : hdmavalue: null
+2025-04-22 02:38:05,713 [INFO] Argument:327 - 	 sub Args: 
+2025-04-22 02:38:05,714 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Stream0
+2025-04-22 02:38:05,714 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Stream0
+2025-04-22 02:38:05,715 [INFO] Argument:325 - Argument : Initvalue: null
+2025-04-22 02:38:05,717 [INFO] Argument:327 - 	 sub Args: 
+2025-04-22 02:38:05,719 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_3
+2025-04-22 02:38:05,720 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_3
+2025-04-22 02:38:05,720 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-04-22 02:38:05,720 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-04-22 02:38:05,720 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-22 02:38:05,720 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-22 02:38:05,720 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-22 02:38:05,720 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-22 02:38:05,720 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-22 02:38:05,720 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-22 02:38:05,720 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-22 02:38:05,721 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-22 02:38:05,721 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-22 02:38:05,721 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-22 02:38:05,721 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-22 02:38:05,721 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-22 02:38:05,721 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-22 02:38:05,721 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-22 02:38:05,721 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2025-04-22 02:38:05,721 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2025-04-22 02:38:05,721 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2025-04-22 02:38:05,721 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2025-04-22 02:38:05,721 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2025-04-22 02:38:05,721 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2025-04-22 02:38:05,722 [INFO] Argument:325 - Argument : Lockvalue: null
+2025-04-22 02:38:05,722 [INFO] Argument:335 - Argument : Lockvalue: null
+2025-04-22 02:38:05,722 [INFO] Argument:325 - Argument : Statevalue: null
+2025-04-22 02:38:05,722 [INFO] Argument:335 - Argument : Statevalue: null
+2025-04-22 02:38:05,722 [INFO] Argument:325 - Argument : Parentvalue: null
+2025-04-22 02:38:05,722 [INFO] Argument:335 - Argument : Parentvalue: null
+2025-04-22 02:38:05,723 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2025-04-22 02:38:05,723 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2025-04-22 02:38:05,724 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-22 02:38:05,724 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-22 02:38:05,724 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2025-04-22 02:38:05,724 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2025-04-22 02:38:05,724 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2025-04-22 02:38:05,724 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2025-04-22 02:38:05,724 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2025-04-22 02:38:05,724 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2025-04-22 02:38:05,725 [INFO] Argument:325 - Argument : hdmavalue: null
+2025-04-22 02:38:05,725 [INFO] Argument:327 - 	 sub Args: 
+2025-04-22 02:38:05,726 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Stream5
+2025-04-22 02:38:05,726 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Stream5
+2025-04-22 02:38:05,726 [INFO] Argument:325 - Argument : Initvalue: null
+2025-04-22 02:38:05,726 [INFO] Argument:327 - 	 sub Args: 
+2025-04-22 02:38:05,726 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2025-04-22 02:38:05,726 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2025-04-22 02:38:05,726 [INFO] Argument:325 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2025-04-22 02:38:05,726 [INFO] Argument:335 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2025-04-22 02:38:05,726 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-22 02:38:05,727 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-22 02:38:05,727 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-22 02:38:05,732 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-22 02:38:05,733 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-22 02:38:05,733 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-22 02:38:05,733 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-22 02:38:05,734 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-22 02:38:05,735 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-22 02:38:05,737 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-22 02:38:05,737 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-22 02:38:05,737 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-22 02:38:05,737 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-22 02:38:05,737 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-22 02:38:05,737 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2025-04-22 02:38:05,737 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2025-04-22 02:38:05,737 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2025-04-22 02:38:05,737 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2025-04-22 02:38:05,737 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2025-04-22 02:38:05,737 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2025-04-22 02:38:05,737 [INFO] Argument:325 - Argument : Lockvalue: null
+2025-04-22 02:38:05,737 [INFO] Argument:335 - Argument : Lockvalue: null
+2025-04-22 02:38:05,737 [INFO] Argument:325 - Argument : Statevalue: null
+2025-04-22 02:38:05,737 [INFO] Argument:335 - Argument : Statevalue: null
+2025-04-22 02:38:05,738 [INFO] Argument:325 - Argument : Parentvalue: null
+2025-04-22 02:38:05,738 [INFO] Argument:335 - Argument : Parentvalue: null
+2025-04-22 02:38:05,738 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2025-04-22 02:38:05,738 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2025-04-22 02:38:05,738 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-22 02:38:05,738 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-22 02:38:05,738 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2025-04-22 02:38:05,738 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2025-04-22 02:38:05,738 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2025-04-22 02:38:05,738 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2025-04-22 02:38:05,738 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2025-04-22 02:38:05,738 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2025-04-22 02:38:05,901 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/license.tmp_save
+2025-04-22 02:38:06,422 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/license.tmp
+2025-04-22 02:38:06,606 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/gpio.tmp_save
+2025-04-22 02:38:06,874 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/gpio.tmp
+2025-04-22 02:38:07,934 [WARN] IPConfigManager:3217 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2025-04-22 02:38:08,021 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/dma.tmp_save
+2025-04-22 02:38:08,136 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/dma.tmp
+2025-04-22 02:38:08,141 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/dma_GV.tmp_save
+2025-04-22 02:38:08,227 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/dma_GV.tmp
+2025-04-22 02:38:08,248 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_it.c_save
+2025-04-22 02:38:08,898 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_it.c
+2025-04-22 02:38:08,966 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_it.h_save
+2025-04-22 02:38:09,166 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_it.h
+2025-04-22 02:38:09,212 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_hal_msp.c_save
+2025-04-22 02:38:09,492 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_hal_msp.c
+2025-04-22 02:38:09,498 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/system.tmp_save
+2025-04-22 02:38:09,583 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/system.tmp
+2025-04-22 02:38:09,601 [INFO] CodeEngine:319 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_hal_conf.h_save
+2025-04-22 02:38:09,681 [INFO] CodeEngine:343 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_hal_conf.h
+2025-04-22 02:38:09,864 [WARN] IPConfigManager:3790 - IP not found : USB_OTG
+2025-04-22 02:38:09,865 [WARN] CodeGenerator:4198 - IP not found : null
+2025-04-22 02:38:09,875 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/main.h_save
+2025-04-22 02:38:10,019 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/main.h
+2025-04-22 02:38:10,023 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/main.c_save
+2025-04-22 02:38:10,165 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/main.c
+2025-04-22 02:38:10,510 [INFO] ProjectBuilder:3324 - Time for Copy HAL[1] : 80mS.
+2025-04-22 02:38:10,518 [INFO] ProjectBuilder:4912 - Project Generator version: 4.6.0.1-B1
+2025-04-22 02:38:10,617 [INFO] ConfigFileManager:1590 - The Die is : DIE413
+2025-04-22 02:38:13,342 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 2819mS.
+2025-04-22 02:38:13,347 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 3mS.
+2025-04-22 02:38:13,348 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 1mS.
