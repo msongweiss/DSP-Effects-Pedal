@@ -1,0 +1,27 @@
+#include "cs43l22.h"
+
+#define SIN_FREQ       1000
+#define SAMPLING_RATE  48000
+#define BUFFER_LENGTH  SAMPLING_RATE / SIN_FREQ
+int16_t buffer_audio[2 * BUFFER_LENGTH];
+
+void play_sine(void)
+{
+	/*
+	functions to initialize peripherals
+	*/
+	cs43l22_Init(0x94, OUTPUT_DEVICE_BOTH, 100, I2S_AUDIOFREQ_48K);
+
+
+	while(1)
+	{
+		// sine signal
+		for(int i = 0; i < BUFFER_LENGTH;i++)
+		  {
+			  buffer_audio[2 * i] = 10000 * sin(2 * 3.14 * SIN_FREQ * i / SAMPLING_RATE);
+			  buffer_audio[2 * i + 1] = 10000 * sin(2 * 3.14 * SIN_FREQ * i / SAMPLING_RATE);
+		  }
+		// playing the sound
+		cs43l22_play(buffer_audio, 2 * BUFFER_LENGTH);
+	}
+}

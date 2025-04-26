@@ -1,17 +1,17 @@
-14:39:19 **** Incremental Build of configuration Debug for project pedal_v1 ****
+14:37:30 **** Incremental Build of configuration Debug for project pedal_v1 ****
 make -j9 all 
-arm-none-eabi-gcc "../Core/Src/audio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/BSP/Components/cs43l22 -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/audio.d" -MT"Core/Src/audio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/audio.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: pedal_v1.elf
  
 arm-none-eabi-size  pedal_v1.elf 
 arm-none-eabi-objdump -h -S pedal_v1.elf  > "pedal_v1.list"
    text	   data	    bss	    dec	    hex	filename
-  35760	    112	   7016	  42888	   a788	pedal_v1.elf
+  31272	     20	   5148	  36440	   8e58	pedal_v1.elf
 Finished building: default.size.stdout
  
 Finished building: pedal_v1.list
  
 
-14:39:20 Build Finished. 0 errors, 0 warnings. (took 1s.48ms)
+14:37:31 Build Finished. 0 errors, 0 warnings. (took 1s.252ms)
 

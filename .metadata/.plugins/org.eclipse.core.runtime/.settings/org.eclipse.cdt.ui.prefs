@@ -18,6 +18,7 @@ c_operators=230,230,250
 c_single_line_comment=98,98,98
 c_string=23,198,163
 c_type=221,40,103
+consoleOnTop=false
 eclipse.preferences.version=1
 inactiveCodeColor=30,30,30
 org.eclipse.cdt.internal.ui.text.doctools.multi=98,98,98

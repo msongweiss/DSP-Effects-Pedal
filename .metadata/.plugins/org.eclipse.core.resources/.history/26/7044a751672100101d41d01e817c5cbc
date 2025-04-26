@@ -1,0 +1,29 @@
+#include "audio.h"
+#include "cs43l22.h"
+#include <stdio.h>
+
+extern I2C_HandleTypeDef hi2c1;
+extern I2S_HandleTypeDef hi2s3;
+extern ADC_HandleTypeDef hadc1;
+
+uint16_t adcData[ADC_BUFFER_SIZE];
+int16_t dacData[I2S_BUFFER_SIZE];
+
+uint8_t dataReadyFlag;
+
+
+
+void Audio_Init(void)
+{
+    // Init codec
+	cs43l22_init();
+    cs43l22_unmute();  // unmute
+    cs43l22_play((int16_t*)dacData, I2S_BUFFER_SIZE);
+}
+
+void Audio_Start(void)
+{
+    // Start DMA streams
+    HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adcData, ADC_BUFFER_SIZE);
+    HAL_I2SEx_TransmitReceive_DMA(&hi2s3, (uint16_t*)dacData, (uint16_t*)adcData, I2S_BUFFER_SIZE);
+}

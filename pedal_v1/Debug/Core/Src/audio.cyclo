@@ -1,4 +1,0 @@
-../Core/Src/audio.c:14:6:Audio_Init	1
-../Core/Src/audio.c:22:6:Audio_Start	1
-../Core/Src/audio.c:31:6:HAL_ADC_ConvHalfCpltCallback	2
-../Core/Src/audio.c:40:6:HAL_ADC_ConvCpltCallback	2

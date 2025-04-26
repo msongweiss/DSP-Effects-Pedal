@@ -24,6 +24,7 @@
 #include "i2c.h"
 #include "i2s.h"
 #include "spi.h"
+#include "tim.h"
 #include "usart.h"
 #include "usb_otg.h"
 #include "gpio.h"
@@ -31,8 +32,9 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "usart.h"
-#include "audio.h"
+#include "cs43l22.h"
 #include <stdio.h>
+#include <math.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -49,6 +51,18 @@ extern UART_HandleTypeDef huart2;
 extern I2C_HandleTypeDef hi2c1;
 extern I2S_HandleTypeDef hi2s3;
 extern ADC_HandleTypeDef hadc1;
+
+#define AUDIO_BLOCK_SIZE 256
+#define ADC_BUFFER_SIZE  AUDIO_BLOCK_SIZE
+#define I2S_BUFFER_SIZE  2 * AUDIO_BLOCK_SIZE
+
+uint16_t adcData[ADC_BUFFER_SIZE];
+int16_t dacData[I2S_BUFFER_SIZE];
+
+static volatile uint16_t *inBufPtr;
+static volatile int16_t *outBufPtr = &dacData[0];
+
+uint8_t dataReadyFlag;
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -59,17 +73,61 @@ extern ADC_HandleTypeDef hadc1;
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+#define AUDIO_BLOCK_SIZE 256
+#define ADC_BUFFER_SIZE  AUDIO_BLOCK_SIZE
+#define I2S_BUFFER_SIZE  2 * AUDIO_BLOCK_SIZE
 
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
+void processData() {
+	static float leftIn, leftOut;
+	static float rightIn, rightOut;
 
+	for (uint8_t n = 0; n < AUDIO_BLOCK_SIZE; n += 2) {
+		// Left channel
+		leftIn = ((int16_t)inBufPtr[n] - 2048) / 2047.0f;  // for ADC values
+//		if (leftIn > 1.0f) {
+//			leftIn -= 2.0f;
+//		}
+		leftOut = leftIn;
+
+		outBufPtr[n] = (int16_t) (10000.0f * leftOut);
+
+		// Right channel
+		rightIn = ((int16_t)inBufPtr[n + 1] - 2048) / 2047.0f;  // for ADC values
+//		if (rightIn > 1.0f) {
+//			rightIn -= 2.0f;
+//		}
+		rightOut = rightIn;
+
+		outBufPtr[n + 1] = (int16_t) (10000.0f * rightOut);
+	}
+	dataReadyFlag = 0;
+}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+// === DMA callbacks ===
+
+void HAL_I2S_TxHalfCpltCallback(I2S_HandleTypeDef *hi2s)
+{
+    inBufPtr = &adcData[0];
+    outBufPtr = &dacData[0];
+
+    dataReadyFlag = 1;
+}
+
+void HAL_I2S_TxCpltCallback(I2S_HandleTypeDef *hi2s)
+{
+    inBufPtr = &adcData[ADC_BUFFER_SIZE / 2];
+    outBufPtr = &dacData[I2S_BUFFER_SIZE / 2];
+
+    dataReadyFlag = 1;
+}
 
 /* USER CODE END 0 */
 
@@ -110,19 +168,25 @@ int main(void)
   MX_ADC1_Init();
   MX_USB_OTG_FS_PCD_Init();
   MX_USART2_UART_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-  Audio_Init();
-  Audio_Start();
+  cs43l22_init();
+  cs43l22_unmute();  // unmute
+
+  HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adcData, ADC_BUFFER_SIZE);
+  HAL_I2S_Transmit_DMA(&hi2s3, (uint16_t*)dacData, I2S_BUFFER_SIZE);
+//  cs43l22_play((int16_t*)dacData, I2S_BUFFER_SIZE);
   /* USER CODE END 2 */
+  HAL_I2S_TxHalfCpltCallback(&hi2s3);
+  HAL_I2S_TxCpltCallback(&hi2s3);
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
-	uint16_t val = HAL_ADC_GetValue(&hadc1);
-	printf("ADC: %d\n", val);  // Should vary between ~0 to ~4095
-	HAL_Delay(100);  // Delay to control print rate (e.g., every 100ms)
+	  if(dataReadyFlag) {
+		  processData();
+	  }
   }
     /* USER CODE END WHILE */
 

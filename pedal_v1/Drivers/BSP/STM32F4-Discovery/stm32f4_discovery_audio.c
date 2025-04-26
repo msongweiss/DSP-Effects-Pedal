@@ -432,32 +432,32 @@ void BSP_AUDIO_OUT_SetFrequency(uint32_t AudioFreq)
   I2S3_Init(AudioFreq);
 }
 
-/**
-  * @brief  Tx Transfer completed callbacks.
-  * @param  hi2s: I2S handle
-  */
-void HAL_I2S_TxCpltCallback(I2S_HandleTypeDef *hi2s)
-{
-  if(hi2s->Instance == I2S3)
-  {
-    /* Call the user function which will manage directly transfer complete */  
-    BSP_AUDIO_OUT_TransferComplete_CallBack();       
-  }
-}
-
-/**
-  * @brief  Tx Half Transfer completed callbacks.
-  * @param  hi2s: I2S handle
-  */
-void HAL_I2S_TxHalfCpltCallback(I2S_HandleTypeDef *hi2s)
-{
-  if(hi2s->Instance == I2S3)
-  {
-    /* Manage the remaining file size and new address offset: This function should
-       be coded by user (its prototype is already declared in stm32f4_discovery_audio.h) */  
-    BSP_AUDIO_OUT_HalfTransfer_CallBack();
-  }
-}
+///**
+//  * @brief  Tx Transfer completed callbacks.
+//  * @param  hi2s: I2S handle
+//  */
+//void HAL_I2S_TxCpltCallback(I2S_HandleTypeDef *hi2s)
+//{
+//  if(hi2s->Instance == I2S3)
+//  {
+//    /* Call the user function which will manage directly transfer complete */
+//    BSP_AUDIO_OUT_TransferComplete_CallBack();
+//  }
+//}
+//
+///**
+//  * @brief  Tx Half Transfer completed callbacks.
+//  * @param  hi2s: I2S handle
+//  */
+//void HAL_I2S_TxHalfCpltCallback(I2S_HandleTypeDef *hi2s)
+//{
+//  if(hi2s->Instance == I2S3)
+//  {
+//    /* Manage the remaining file size and new address offset: This function should
+//       be coded by user (its prototype is already declared in stm32f4_discovery_audio.h) */
+//    BSP_AUDIO_OUT_HalfTransfer_CallBack();
+//  }
+//}
 
 /**
   * @brief  Clock Config.
@@ -485,7 +485,7 @@ __weak void BSP_AUDIO_OUT_ClockConfig(I2S_HandleTypeDef *hi2s, uint32_t AudioFre
   if ((freqindex & 0x7) == 0)
   {
     /* I2S clock config 
-    PLLI2S_VCO = f(VCO clock) = f(PLLI2S clock input) × (PLLI2SN/PLLM)
+    PLLI2S_VCO = f(VCO clock) = f(PLLI2S clock input) ï¿½ (PLLI2SN/PLLM)
     I2SCLK = f(PLLI2S clock output) = f(VCO clock) / PLLI2SR */
     rccclkinit.PeriphClockSelection = RCC_PERIPHCLK_I2S;
     rccclkinit.PLLI2S.PLLI2SN = I2SPLLN[freqindex];
@@ -495,7 +495,7 @@ __weak void BSP_AUDIO_OUT_ClockConfig(I2S_HandleTypeDef *hi2s, uint32_t AudioFre
   else 
   {
     /* I2S clock config 
-    PLLI2S_VCO = f(VCO clock) = f(PLLI2S clock input) × (PLLI2SN/PLLM)
+    PLLI2S_VCO = f(VCO clock) = f(PLLI2S clock input) ï¿½ (PLLI2SN/PLLM)
     I2SCLK = f(PLLI2S clock output) = f(VCO clock) / PLLI2SR */
     rccclkinit.PeriphClockSelection = RCC_PERIPHCLK_I2S;
     rccclkinit.PLLI2S.PLLI2SN = 258;

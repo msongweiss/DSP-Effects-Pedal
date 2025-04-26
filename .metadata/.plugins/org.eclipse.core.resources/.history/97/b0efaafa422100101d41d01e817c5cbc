@@ -1,0 +1,50 @@
+#include "audio.h"
+#include "cs43l22.h"
+#include <stdio.h>
+
+extern I2C_HandleTypeDef hi2c1;
+extern I2S_HandleTypeDef hi2s3;
+extern ADC_HandleTypeDef hadc1;
+
+#define CODEC_ADDRESS 0x94  // 7-bit addr = 0x4A (AD0 = 0) → 8-bit = 0x94
+
+int16_t adc_buffer[ADC_BUFFER_SIZE];
+int16_t i2s_buffer[I2S_BUFFER_SIZE];
+
+void Audio_Init(void)
+{
+    // Init codec
+	cs43l22_init();
+    cs43l22_unmute();  // unmute
+    cs43l22_play((int16_t*)i2s_buffer, 2*I2S_BUFFER_SIZE);
+}
+
+void Audio_Start(void)
+{
+    // Start DMA streams
+    HAL_ADC_Start_DMA(&hadc1, (int32_t*)adc_buffer, ADC_BUFFER_SIZE);
+    HAL_I2S_Transmit_DMA(&hi2s3, i2s_buffer, I2S_BUFFER_SIZE);
+}
+
+// === DMA callbacks ===
+
+void HAL_ADC_ConvHalfCpltCallback(ADC_HandleTypeDef* hadc)
+{
+    for (int i = 0; i < AUDIO_BLOCK_SIZE; i++) {
+    	uint16_t raw = adc_buffer[i];        // 12-bit: 0–4095
+    	int16_t centered = ((int16_t)raw - 2048) << 4;  // Remove offset, scale to 16-bit
+        i2s_buffer[2 * i]     = centered;
+        i2s_buffer[2 * i + 1] = centered;
+    }
+}
+
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
+{
+    for (int i = 0; i < AUDIO_BLOCK_SIZE; i++) {
+    	uint16_t raw = adc_buffer[i];        // 12-bit: 0–4095
+    	int16_t centered = ((int16_t)raw - 2048) << 4;  // Remove offset, scale to 16-bit
+        int j = AUDIO_BLOCK_SIZE + i;
+        i2s_buffer[2 * j]     = centered;
+        i2s_buffer[2 * j + 1] = centered;
+    }
+}

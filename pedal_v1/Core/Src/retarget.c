@@ -1,5 +1,5 @@
 #include "usart.h"
-#include "stdio.h"
+#include <stdio.h>
 
 // Retarget printf to USART2
 int __io_putchar(int ch) {

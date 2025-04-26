@@ -8,8 +8,6 @@
 ../Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_audio.c:384:9:BSP_AUDIO_OUT_SetMute	16	static
 ../Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_audio.c:406:9:BSP_AUDIO_OUT_SetOutputMode	16	static
 ../Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_audio.c:426:6:BSP_AUDIO_OUT_SetFrequency	16	static
-../Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_audio.c:439:6:HAL_I2S_TxCpltCallback	16	static
-../Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_audio.c:452:6:HAL_I2S_TxHalfCpltCallback	16	static
 ../Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_audio.c:470:13:BSP_AUDIO_OUT_ClockConfig	48	static
 ../Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_audio.c:512:13:BSP_AUDIO_OUT_MspInit	56	static
 ../Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_audio.c:582:13:BSP_AUDIO_OUT_MspDeInit	40	static

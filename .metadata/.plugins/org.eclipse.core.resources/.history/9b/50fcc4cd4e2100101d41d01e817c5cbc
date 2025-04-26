@@ -1,0 +1,16 @@
+#ifndef __AUDIO_H__
+#define __AUDIO_H__
+
+#include "stm32f4xx_hal.h"
+
+#define AUDIO_BLOCK_SIZE 256
+#define ADC_BUFFER_SIZE  (AUDIO_BLOCK_SIZE * 2)
+#define I2S_BUFFER_SIZE  (AUDIO_BLOCK_SIZE * 4)
+
+extern uint16_t adc_buffer[ADC_BUFFER_SIZE];
+extern int16_t i2s_buffer[I2S_BUFFER_SIZE];
+
+void Audio_Init(void);
+void Audio_Start(void);
+
+#endif // __AUDIO_H__
