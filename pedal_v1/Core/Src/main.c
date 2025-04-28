@@ -78,41 +78,6 @@ uint8_t dataReadyFlag;
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-void processData() {
-	printf("Process data running\n");
-
-
-	for (uint8_t n = 0; n < AUDIO_BLOCK_SIZE / 2; n += 2) {
-//		uint32_t sample = ((uint32_t *)inBufPtr)[n]; // Cast to 32-bit pointer and read
-//		printf("Buffer[%d] = %lu\n", n, sample);
-//		uint16_t leftIn  = sample & 0xFFFF;         // lower 16 bits
-//		uint16_t rightIn = (sample >> 16) & 0xFFFF; // upper 16 bits
-//
-//		int16_t leftOut = ((int32_t)leftIn - 2048) * 16;
-//		int16_t rightOut = ((int32_t)rightIn - 2048) * 16;
-//
-//		outBufPtr[2 * n] = leftOut;
-//		outBufPtr[2 * n + 1] = rightOut;
-//
-		static float leftIn, leftOut;
-		static float rightIn, rightOut;
-		// Left channel
-		leftIn = ((int16_t)inBufPtr[n] - 2300);  // for ADC values
-		leftOut = leftIn;
-
-		outBufPtr[n] = (int16_t) (16 * leftOut);
-//		printf("LeftOut: %hd\n", (int16_t) (16 * leftOut));
-
-		// Right channel
-		rightIn = ((int16_t)inBufPtr[n + 1] - 2300);  // for ADC values
-		rightOut = rightIn;
-
-		outBufPtr[n + 1] = (int16_t) (16 * rightOut);
-//		printf("RightOut: %hd\n", (int16_t) (16 * rightOut));
-	}
-	dataReadyFlag = 0;
-}
-
 void printADCData(void) {
     for (uint16_t i = 0; i < ADC_BUFFER_SIZE; i++) {
         printf("adcData[%d] = %u\n", i, adcData[i]);
@@ -121,9 +86,34 @@ void printADCData(void) {
 
 void printDACData(void) {
     for (uint16_t i = 0; i < DAC_BUFFER_SIZE; i++) {
-        printf("dacData[%d] = %hd\n", i, dacData[i]);
+        printf("dacData[%d] = %u\n", i, (uint16_t)dacData[i]);
     }
 }
+
+void processData() {
+	printDACData();
+
+	for (uint8_t n = 0; n < (AUDIO_BLOCK_SIZE / 2) - 1; n += 2) {
+
+		static float leftIn, leftOut;
+		static float rightIn, rightOut;
+		// Left channel
+		leftIn = ((int16_t)inBufPtr[n] - 2300);  // for ADC values
+		leftOut = leftIn;
+
+		outBufPtr[n] = (int16_t) (16 * leftOut);
+//		printf("LeftOut[%u]: %hd\n", n, (int16_t) (16 * leftOut));
+
+		// Right channel
+		rightIn = ((int16_t)inBufPtr[n + 1] - 2300);  // for ADC values
+		rightOut = rightIn;
+
+		outBufPtr[n + 1] = (int16_t) (16 * rightOut);
+//		printf("RightOut[%u]: %hd\n", n+1, (int16_t) (16 * rightOut));
+	}
+	dataReadyFlag = 0;
+}
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -136,6 +126,7 @@ void HAL_I2S_TxHalfCpltCallback(I2S_HandleTypeDef *hi2s)
     outBufPtr = &dacData[0];
 
     dataReadyFlag = 1;
+    processData();
 }
 
 void HAL_I2S_TxCpltCallback(I2S_HandleTypeDef *hi2s)
@@ -144,6 +135,7 @@ void HAL_I2S_TxCpltCallback(I2S_HandleTypeDef *hi2s)
     outBufPtr = &dacData[DAC_BUFFER_SIZE / 2];
 
     dataReadyFlag = 1;
+    processData();
 }
 
 /* USER CODE END 0 */
@@ -191,7 +183,9 @@ int main(void)
 
   HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adcData, ADC_BUFFER_SIZE);
   HAL_TIM_Base_Start(&htim2);
+  cs43l22_stop();
   cs43l22_play((int16_t*)dacData, DAC_BUFFER_SIZE);
+//  HAL_I2S_Transmit_DMA(&hi2s3, (uint16_t *)dacData, DAC_BUFFER_SIZE);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -200,8 +194,8 @@ int main(void)
   {
 	  if(dataReadyFlag) {
 
-		  processData();
-		  printDACData();
+
+//		  printDACData();
 //		  printADCData();
 
 	  }
