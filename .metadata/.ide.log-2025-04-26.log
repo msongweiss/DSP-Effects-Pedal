@@ -1,0 +1,1635 @@
+2025-04-27 14:09:10,586 [INFO] WebApp:194 - Connection lost
+2025-04-27 14:09:14,096 [INFO] WebApp:191 - Connection restablished
+2025-04-27 14:13:09,246 [INFO] WebApp:194 - Connection lost
+2025-04-27 14:13:15,049 [INFO] WebApp:191 - Connection restablished
+2025-04-27 15:06:58,255 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 823200632 Bytes (1073741824)
+2025-04-27 15:06:58,892 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SPI
+2025-04-27 15:06:58,893 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8
+2025-04-27 15:06:58,893 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2S
+2025-04-27 15:06:58,893 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-04-27 15:06:58,893 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: ADC
+2025-04-27 15:06:58,893 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-04-27 15:06:58,893 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2C
+2025-04-27 15:06:58,893 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USB_OTG_FS
+2025-04-27 15:06:58,893 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-04-27 15:06:58,893 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-04-27 15:06:58,894 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DMA
+2025-04-27 15:06:58,894 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DAC
+2025-04-27 15:06:58,898 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-04-27 15:06:58,900 [INFO] CodeGenerator:882 - code generatio: config db path: /Users/juno/.stm32cubemx/databases/DB.6.0.140/db/
+2025-04-27 15:06:59,000 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:06:59,001 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:06:59,271 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/license.tmp_save
+2025-04-27 15:06:59,695 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/license.tmp
+2025-04-27 15:06:59,880 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/gpio.c_save
+2025-04-27 15:07:00,132 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/gpio.c
+2025-04-27 15:07:00,135 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/gpio.h_save
+2025-04-27 15:07:00,258 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/gpio.h
+2025-04-27 15:07:01,973 [WARN] IPConfigManager:3217 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2025-04-27 15:07:01,998 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/adc.c_save
+2025-04-27 15:07:02,226 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/adc.c
+2025-04-27 15:07:02,229 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/adc.h_save
+2025-04-27 15:07:02,319 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/adc.h
+2025-04-27 15:07:02,324 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/dac.c_save
+2025-04-27 15:07:02,454 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/dac.c
+2025-04-27 15:07:02,457 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/dac.h_save
+2025-04-27 15:07:02,540 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/dac.h
+2025-04-27 15:07:02,613 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/dma.c_save
+2025-04-27 15:07:02,717 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/dma.c
+2025-04-27 15:07:02,720 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/dma.h_save
+2025-04-27 15:07:02,837 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/dma.h
+2025-04-27 15:07:02,843 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/i2c.c_save
+2025-04-27 15:07:02,961 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/i2c.c
+2025-04-27 15:07:02,963 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/i2c.h_save
+2025-04-27 15:07:03,050 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/i2c.h
+2025-04-27 15:07:03,063 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/i2s.c_save
+2025-04-27 15:07:03,212 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/i2s.c
+2025-04-27 15:07:03,214 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/i2s.h_save
+2025-04-27 15:07:03,313 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/i2s.h
+2025-04-27 15:07:03,325 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/spi.c_save
+2025-04-27 15:07:03,440 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/spi.c
+2025-04-27 15:07:03,442 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/spi.h_save
+2025-04-27 15:07:03,519 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/spi.h
+2025-04-27 15:07:03,524 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/tim.c_save
+2025-04-27 15:07:03,635 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/tim.c
+2025-04-27 15:07:03,637 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/tim.h_save
+2025-04-27 15:07:03,729 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/tim.h
+2025-04-27 15:07:03,736 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/usart.c_save
+2025-04-27 15:07:03,851 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/usart.c
+2025-04-27 15:07:03,853 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/usart.h_save
+2025-04-27 15:07:03,938 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/usart.h
+2025-04-27 15:07:03,947 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/usb_otg.c_save
+2025-04-27 15:07:04,056 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/usb_otg.c
+2025-04-27 15:07:04,059 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/usb_otg.h_save
+2025-04-27 15:07:04,135 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/usb_otg.h
+2025-04-27 15:07:04,163 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_it.c_save
+2025-04-27 15:07:04,342 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_it.c
+2025-04-27 15:07:04,349 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_it.h_save
+2025-04-27 15:07:04,431 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_it.h
+2025-04-27 15:07:04,446 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_hal_msp.c_save
+2025-04-27 15:07:04,570 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_hal_msp.c
+2025-04-27 15:07:04,575 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/system.tmp_save
+2025-04-27 15:07:04,669 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/system.tmp
+2025-04-27 15:07:04,682 [INFO] CodeEngine:319 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_hal_conf.h_save
+2025-04-27 15:07:04,817 [INFO] CodeEngine:343 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_hal_conf.h
+2025-04-27 15:07:04,938 [INFO] ApiDbMcu:508 - Load IP Config File for ADC1
+2025-04-27 15:07:04,941 [INFO] ApiDbMcu:508 - Load IP Config File for DAC
+2025-04-27 15:07:04,944 [INFO] ApiDbMcu:508 - Load IP Config File for I2C1
+2025-04-27 15:07:04,946 [INFO] ApiDbMcu:508 - Load IP Config File for I2S3
+2025-04-27 15:07:04,951 [INFO] ApiDbMcu:508 - Load IP Config File for SPI1
+2025-04-27 15:07:04,966 [INFO] ApiDbMcu:508 - Load IP Config File for TIM2
+2025-04-27 15:07:04,970 [INFO] ApiDbMcu:508 - Load IP Config File for USART3
+2025-04-27 15:07:04,972 [INFO] ApiDbMcu:508 - Load IP Config File for USB_OTG_FS
+2025-04-27 15:07:04,975 [INFO] ApiDbMcu:508 - Load IP Config File for RCC
+2025-04-27 15:07:04,981 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/main.h_save
+2025-04-27 15:07:05,095 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/main.h
+2025-04-27 15:07:05,097 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/main.c_save
+2025-04-27 15:07:05,208 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/main.c
+2025-04-27 15:07:06,080 [INFO] ProjectBuilder:3324 - Time for Copy HAL[1] : 114mS.
+2025-04-27 15:07:06,105 [INFO] ProjectBuilder:4912 - Project Generator version: 4.6.0.1-B1
+2025-04-27 15:07:06,284 [INFO] ConfigFileManager:1590 - The Die is : DIE413
+2025-04-27 15:07:06,317 [INFO] ApiDbMcu:508 - Load IP Config File for FATFS
+2025-04-27 15:07:06,329 [INFO] ApiDbMcu:508 - Load IP Config File for FREERTOS
+2025-04-27 15:07:06,336 [INFO] ApiDbMcu:508 - Load IP Config File for LIBJPEG
+2025-04-27 15:07:06,347 [INFO] ApiDbMcu:508 - Load IP Config File for LWIP
+2025-04-27 15:07:06,358 [INFO] ApiDbMcu:508 - Load IP Config File for MBEDTLS
+2025-04-27 15:07:06,381 [INFO] ApiDbMcu:508 - Load IP Config File for USB_DEVICE
+2025-04-27 15:07:06,387 [INFO] ApiDbMcu:508 - Load IP Config File for USB_HOST
+2025-04-27 15:07:08,762 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 2658mS.
+2025-04-27 15:07:08,764 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 1mS.
+2025-04-27 15:07:08,767 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 1mS.
+2025-04-27 15:12:58,814 [INFO] DmaTabbedPanel:205 - Cannot restore the selected Tab for DMA
+2025-04-27 15:13:21,828 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:13:21,832 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:13:21,848 [INFO] I2sManager:553 - AudioClock : 47348Divider : 16Odd : 1
+2025-04-27 15:13:23,768 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,475x185,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:14:13,480 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:14:16,955 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 539233864 Bytes (1073741824)
+2025-04-27 15:14:18,309 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 565448264 Bytes (1073741824)
+2025-04-27 15:14:20,279 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 659297864 Bytes (1073741824)
+2025-04-27 15:14:21,479 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SPI
+2025-04-27 15:14:21,499 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8
+2025-04-27 15:14:21,502 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2S
+2025-04-27 15:14:21,504 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-04-27 15:14:21,513 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: ADC
+2025-04-27 15:14:21,517 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-04-27 15:14:21,517 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2C
+2025-04-27 15:14:21,517 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USB_OTG_FS
+2025-04-27 15:14:21,517 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-04-27 15:14:21,517 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-04-27 15:14:21,517 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DMA
+2025-04-27 15:14:21,518 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DAC
+2025-04-27 15:14:21,521 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-04-27 15:14:21,525 [INFO] CodeGenerator:882 - code generatio: config db path: /Users/juno/.stm32cubemx/databases/DB.6.0.140/db/
+2025-04-27 15:14:21,651 [INFO] Argument:325 - Argument : hdmavalue: null
+2025-04-27 15:14:21,651 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 15:14:21,651 [INFO] Argument:325 - Argument : Instancevalue: DMA2_Stream0
+2025-04-27 15:14:21,653 [INFO] Argument:335 - Argument : Instancevalue: DMA2_Stream0
+2025-04-27 15:14:21,654 [INFO] Argument:325 - Argument : Initvalue: null
+2025-04-27 15:14:21,655 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 15:14:21,656 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2025-04-27 15:14:21,657 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2025-04-27 15:14:21,658 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-04-27 15:14:21,658 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-04-27 15:14:21,660 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 15:14:21,662 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 15:14:21,662 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 15:14:21,663 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 15:14:21,663 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 15:14:21,663 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 15:14:21,663 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 15:14:21,663 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 15:14:21,663 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-27 15:14:21,663 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-27 15:14:21,663 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 15:14:21,663 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 15:14:21,663 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 15:14:21,663 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 15:14:21,663 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2025-04-27 15:14:21,663 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2025-04-27 15:14:21,663 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2025-04-27 15:14:21,663 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2025-04-27 15:14:21,663 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2025-04-27 15:14:21,663 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2025-04-27 15:14:21,663 [INFO] Argument:325 - Argument : Lockvalue: null
+2025-04-27 15:14:21,663 [INFO] Argument:335 - Argument : Lockvalue: null
+2025-04-27 15:14:21,663 [INFO] Argument:325 - Argument : Statevalue: null
+2025-04-27 15:14:21,663 [INFO] Argument:335 - Argument : Statevalue: null
+2025-04-27 15:14:21,663 [INFO] Argument:325 - Argument : Parentvalue: null
+2025-04-27 15:14:21,663 [INFO] Argument:335 - Argument : Parentvalue: null
+2025-04-27 15:14:21,663 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2025-04-27 15:14:21,663 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2025-04-27 15:14:21,663 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 15:14:21,663 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 15:14:21,663 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 15:14:21,663 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 15:14:21,664 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2025-04-27 15:14:21,664 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2025-04-27 15:14:21,664 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2025-04-27 15:14:21,664 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2025-04-27 15:14:21,682 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:14:21,682 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:14:21,693 [INFO] Argument:325 - Argument : hdmavalue: null
+2025-04-27 15:14:21,693 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 15:14:21,693 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Stream0
+2025-04-27 15:14:21,693 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Stream0
+2025-04-27 15:14:21,693 [INFO] Argument:325 - Argument : Initvalue: null
+2025-04-27 15:14:21,693 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 15:14:21,693 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_3
+2025-04-27 15:14:21,693 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_3
+2025-04-27 15:14:21,693 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-04-27 15:14:21,693 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-04-27 15:14:21,693 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 15:14:21,693 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 15:14:21,693 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 15:14:21,693 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 15:14:21,693 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 15:14:21,693 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 15:14:21,693 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 15:14:21,693 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 15:14:21,693 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-27 15:14:21,693 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-27 15:14:21,693 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 15:14:21,693 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 15:14:21,693 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 15:14:21,693 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 15:14:21,693 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2025-04-27 15:14:21,693 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2025-04-27 15:14:21,693 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2025-04-27 15:14:21,693 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2025-04-27 15:14:21,694 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2025-04-27 15:14:21,694 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2025-04-27 15:14:21,694 [INFO] Argument:325 - Argument : Lockvalue: null
+2025-04-27 15:14:21,694 [INFO] Argument:335 - Argument : Lockvalue: null
+2025-04-27 15:14:21,694 [INFO] Argument:325 - Argument : Statevalue: null
+2025-04-27 15:14:21,694 [INFO] Argument:335 - Argument : Statevalue: null
+2025-04-27 15:14:21,694 [INFO] Argument:325 - Argument : Parentvalue: null
+2025-04-27 15:14:21,694 [INFO] Argument:335 - Argument : Parentvalue: null
+2025-04-27 15:14:21,694 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2025-04-27 15:14:21,694 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2025-04-27 15:14:21,694 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 15:14:21,694 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 15:14:21,694 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 15:14:21,694 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 15:14:21,694 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2025-04-27 15:14:21,694 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2025-04-27 15:14:21,694 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2025-04-27 15:14:21,694 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2025-04-27 15:14:21,695 [INFO] Argument:325 - Argument : hdmavalue: null
+2025-04-27 15:14:21,695 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 15:14:21,695 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Stream5
+2025-04-27 15:14:21,695 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Stream5
+2025-04-27 15:14:21,695 [INFO] Argument:325 - Argument : Initvalue: null
+2025-04-27 15:14:21,695 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 15:14:21,695 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2025-04-27 15:14:21,695 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2025-04-27 15:14:21,695 [INFO] Argument:325 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2025-04-27 15:14:21,695 [INFO] Argument:335 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2025-04-27 15:14:21,695 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 15:14:21,695 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 15:14:21,695 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 15:14:21,695 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 15:14:21,695 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 15:14:21,695 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 15:14:21,695 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 15:14:21,695 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 15:14:21,695 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-27 15:14:21,695 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-27 15:14:21,695 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 15:14:21,695 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 15:14:21,695 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 15:14:21,695 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 15:14:21,695 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2025-04-27 15:14:21,695 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2025-04-27 15:14:21,695 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2025-04-27 15:14:21,695 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2025-04-27 15:14:21,695 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2025-04-27 15:14:21,695 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2025-04-27 15:14:21,695 [INFO] Argument:325 - Argument : Lockvalue: null
+2025-04-27 15:14:21,696 [INFO] Argument:335 - Argument : Lockvalue: null
+2025-04-27 15:14:21,696 [INFO] Argument:325 - Argument : Statevalue: null
+2025-04-27 15:14:21,696 [INFO] Argument:335 - Argument : Statevalue: null
+2025-04-27 15:14:21,696 [INFO] Argument:325 - Argument : Parentvalue: null
+2025-04-27 15:14:21,696 [INFO] Argument:335 - Argument : Parentvalue: null
+2025-04-27 15:14:21,696 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2025-04-27 15:14:21,696 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2025-04-27 15:14:21,696 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 15:14:21,696 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 15:14:21,696 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 15:14:21,696 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 15:14:21,696 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2025-04-27 15:14:21,696 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2025-04-27 15:14:21,696 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2025-04-27 15:14:21,696 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2025-04-27 15:14:21,920 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/license.tmp_save
+2025-04-27 15:14:22,109 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/license.tmp
+2025-04-27 15:14:22,213 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/gpio.c_save
+2025-04-27 15:14:22,339 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/gpio.c
+2025-04-27 15:14:22,342 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/gpio.h_save
+2025-04-27 15:14:22,400 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/gpio.h
+2025-04-27 15:14:23,300 [WARN] IPConfigManager:3217 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2025-04-27 15:14:23,324 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/adc.c_save
+2025-04-27 15:14:23,495 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/adc.c
+2025-04-27 15:14:23,499 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/adc.h_save
+2025-04-27 15:14:23,561 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/adc.h
+2025-04-27 15:14:23,568 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/dac.c_save
+2025-04-27 15:14:23,652 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/dac.c
+2025-04-27 15:14:23,656 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/dac.h_save
+2025-04-27 15:14:23,715 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/dac.h
+2025-04-27 15:14:23,782 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/dma.c_save
+2025-04-27 15:14:23,870 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/dma.c
+2025-04-27 15:14:23,873 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/dma.h_save
+2025-04-27 15:14:23,926 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/dma.h
+2025-04-27 15:14:23,931 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/i2c.c_save
+2025-04-27 15:14:24,009 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/i2c.c
+2025-04-27 15:14:24,013 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/i2c.h_save
+2025-04-27 15:14:24,071 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/i2c.h
+2025-04-27 15:14:24,076 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/i2s.c_save
+2025-04-27 15:14:24,160 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/i2s.c
+2025-04-27 15:14:24,164 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/i2s.h_save
+2025-04-27 15:14:24,218 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/i2s.h
+2025-04-27 15:14:24,223 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/spi.c_save
+2025-04-27 15:14:24,295 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/spi.c
+2025-04-27 15:14:24,297 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/spi.h_save
+2025-04-27 15:14:24,348 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/spi.h
+2025-04-27 15:14:24,362 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/tim.c_save
+2025-04-27 15:14:24,435 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/tim.c
+2025-04-27 15:14:24,436 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/tim.h_save
+2025-04-27 15:14:24,486 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/tim.h
+2025-04-27 15:14:24,491 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/usart.c_save
+2025-04-27 15:14:24,567 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/usart.c
+2025-04-27 15:14:24,569 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/usart.h_save
+2025-04-27 15:14:24,619 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/usart.h
+2025-04-27 15:14:24,626 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/usb_otg.c_save
+2025-04-27 15:14:24,699 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/usb_otg.c
+2025-04-27 15:14:24,700 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/usb_otg.h_save
+2025-04-27 15:14:24,749 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/usb_otg.h
+2025-04-27 15:14:24,764 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_it.c_save
+2025-04-27 15:14:24,846 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_it.c
+2025-04-27 15:14:24,849 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_it.h_save
+2025-04-27 15:14:24,911 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_it.h
+2025-04-27 15:14:24,928 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_hal_msp.c_save
+2025-04-27 15:14:25,010 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_hal_msp.c
+2025-04-27 15:14:25,011 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/system.tmp_save
+2025-04-27 15:14:25,062 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/system.tmp
+2025-04-27 15:14:25,071 [INFO] CodeEngine:319 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_hal_conf.h_save
+2025-04-27 15:14:25,134 [INFO] CodeEngine:343 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_hal_conf.h
+2025-04-27 15:14:25,180 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/main.h_save
+2025-04-27 15:14:25,255 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/main.h
+2025-04-27 15:14:25,258 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/main.c_save
+2025-04-27 15:14:25,350 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/main.c
+2025-04-27 15:14:25,567 [INFO] ProjectBuilder:3324 - Time for Copy HAL[1] : 76mS.
+2025-04-27 15:14:25,572 [INFO] ProjectBuilder:4912 - Project Generator version: 4.6.0.1-B1
+2025-04-27 15:14:25,649 [INFO] ConfigFileManager:1590 - The Die is : DIE413
+2025-04-27 15:14:27,708 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 2134mS.
+2025-04-27 15:14:27,710 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
+2025-04-27 15:14:27,711 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
+2025-04-27 15:22:13,061 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:22:13,074 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:22:13,078 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:22:13,078 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:22:13,353 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:22:13,354 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:22:13,354 [INFO] I2sManager:553 - AudioClock : 47348Divider : 16Odd : 1
+2025-04-27 15:22:13,496 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:22:13,529 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:22:13,529 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:22:13,530 [INFO] I2sManager:553 - AudioClock : 47348Divider : 16Odd : 1
+2025-04-27 15:22:31,495 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,450x177,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:23:47,973 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:23:47,975 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:23:47,976 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:23:47,976 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:23:48,053 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:23:48,054 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:23:48,054 [INFO] I2sManager:553 - AudioClock : 47348Divider : 16Odd : 1
+2025-04-27 15:24:07,198 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:24:07,199 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:24:07,199 [INFO] I2sManager:553 - AudioClock : 47348Divider : 16Odd : 1
+2025-04-27 15:24:07,293 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:24:38,634 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:24:38,649 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:24:38,652 [INFO] I2sManager:553 - AudioClock : 47348Divider : 16Odd : 1
+2025-04-27 15:24:38,879 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:24:39,100 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:24:39,101 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:24:39,101 [INFO] I2sManager:553 - AudioClock : 47348Divider : 16Odd : 1
+2025-04-27 15:24:39,153 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:24:39,168 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:24:39,168 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:24:39,168 [INFO] I2sManager:553 - AudioClock : 47348Divider : 16Odd : 1
+2025-04-27 15:24:39,919 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:24:39,920 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:24:39,920 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:24:39,977 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:24:40,115 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:24:40,116 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:24:40,116 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:24:40,200 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:24:40,215 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:24:40,216 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:24:40,217 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:24:57,854 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:24:57,855 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:24:57,856 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:24:57,911 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:25:04,669 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:25:38,673 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,475x185,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:26:56,023 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:26:56,026 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:26:56,027 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:26:56,027 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:26:56,103 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:26:56,104 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:26:56,104 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:27:01,667 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:27:01,668 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:27:01,668 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:27:12,675 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,475x185,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:27:19,120 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 647471672 Bytes (1073741824)
+2025-04-27 15:27:20,449 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 674734648 Bytes (1073741824)
+2025-04-27 15:27:23,510 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 771203640 Bytes (1073741824)
+2025-04-27 15:27:24,724 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8
+2025-04-27 15:27:24,745 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2S
+2025-04-27 15:27:24,749 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-04-27 15:27:24,749 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: ADC
+2025-04-27 15:27:24,749 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-04-27 15:27:24,749 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2C
+2025-04-27 15:27:24,749 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USB_OTG_FS
+2025-04-27 15:27:24,750 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-04-27 15:27:24,750 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-04-27 15:27:24,750 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DMA
+2025-04-27 15:27:24,750 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DAC
+2025-04-27 15:27:24,752 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-04-27 15:27:24,755 [INFO] CodeGenerator:882 - code generatio: config db path: /Users/juno/.stm32cubemx/databases/DB.6.0.140/db/
+2025-04-27 15:27:24,812 [INFO] Argument:325 - Argument : hdmavalue: null
+2025-04-27 15:27:24,812 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 15:27:24,812 [INFO] Argument:325 - Argument : Instancevalue: DMA2_Stream0
+2025-04-27 15:27:24,812 [INFO] Argument:335 - Argument : Instancevalue: DMA2_Stream0
+2025-04-27 15:27:24,813 [INFO] Argument:325 - Argument : Initvalue: null
+2025-04-27 15:27:24,813 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 15:27:24,813 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2025-04-27 15:27:24,813 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2025-04-27 15:27:24,813 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-04-27 15:27:24,813 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-04-27 15:27:24,813 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 15:27:24,813 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 15:27:24,813 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 15:27:24,813 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 15:27:24,813 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 15:27:24,813 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 15:27:24,813 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 15:27:24,813 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 15:27:24,813 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-27 15:27:24,813 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-27 15:27:24,813 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 15:27:24,813 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 15:27:24,813 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 15:27:24,813 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 15:27:24,813 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2025-04-27 15:27:24,813 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2025-04-27 15:27:24,813 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2025-04-27 15:27:24,814 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2025-04-27 15:27:24,814 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2025-04-27 15:27:24,814 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2025-04-27 15:27:24,814 [INFO] Argument:325 - Argument : Lockvalue: null
+2025-04-27 15:27:24,814 [INFO] Argument:335 - Argument : Lockvalue: null
+2025-04-27 15:27:24,814 [INFO] Argument:325 - Argument : Statevalue: null
+2025-04-27 15:27:24,814 [INFO] Argument:335 - Argument : Statevalue: null
+2025-04-27 15:27:24,814 [INFO] Argument:325 - Argument : Parentvalue: null
+2025-04-27 15:27:24,814 [INFO] Argument:335 - Argument : Parentvalue: null
+2025-04-27 15:27:24,814 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2025-04-27 15:27:24,814 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2025-04-27 15:27:24,814 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 15:27:24,814 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 15:27:24,814 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 15:27:24,814 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 15:27:24,814 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2025-04-27 15:27:24,814 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2025-04-27 15:27:24,814 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2025-04-27 15:27:24,814 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2025-04-27 15:27:24,847 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:27:24,848 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:27:24,854 [INFO] Argument:325 - Argument : hdmavalue: null
+2025-04-27 15:27:24,854 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 15:27:24,854 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Stream0
+2025-04-27 15:27:24,854 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Stream0
+2025-04-27 15:27:24,854 [INFO] Argument:325 - Argument : Initvalue: null
+2025-04-27 15:27:24,854 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 15:27:24,854 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_3
+2025-04-27 15:27:24,854 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_3
+2025-04-27 15:27:24,854 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-04-27 15:27:24,854 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-04-27 15:27:24,854 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 15:27:24,854 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 15:27:24,854 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 15:27:24,854 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 15:27:24,854 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 15:27:24,854 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 15:27:24,854 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 15:27:24,854 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 15:27:24,855 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-27 15:27:24,855 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-27 15:27:24,855 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 15:27:24,855 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 15:27:24,855 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 15:27:24,855 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 15:27:24,855 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2025-04-27 15:27:24,855 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2025-04-27 15:27:24,855 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2025-04-27 15:27:24,855 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2025-04-27 15:27:24,855 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2025-04-27 15:27:24,855 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2025-04-27 15:27:24,855 [INFO] Argument:325 - Argument : Lockvalue: null
+2025-04-27 15:27:24,855 [INFO] Argument:335 - Argument : Lockvalue: null
+2025-04-27 15:27:24,855 [INFO] Argument:325 - Argument : Statevalue: null
+2025-04-27 15:27:24,855 [INFO] Argument:335 - Argument : Statevalue: null
+2025-04-27 15:27:24,855 [INFO] Argument:325 - Argument : Parentvalue: null
+2025-04-27 15:27:24,855 [INFO] Argument:335 - Argument : Parentvalue: null
+2025-04-27 15:27:24,855 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2025-04-27 15:27:24,855 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2025-04-27 15:27:24,855 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 15:27:24,855 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 15:27:24,855 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 15:27:24,855 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 15:27:24,855 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2025-04-27 15:27:24,855 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2025-04-27 15:27:24,855 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2025-04-27 15:27:24,855 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2025-04-27 15:27:24,856 [INFO] Argument:325 - Argument : hdmavalue: null
+2025-04-27 15:27:24,856 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 15:27:24,856 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Stream5
+2025-04-27 15:27:24,856 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Stream5
+2025-04-27 15:27:24,856 [INFO] Argument:325 - Argument : Initvalue: null
+2025-04-27 15:27:24,856 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 15:27:24,856 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2025-04-27 15:27:24,856 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2025-04-27 15:27:24,856 [INFO] Argument:325 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2025-04-27 15:27:24,856 [INFO] Argument:335 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2025-04-27 15:27:24,856 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 15:27:24,856 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 15:27:24,856 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 15:27:24,856 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 15:27:24,857 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 15:27:24,857 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 15:27:24,857 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 15:27:24,857 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 15:27:24,857 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-27 15:27:24,857 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-27 15:27:24,857 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 15:27:24,857 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 15:27:24,857 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 15:27:24,857 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 15:27:24,857 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2025-04-27 15:27:24,857 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2025-04-27 15:27:24,857 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2025-04-27 15:27:24,857 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2025-04-27 15:27:24,857 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2025-04-27 15:27:24,857 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2025-04-27 15:27:24,857 [INFO] Argument:325 - Argument : Lockvalue: null
+2025-04-27 15:27:24,857 [INFO] Argument:335 - Argument : Lockvalue: null
+2025-04-27 15:27:24,857 [INFO] Argument:325 - Argument : Statevalue: null
+2025-04-27 15:27:24,857 [INFO] Argument:335 - Argument : Statevalue: null
+2025-04-27 15:27:24,857 [INFO] Argument:325 - Argument : Parentvalue: null
+2025-04-27 15:27:24,858 [INFO] Argument:335 - Argument : Parentvalue: null
+2025-04-27 15:27:24,858 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2025-04-27 15:27:24,858 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2025-04-27 15:27:24,858 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 15:27:24,858 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 15:27:24,858 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 15:27:24,858 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 15:27:24,858 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2025-04-27 15:27:24,858 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2025-04-27 15:27:24,858 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2025-04-27 15:27:24,858 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2025-04-27 15:27:25,039 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/license.tmp_save
+2025-04-27 15:27:25,496 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/license.tmp
+2025-04-27 15:27:25,637 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/gpio.c_save
+2025-04-27 15:27:25,913 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/gpio.c
+2025-04-27 15:27:25,918 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/gpio.h_save
+2025-04-27 15:27:26,032 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/gpio.h
+2025-04-27 15:27:27,269 [WARN] IPConfigManager:3217 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2025-04-27 15:27:27,292 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/adc.c_save
+2025-04-27 15:27:27,541 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/adc.c
+2025-04-27 15:27:27,544 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/adc.h_save
+2025-04-27 15:27:27,645 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/adc.h
+2025-04-27 15:27:27,649 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/dac.c_save
+2025-04-27 15:27:27,771 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/dac.c
+2025-04-27 15:27:27,772 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/dac.h_save
+2025-04-27 15:27:27,870 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/dac.h
+2025-04-27 15:27:27,965 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/dma.c_save
+2025-04-27 15:27:28,075 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/dma.c
+2025-04-27 15:27:28,077 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/dma.h_save
+2025-04-27 15:27:28,148 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/dma.h
+2025-04-27 15:27:28,155 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/i2c.c_save
+2025-04-27 15:27:28,349 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/i2c.c
+2025-04-27 15:27:28,355 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/i2c.h_save
+2025-04-27 15:27:28,434 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/i2c.h
+2025-04-27 15:27:28,442 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/i2s.c_save
+2025-04-27 15:27:28,546 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/i2s.c
+2025-04-27 15:27:28,548 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/i2s.h_save
+2025-04-27 15:27:28,615 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/i2s.h
+2025-04-27 15:27:28,619 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/tim.c_save
+2025-04-27 15:27:28,714 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/tim.c
+2025-04-27 15:27:28,716 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/tim.h_save
+2025-04-27 15:27:28,780 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/tim.h
+2025-04-27 15:27:28,785 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/usart.c_save
+2025-04-27 15:27:28,880 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/usart.c
+2025-04-27 15:27:28,882 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/usart.h_save
+2025-04-27 15:27:28,954 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/usart.h
+2025-04-27 15:27:28,960 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/usb_otg.c_save
+2025-04-27 15:27:29,040 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/usb_otg.c
+2025-04-27 15:27:29,042 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/usb_otg.h_save
+2025-04-27 15:27:29,106 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/usb_otg.h
+2025-04-27 15:27:29,116 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_it.c_save
+2025-04-27 15:27:29,267 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_it.c
+2025-04-27 15:27:29,269 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_it.h_save
+2025-04-27 15:27:29,332 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_it.h
+2025-04-27 15:27:29,346 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_hal_msp.c_save
+2025-04-27 15:27:29,439 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_hal_msp.c
+2025-04-27 15:27:29,443 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/system.tmp_save
+2025-04-27 15:27:29,500 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/system.tmp
+2025-04-27 15:27:29,508 [INFO] CodeEngine:319 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_hal_conf.h_save
+2025-04-27 15:27:29,585 [INFO] CodeEngine:343 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_hal_conf.h
+2025-04-27 15:27:29,686 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/main.h_save
+2025-04-27 15:27:29,809 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/main.h
+2025-04-27 15:27:29,814 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/main.c_save
+2025-04-27 15:27:29,926 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/main.c
+2025-04-27 15:27:30,177 [INFO] ProjectBuilder:3324 - Time for Copy HAL[1] : 99mS.
+2025-04-27 15:27:30,183 [INFO] ProjectBuilder:4912 - Project Generator version: 4.6.0.1-B1
+2025-04-27 15:27:30,280 [INFO] ConfigFileManager:1590 - The Die is : DIE413
+2025-04-27 15:27:32,229 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 2045mS.
+2025-04-27 15:27:32,234 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
+2025-04-27 15:27:32,236 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 1mS.
+2025-04-27 15:28:30,593 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,450x177,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:31:41,222 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:31:41,229 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:31:41,230 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:31:41,230 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:31:41,305 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:31:41,306 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:31:41,309 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:32:16,714 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:32:16,727 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:32:16,731 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:32:16,935 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:34:44,874 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:34:44,884 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:34:44,886 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:34:44,887 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:34:44,967 [INFO] I2sManager:658 - 1.92E8
+2025-04-27 15:34:44,967 [INFO] I2sManager:195 - I2S Clock Value : 1.92E8
+2025-04-27 15:34:44,968 [INFO] I2sManager:553 - AudioClock : 46875Divider : 8Odd : 0
+2025-04-27 15:34:45,168 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:34:45,169 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:34:45,169 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:34:45,169 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:34:48,404 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:34:48,405 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:34:48,406 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:34:48,406 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:34:48,457 [INFO] I2sManager:658 - 7.68E7
+2025-04-27 15:34:48,457 [INFO] I2sManager:195 - I2S Clock Value : 7.68E7
+2025-04-27 15:34:48,458 [INFO] I2sManager:553 - AudioClock : 50000Divider : 3Odd : 0
+2025-04-27 15:34:48,703 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:34:48,704 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:34:48,705 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:34:48,705 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:35:22,918 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:35:22,921 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:35:22,922 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:35:22,922 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:35:22,995 [INFO] I2sManager:658 - 7.68E7
+2025-04-27 15:35:22,995 [INFO] I2sManager:195 - I2S Clock Value : 7.68E7
+2025-04-27 15:35:22,996 [INFO] I2sManager:553 - AudioClock : 50000Divider : 3Odd : 0
+2025-04-27 15:35:47,482 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,458x185,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:37:47,608 [INFO] I2sManager:658 - 7.68E7
+2025-04-27 15:37:47,624 [INFO] I2sManager:195 - I2S Clock Value : 7.68E7
+2025-04-27 15:37:47,628 [INFO] I2sManager:553 - AudioClock : 50000Divider : 3Odd : 0
+2025-04-27 15:37:57,259 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,458x185,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:38:33,779 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:33,787 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:33,787 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:33,787 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:33,864 [INFO] I2sManager:658 - 2.0E7
+2025-04-27 15:38:33,865 [INFO] I2sManager:195 - I2S Clock Value : 2.0E7
+2025-04-27 15:38:33,949 [INFO] I2sManager:658 - 2.0E7
+2025-04-27 15:38:33,950 [INFO] I2sManager:195 - I2S Clock Value : 2.0E7
+2025-04-27 15:38:34,051 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:34,051 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:34,052 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:34,052 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:34,136 [INFO] I2sManager:658 - 2.0E7
+2025-04-27 15:38:34,136 [INFO] I2sManager:195 - I2S Clock Value : 2.0E7
+2025-04-27 15:38:35,905 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:35,906 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:35,906 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:35,906 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:35,969 [INFO] I2sManager:658 - 1.4285714285714285E7
+2025-04-27 15:38:35,969 [INFO] I2sManager:195 - I2S Clock Value : 1.4285714285714285E7
+2025-04-27 15:38:36,040 [INFO] I2sManager:658 - 1.4285714285714285E7
+2025-04-27 15:38:36,040 [INFO] I2sManager:195 - I2S Clock Value : 1.4285714285714285E7
+2025-04-27 15:38:36,145 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:36,145 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:36,145 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:36,145 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:36,202 [INFO] I2sManager:658 - 1.4285714285714285E7
+2025-04-27 15:38:36,202 [INFO] I2sManager:195 - I2S Clock Value : 1.4285714285714285E7
+2025-04-27 15:38:38,363 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:38,363 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:38,363 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:38,364 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:38,453 [INFO] I2sManager:658 - 1.4285714285714285E7
+2025-04-27 15:38:38,453 [INFO] I2sManager:195 - I2S Clock Value : 1.4285714285714285E7
+2025-04-27 15:38:38,511 [INFO] I2sManager:658 - 1.4285714285714285E7
+2025-04-27 15:38:38,511 [INFO] I2sManager:195 - I2S Clock Value : 1.4285714285714285E7
+2025-04-27 15:38:48,827 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:48,871 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:48,875 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:48,876 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:49,396 [INFO] I2sManager:658 - 4.8E7
+2025-04-27 15:38:49,397 [INFO] I2sManager:195 - I2S Clock Value : 4.8E7
+2025-04-27 15:38:49,397 [INFO] I2sManager:553 - AudioClock : 46875Divider : 2Odd : 0
+2025-04-27 15:38:49,638 [INFO] I2sManager:658 - 4.8E7
+2025-04-27 15:38:49,639 [INFO] I2sManager:195 - I2S Clock Value : 4.8E7
+2025-04-27 15:38:49,639 [INFO] I2sManager:553 - AudioClock : 46875Divider : 2Odd : 0
+2025-04-27 15:38:49,732 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:49,732 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:49,732 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:49,732 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:49,786 [INFO] I2sManager:658 - 4.8E7
+2025-04-27 15:38:49,786 [INFO] I2sManager:195 - I2S Clock Value : 4.8E7
+2025-04-27 15:38:49,787 [INFO] I2sManager:553 - AudioClock : 46875Divider : 2Odd : 0
+2025-04-27 15:38:59,762 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:59,763 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:59,764 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:59,764 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:38:59,820 [INFO] I2sManager:658 - 4.8E7
+2025-04-27 15:38:59,821 [INFO] I2sManager:195 - I2S Clock Value : 4.8E7
+2025-04-27 15:38:59,821 [INFO] I2sManager:553 - AudioClock : 46875Divider : 2Odd : 0
+2025-04-27 15:38:59,873 [INFO] I2sManager:658 - 4.8E7
+2025-04-27 15:38:59,873 [INFO] I2sManager:195 - I2S Clock Value : 4.8E7
+2025-04-27 15:38:59,874 [INFO] I2sManager:553 - AudioClock : 46875Divider : 2Odd : 0
+2025-04-27 15:39:07,165 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:39:07,167 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:39:07,168 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:39:07,168 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:39:07,287 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:39:07,287 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:39:07,288 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:39:07,364 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:39:07,364 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:39:07,364 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:39:07,488 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:39:07,493 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:39:07,493 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:39:07,493 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:39:07,552 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:39:07,552 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:39:07,553 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:39:11,901 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:39:11,901 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:39:11,901 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:39:11,901 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:39:11,958 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:39:11,958 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:39:11,959 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:39:12,011 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:39:12,011 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:39:12,011 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:39:38,979 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,458x185,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:39:46,811 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:39:46,812 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:39:46,812 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:40:33,100 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:40:33,101 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:40:33,103 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:40:51,828 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:40:51,841 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:40:51,844 [INFO] I2sManager:553 - AudioClock : 8012Divider : 97Odd : 1
+2025-04-27 15:40:51,970 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:40:51,970 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:40:51,970 [INFO] I2sManager:553 - AudioClock : 8012Divider : 97Odd : 1
+2025-04-27 15:41:02,037 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:41:02,037 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:41:02,037 [INFO] I2sManager:553 - AudioClock : 47348Divider : 16Odd : 1
+2025-04-27 15:41:02,101 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:41:02,101 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:41:02,101 [INFO] I2sManager:553 - AudioClock : 47348Divider : 16Odd : 1
+2025-04-27 15:41:09,125 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:41:19,141 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:41:25,133 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:41:28,335 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:41:32,105 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:41:39,571 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:41:43,106 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:41:44,968 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:41:51,610 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:41:51,612 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:41:51,613 [INFO] I2sManager:553 - AudioClock : 47348Divider : 16Odd : 1
+2025-04-27 15:41:55,912 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:41:55,912 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:41:55,913 [INFO] I2sManager:553 - AudioClock : 47348Divider : 16Odd : 1
+2025-04-27 15:41:58,390 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:41:58,404 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:41:58,408 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:41:58,929 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:41:58,930 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:41:58,930 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:41:58,987 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:41:58,987 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:41:58,987 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:42:04,599 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:42:04,599 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:42:04,600 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:42:07,249 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:42:10,906 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:42:13,396 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:42:18,352 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:42:18,353 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:42:18,353 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:42:18,353 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:42:18,410 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:42:18,410 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:42:18,410 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:42:18,469 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:42:18,469 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:42:18,470 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:42:20,082 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,458x185,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:42:25,024 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:42:26,907 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:43:40,858 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:43:40,860 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:43:40,861 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:43:40,945 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:47:49,150 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:47:49,166 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:47:49,181 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:47:49,395 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:48:25,214 [INFO] DmaTabbedPanel:205 - Cannot restore the selected Tab for DMA
+2025-04-27 15:49:01,804 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:49:01,806 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:49:01,807 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:49:07,451 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:49:07,452 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:49:14,667 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:49:14,669 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:49:23,053 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:23,122 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:23,123 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:23,123 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:23,123 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:23,123 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:23,124 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:23,124 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:23,124 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:23,124 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:23,125 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:23,125 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:23,125 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:23,126 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:23,126 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:23,167 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:26,881 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:26,881 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:26,882 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:26,882 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:26,882 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:26,882 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:26,882 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:26,883 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:26,883 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:26,883 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:26,883 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:26,884 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:26,884 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:26,884 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:26,915 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:34,313 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,458x185,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:49:41,108 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:41,110 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:41,110 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:41,111 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:41,111 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:41,111 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:41,111 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:41,111 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:41,112 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:41,112 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:41,112 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:41,112 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:41,112 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:41,112 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:49:41,148 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,435 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:50:10,436 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:50:10,437 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:50:10,437 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:50:10,522 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,522 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,523 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,523 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,523 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,524 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,524 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,524 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,524 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,524 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,524 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,524 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,525 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,525 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,565 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,653 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,656 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,656 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,657 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,657 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,657 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,657 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,657 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,657 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,658 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,658 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,658 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,658 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,658 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,686 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:50:10,700 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:50:10,701 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:50:10,701 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:51:04,275 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:51:04,277 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:51:04,278 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:51:04,278 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:51:04,358 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,359 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,359 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,360 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,360 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,360 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,360 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,360 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,361 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,361 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,362 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,362 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,362 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,362 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,404 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,475 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,475 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,475 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,475 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,475 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,476 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,476 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,476 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,476 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,476 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,476 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,476 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,477 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,477 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,506 [INFO] ADCParametersView:116 -                Rank 1 : false
+2025-04-27 15:51:04,521 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:51:04,521 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:51:04,522 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:51:57,738 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 433035712 Bytes (1073741824)
+2025-04-27 15:51:59,437 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 459250112 Bytes (1073741824)
+2025-04-27 15:52:06,535 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 559387072 Bytes (1073741824)
+2025-04-27 15:52:07,758 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8
+2025-04-27 15:52:07,772 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2S
+2025-04-27 15:52:07,776 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-04-27 15:52:07,776 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: ADC
+2025-04-27 15:52:07,776 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-04-27 15:52:07,776 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2C
+2025-04-27 15:52:07,776 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USB_OTG_FS
+2025-04-27 15:52:07,776 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-04-27 15:52:07,776 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-04-27 15:52:07,776 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DMA
+2025-04-27 15:52:07,776 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DAC
+2025-04-27 15:52:07,778 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-04-27 15:52:07,784 [INFO] CodeGenerator:882 - code generatio: config db path: /Users/juno/.stm32cubemx/databases/DB.6.0.140/db/
+2025-04-27 15:52:07,846 [INFO] Argument:325 - Argument : hdmavalue: null
+2025-04-27 15:52:07,847 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 15:52:07,847 [INFO] Argument:325 - Argument : Instancevalue: DMA2_Stream0
+2025-04-27 15:52:07,847 [INFO] Argument:335 - Argument : Instancevalue: DMA2_Stream0
+2025-04-27 15:52:07,847 [INFO] Argument:325 - Argument : Initvalue: null
+2025-04-27 15:52:07,847 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 15:52:07,847 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2025-04-27 15:52:07,847 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2025-04-27 15:52:07,847 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-04-27 15:52:07,848 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-04-27 15:52:07,848 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 15:52:07,848 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 15:52:07,848 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 15:52:07,848 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 15:52:07,848 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 15:52:07,848 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 15:52:07,848 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 15:52:07,848 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 15:52:07,848 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-27 15:52:07,848 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-27 15:52:07,848 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 15:52:07,848 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 15:52:07,848 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 15:52:07,848 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 15:52:07,848 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2025-04-27 15:52:07,848 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2025-04-27 15:52:07,848 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2025-04-27 15:52:07,848 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2025-04-27 15:52:07,848 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2025-04-27 15:52:07,848 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2025-04-27 15:52:07,848 [INFO] Argument:325 - Argument : Lockvalue: null
+2025-04-27 15:52:07,848 [INFO] Argument:335 - Argument : Lockvalue: null
+2025-04-27 15:52:07,848 [INFO] Argument:325 - Argument : Statevalue: null
+2025-04-27 15:52:07,848 [INFO] Argument:335 - Argument : Statevalue: null
+2025-04-27 15:52:07,848 [INFO] Argument:325 - Argument : Parentvalue: null
+2025-04-27 15:52:07,848 [INFO] Argument:335 - Argument : Parentvalue: null
+2025-04-27 15:52:07,848 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2025-04-27 15:52:07,848 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2025-04-27 15:52:07,848 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 15:52:07,848 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 15:52:07,848 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 15:52:07,848 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 15:52:07,848 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2025-04-27 15:52:07,848 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2025-04-27 15:52:07,848 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2025-04-27 15:52:07,848 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2025-04-27 15:52:07,861 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:52:07,861 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:52:07,867 [INFO] Argument:325 - Argument : hdmavalue: null
+2025-04-27 15:52:07,867 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 15:52:07,868 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Stream0
+2025-04-27 15:52:07,868 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Stream0
+2025-04-27 15:52:07,868 [INFO] Argument:325 - Argument : Initvalue: null
+2025-04-27 15:52:07,868 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 15:52:07,868 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_3
+2025-04-27 15:52:07,868 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_3
+2025-04-27 15:52:07,868 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-04-27 15:52:07,868 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-04-27 15:52:07,868 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 15:52:07,868 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 15:52:07,868 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 15:52:07,868 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 15:52:07,868 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 15:52:07,868 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 15:52:07,868 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 15:52:07,868 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 15:52:07,868 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-27 15:52:07,868 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-27 15:52:07,868 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 15:52:07,868 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 15:52:07,868 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 15:52:07,868 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 15:52:07,868 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2025-04-27 15:52:07,868 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2025-04-27 15:52:07,868 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2025-04-27 15:52:07,868 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2025-04-27 15:52:07,868 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2025-04-27 15:52:07,868 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2025-04-27 15:52:07,868 [INFO] Argument:325 - Argument : Lockvalue: null
+2025-04-27 15:52:07,868 [INFO] Argument:335 - Argument : Lockvalue: null
+2025-04-27 15:52:07,868 [INFO] Argument:325 - Argument : Statevalue: null
+2025-04-27 15:52:07,868 [INFO] Argument:335 - Argument : Statevalue: null
+2025-04-27 15:52:07,868 [INFO] Argument:325 - Argument : Parentvalue: null
+2025-04-27 15:52:07,868 [INFO] Argument:335 - Argument : Parentvalue: null
+2025-04-27 15:52:07,868 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2025-04-27 15:52:07,868 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2025-04-27 15:52:07,868 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 15:52:07,868 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 15:52:07,868 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 15:52:07,868 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 15:52:07,868 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2025-04-27 15:52:07,868 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2025-04-27 15:52:07,868 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2025-04-27 15:52:07,868 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2025-04-27 15:52:07,869 [INFO] Argument:325 - Argument : hdmavalue: null
+2025-04-27 15:52:07,869 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 15:52:07,871 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Stream5
+2025-04-27 15:52:07,874 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Stream5
+2025-04-27 15:52:07,875 [INFO] Argument:325 - Argument : Initvalue: null
+2025-04-27 15:52:07,875 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 15:52:07,875 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2025-04-27 15:52:07,875 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2025-04-27 15:52:07,875 [INFO] Argument:325 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2025-04-27 15:52:07,875 [INFO] Argument:335 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2025-04-27 15:52:07,875 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 15:52:07,875 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 15:52:07,875 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 15:52:07,875 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 15:52:07,875 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 15:52:07,875 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 15:52:07,875 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 15:52:07,875 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 15:52:07,875 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-27 15:52:07,875 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-27 15:52:07,875 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 15:52:07,875 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 15:52:07,875 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 15:52:07,875 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 15:52:07,875 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2025-04-27 15:52:07,875 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2025-04-27 15:52:07,875 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2025-04-27 15:52:07,875 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2025-04-27 15:52:07,875 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2025-04-27 15:52:07,875 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2025-04-27 15:52:07,875 [INFO] Argument:325 - Argument : Lockvalue: null
+2025-04-27 15:52:07,875 [INFO] Argument:335 - Argument : Lockvalue: null
+2025-04-27 15:52:07,875 [INFO] Argument:325 - Argument : Statevalue: null
+2025-04-27 15:52:07,875 [INFO] Argument:335 - Argument : Statevalue: null
+2025-04-27 15:52:07,875 [INFO] Argument:325 - Argument : Parentvalue: null
+2025-04-27 15:52:07,875 [INFO] Argument:335 - Argument : Parentvalue: null
+2025-04-27 15:52:07,875 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2025-04-27 15:52:07,875 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2025-04-27 15:52:07,875 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 15:52:07,875 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 15:52:07,876 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 15:52:07,876 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 15:52:07,876 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2025-04-27 15:52:07,876 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2025-04-27 15:52:07,876 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2025-04-27 15:52:07,876 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2025-04-27 15:52:08,125 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/license.tmp_save
+2025-04-27 15:52:08,661 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/license.tmp
+2025-04-27 15:52:08,812 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/gpio.c_save
+2025-04-27 15:52:09,063 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/gpio.c
+2025-04-27 15:52:09,067 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/gpio.h_save
+2025-04-27 15:52:09,186 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/gpio.h
+2025-04-27 15:52:10,479 [WARN] IPConfigManager:3217 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2025-04-27 15:52:10,504 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/adc.c_save
+2025-04-27 15:52:10,806 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/adc.c
+2025-04-27 15:52:10,819 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/adc.h_save
+2025-04-27 15:52:10,919 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/adc.h
+2025-04-27 15:52:10,926 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/dac.c_save
+2025-04-27 15:52:11,062 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/dac.c
+2025-04-27 15:52:11,065 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/dac.h_save
+2025-04-27 15:52:11,154 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/dac.h
+2025-04-27 15:52:11,272 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/dma.c_save
+2025-04-27 15:52:11,389 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/dma.c
+2025-04-27 15:52:11,392 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/dma.h_save
+2025-04-27 15:52:11,498 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/dma.h
+2025-04-27 15:52:11,504 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/i2c.c_save
+2025-04-27 15:52:11,715 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/i2c.c
+2025-04-27 15:52:11,719 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/i2c.h_save
+2025-04-27 15:52:11,785 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/i2c.h
+2025-04-27 15:52:11,795 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/i2s.c_save
+2025-04-27 15:52:11,916 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/i2s.c
+2025-04-27 15:52:11,921 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/i2s.h_save
+2025-04-27 15:52:11,999 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/i2s.h
+2025-04-27 15:52:12,004 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/tim.c_save
+2025-04-27 15:52:12,100 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/tim.c
+2025-04-27 15:52:12,103 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/tim.h_save
+2025-04-27 15:52:12,166 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/tim.h
+2025-04-27 15:52:12,170 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/usart.c_save
+2025-04-27 15:52:12,272 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/usart.c
+2025-04-27 15:52:12,275 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/usart.h_save
+2025-04-27 15:52:12,340 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/usart.h
+2025-04-27 15:52:12,345 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/usb_otg.c_save
+2025-04-27 15:52:12,432 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/usb_otg.c
+2025-04-27 15:52:12,434 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/usb_otg.h_save
+2025-04-27 15:52:12,502 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/usb_otg.h
+2025-04-27 15:52:12,514 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_it.c_save
+2025-04-27 15:52:12,713 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_it.c
+2025-04-27 15:52:12,716 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_it.h_save
+2025-04-27 15:52:12,775 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_it.h
+2025-04-27 15:52:12,790 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_hal_msp.c_save
+2025-04-27 15:52:12,869 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_hal_msp.c
+2025-04-27 15:52:12,871 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/system.tmp_save
+2025-04-27 15:52:12,923 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/system.tmp
+2025-04-27 15:52:12,932 [INFO] CodeEngine:319 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_hal_conf.h_save
+2025-04-27 15:52:13,003 [INFO] CodeEngine:343 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_hal_conf.h
+2025-04-27 15:52:13,121 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/main.h_save
+2025-04-27 15:52:13,236 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/main.h
+2025-04-27 15:52:13,239 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/main.c_save
+2025-04-27 15:52:13,344 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/main.c
+2025-04-27 15:52:13,607 [INFO] ProjectBuilder:3324 - Time for Copy HAL[1] : 97mS.
+2025-04-27 15:52:13,612 [INFO] ProjectBuilder:4912 - Project Generator version: 4.6.0.1-B1
+2025-04-27 15:52:13,701 [INFO] ConfigFileManager:1590 - The Die is : DIE413
+2025-04-27 15:52:18,224 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 4591mS.
+2025-04-27 15:52:18,252 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 3mS.
+2025-04-27 15:52:18,264 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
+2025-04-27 15:54:12,356 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:54:12,361 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:54:12,362 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:54:15,700 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:54:15,700 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:54:15,701 [INFO] I2sManager:553 - AudioClock : 47348Divider : 16Odd : 1
+2025-04-27 15:54:15,933 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:54:15,934 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:54:15,934 [INFO] I2sManager:553 - AudioClock : 47348Divider : 16Odd : 1
+2025-04-27 15:54:16,001 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:54:16,001 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:54:16,001 [INFO] I2sManager:553 - AudioClock : 47348Divider : 16Odd : 1
+2025-04-27 15:54:21,999 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:54:21,999 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:54:22,000 [INFO] I2sManager:553 - AudioClock : 47348Divider : 16Odd : 1
+2025-04-27 15:54:22,162 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:54:22,162 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:54:22,163 [INFO] I2sManager:553 - AudioClock : 47348Divider : 16Odd : 1
+2025-04-27 15:54:22,224 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:54:22,224 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:54:22,224 [INFO] I2sManager:553 - AudioClock : 47348Divider : 16Odd : 1
+2025-04-27 15:54:47,176 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:54:47,178 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:54:47,178 [INFO] I2sManager:553 - AudioClock : 47348Divider : 16Odd : 1
+2025-04-27 15:54:51,438 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:54:51,439 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:54:51,439 [INFO] I2sManager:553 - AudioClock : 47348Divider : 16Odd : 1
+2025-04-27 15:54:54,082 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:54:59,580 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:54:59,584 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:54:59,585 [INFO] I2sManager:553 - AudioClock : 47348Divider : 16Odd : 1
+2025-04-27 15:55:04,247 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:55:09,448 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:55:43,431 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:55:43,433 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:55:43,434 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:55:43,570 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:55:43,752 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:55:43,752 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:55:43,753 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:55:43,843 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:55:43,851 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:55:43,851 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:55:43,851 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:55:46,582 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:55:46,582 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:55:46,582 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:55:46,682 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:55:52,352 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 966245144 Bytes (1073741824)
+2025-04-27 15:55:53,815 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 403760536 Bytes (1073741824)
+2025-04-27 15:55:56,298 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 500755864 Bytes (1073741824)
+2025-04-27 15:55:57,507 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8
+2025-04-27 15:55:57,531 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2S
+2025-04-27 15:55:57,534 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-04-27 15:55:57,534 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: ADC
+2025-04-27 15:55:57,534 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-04-27 15:55:57,534 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2C
+2025-04-27 15:55:57,534 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USB_OTG_FS
+2025-04-27 15:55:57,534 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-04-27 15:55:57,534 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-04-27 15:55:57,534 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DMA
+2025-04-27 15:55:57,534 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DAC
+2025-04-27 15:55:57,535 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-04-27 15:55:57,539 [INFO] CodeGenerator:882 - code generatio: config db path: /Users/juno/.stm32cubemx/databases/DB.6.0.140/db/
+2025-04-27 15:55:57,599 [INFO] Argument:325 - Argument : hdmavalue: null
+2025-04-27 15:55:57,600 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 15:55:57,600 [INFO] Argument:325 - Argument : Instancevalue: DMA2_Stream0
+2025-04-27 15:55:57,600 [INFO] Argument:335 - Argument : Instancevalue: DMA2_Stream0
+2025-04-27 15:55:57,600 [INFO] Argument:325 - Argument : Initvalue: null
+2025-04-27 15:55:57,600 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 15:55:57,600 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2025-04-27 15:55:57,600 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2025-04-27 15:55:57,600 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-04-27 15:55:57,600 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-04-27 15:55:57,600 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 15:55:57,600 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 15:55:57,600 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 15:55:57,601 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 15:55:57,601 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 15:55:57,601 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 15:55:57,601 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 15:55:57,601 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 15:55:57,601 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-27 15:55:57,601 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-27 15:55:57,601 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 15:55:57,601 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 15:55:57,601 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 15:55:57,601 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 15:55:57,601 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2025-04-27 15:55:57,601 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2025-04-27 15:55:57,601 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2025-04-27 15:55:57,601 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2025-04-27 15:55:57,601 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2025-04-27 15:55:57,601 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2025-04-27 15:55:57,601 [INFO] Argument:325 - Argument : Lockvalue: null
+2025-04-27 15:55:57,601 [INFO] Argument:335 - Argument : Lockvalue: null
+2025-04-27 15:55:57,601 [INFO] Argument:325 - Argument : Statevalue: null
+2025-04-27 15:55:57,601 [INFO] Argument:335 - Argument : Statevalue: null
+2025-04-27 15:55:57,601 [INFO] Argument:325 - Argument : Parentvalue: null
+2025-04-27 15:55:57,601 [INFO] Argument:335 - Argument : Parentvalue: null
+2025-04-27 15:55:57,601 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2025-04-27 15:55:57,601 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2025-04-27 15:55:57,601 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 15:55:57,601 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 15:55:57,601 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 15:55:57,601 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 15:55:57,601 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2025-04-27 15:55:57,601 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2025-04-27 15:55:57,601 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2025-04-27 15:55:57,601 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2025-04-27 15:55:57,613 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 15:55:57,614 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 15:55:57,621 [INFO] Argument:325 - Argument : hdmavalue: null
+2025-04-27 15:55:57,622 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 15:55:57,622 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Stream0
+2025-04-27 15:55:57,622 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Stream0
+2025-04-27 15:55:57,622 [INFO] Argument:325 - Argument : Initvalue: null
+2025-04-27 15:55:57,622 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 15:55:57,622 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_3
+2025-04-27 15:55:57,622 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_3
+2025-04-27 15:55:57,622 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-04-27 15:55:57,622 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-04-27 15:55:57,622 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 15:55:57,622 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 15:55:57,622 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 15:55:57,622 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 15:55:57,622 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 15:55:57,622 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 15:55:57,622 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 15:55:57,622 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 15:55:57,622 [INFO] Argument:325 - Argument : Modevalue: DMA_NORMAL
+2025-04-27 15:55:57,622 [INFO] Argument:335 - Argument : Modevalue: DMA_NORMAL
+2025-04-27 15:55:57,622 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 15:55:57,622 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 15:55:57,622 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 15:55:57,622 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 15:55:57,622 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2025-04-27 15:55:57,622 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2025-04-27 15:55:57,622 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2025-04-27 15:55:57,622 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2025-04-27 15:55:57,622 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2025-04-27 15:55:57,622 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2025-04-27 15:55:57,622 [INFO] Argument:325 - Argument : Lockvalue: null
+2025-04-27 15:55:57,622 [INFO] Argument:335 - Argument : Lockvalue: null
+2025-04-27 15:55:57,622 [INFO] Argument:325 - Argument : Statevalue: null
+2025-04-27 15:55:57,622 [INFO] Argument:335 - Argument : Statevalue: null
+2025-04-27 15:55:57,622 [INFO] Argument:325 - Argument : Parentvalue: null
+2025-04-27 15:55:57,622 [INFO] Argument:335 - Argument : Parentvalue: null
+2025-04-27 15:55:57,622 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2025-04-27 15:55:57,622 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2025-04-27 15:55:57,622 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 15:55:57,622 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 15:55:57,622 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 15:55:57,622 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 15:55:57,622 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2025-04-27 15:55:57,622 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2025-04-27 15:55:57,623 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2025-04-27 15:55:57,623 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2025-04-27 15:55:57,624 [INFO] Argument:325 - Argument : hdmavalue: null
+2025-04-27 15:55:57,624 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 15:55:57,625 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Stream5
+2025-04-27 15:55:57,625 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Stream5
+2025-04-27 15:55:57,625 [INFO] Argument:325 - Argument : Initvalue: null
+2025-04-27 15:55:57,625 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 15:55:57,625 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2025-04-27 15:55:57,625 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2025-04-27 15:55:57,625 [INFO] Argument:325 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2025-04-27 15:55:57,625 [INFO] Argument:335 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2025-04-27 15:55:57,625 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 15:55:57,625 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 15:55:57,625 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 15:55:57,625 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 15:55:57,625 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 15:55:57,625 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 15:55:57,625 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 15:55:57,625 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 15:55:57,625 [INFO] Argument:325 - Argument : Modevalue: DMA_NORMAL
+2025-04-27 15:55:57,625 [INFO] Argument:335 - Argument : Modevalue: DMA_NORMAL
+2025-04-27 15:55:57,625 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 15:55:57,625 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 15:55:57,625 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 15:55:57,625 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 15:55:57,625 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2025-04-27 15:55:57,625 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2025-04-27 15:55:57,625 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2025-04-27 15:55:57,625 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2025-04-27 15:55:57,625 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2025-04-27 15:55:57,625 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2025-04-27 15:55:57,625 [INFO] Argument:325 - Argument : Lockvalue: null
+2025-04-27 15:55:57,625 [INFO] Argument:335 - Argument : Lockvalue: null
+2025-04-27 15:55:57,625 [INFO] Argument:325 - Argument : Statevalue: null
+2025-04-27 15:55:57,625 [INFO] Argument:335 - Argument : Statevalue: null
+2025-04-27 15:55:57,625 [INFO] Argument:325 - Argument : Parentvalue: null
+2025-04-27 15:55:57,625 [INFO] Argument:335 - Argument : Parentvalue: null
+2025-04-27 15:55:57,625 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2025-04-27 15:55:57,625 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2025-04-27 15:55:57,625 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 15:55:57,625 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 15:55:57,625 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 15:55:57,625 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 15:55:57,625 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2025-04-27 15:55:57,626 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2025-04-27 15:55:57,626 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2025-04-27 15:55:57,626 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2025-04-27 15:55:57,888 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/license.tmp_save
+2025-04-27 15:55:58,073 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/license.tmp
+2025-04-27 15:55:58,176 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/gpio.c_save
+2025-04-27 15:55:58,284 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/gpio.c
+2025-04-27 15:55:58,287 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/gpio.h_save
+2025-04-27 15:55:58,342 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/gpio.h
+2025-04-27 15:55:59,207 [WARN] IPConfigManager:3217 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2025-04-27 15:55:59,229 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/adc.c_save
+2025-04-27 15:55:59,381 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/adc.c
+2025-04-27 15:55:59,385 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/adc.h_save
+2025-04-27 15:55:59,445 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/adc.h
+2025-04-27 15:55:59,452 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/dac.c_save
+2025-04-27 15:55:59,536 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/dac.c
+2025-04-27 15:55:59,538 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/dac.h_save
+2025-04-27 15:55:59,597 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/dac.h
+2025-04-27 15:55:59,668 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/dma.c_save
+2025-04-27 15:55:59,719 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/dma.c
+2025-04-27 15:55:59,721 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/dma.h_save
+2025-04-27 15:55:59,779 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/dma.h
+2025-04-27 15:55:59,785 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/i2c.c_save
+2025-04-27 15:55:59,859 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/i2c.c
+2025-04-27 15:55:59,860 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/i2c.h_save
+2025-04-27 15:55:59,912 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/i2c.h
+2025-04-27 15:55:59,919 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/i2s.c_save
+2025-04-27 15:56:00,033 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/i2s.c
+2025-04-27 15:56:00,036 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/i2s.h_save
+2025-04-27 15:56:00,090 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/i2s.h
+2025-04-27 15:56:00,096 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/tim.c_save
+2025-04-27 15:56:00,171 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/tim.c
+2025-04-27 15:56:00,178 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/tim.h_save
+2025-04-27 15:56:00,231 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/tim.h
+2025-04-27 15:56:00,236 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/usart.c_save
+2025-04-27 15:56:00,310 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/usart.c
+2025-04-27 15:56:00,312 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/usart.h_save
+2025-04-27 15:56:00,366 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/usart.h
+2025-04-27 15:56:00,371 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/usb_otg.c_save
+2025-04-27 15:56:00,443 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/usb_otg.c
+2025-04-27 15:56:00,445 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/usb_otg.h_save
+2025-04-27 15:56:00,499 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/usb_otg.h
+2025-04-27 15:56:00,507 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_it.c_save
+2025-04-27 15:56:00,587 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_it.c
+2025-04-27 15:56:00,589 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_it.h_save
+2025-04-27 15:56:00,639 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_it.h
+2025-04-27 15:56:00,651 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_hal_msp.c_save
+2025-04-27 15:56:00,720 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_hal_msp.c
+2025-04-27 15:56:00,722 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/system.tmp_save
+2025-04-27 15:56:00,769 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/system.tmp
+2025-04-27 15:56:00,777 [INFO] CodeEngine:319 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_hal_conf.h_save
+2025-04-27 15:56:00,839 [INFO] CodeEngine:343 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_hal_conf.h
+2025-04-27 15:56:00,883 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/main.h_save
+2025-04-27 15:56:00,943 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/main.h
+2025-04-27 15:56:00,946 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/main.c_save
+2025-04-27 15:56:01,031 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/main.c
+2025-04-27 15:56:01,241 [INFO] ProjectBuilder:3324 - Time for Copy HAL[1] : 71mS.
+2025-04-27 15:56:01,248 [INFO] ProjectBuilder:4912 - Project Generator version: 4.6.0.1-B1
+2025-04-27 15:56:01,322 [INFO] ConfigFileManager:1590 - The Die is : DIE413
+2025-04-27 15:56:03,306 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 2058mS.
+2025-04-27 15:56:03,308 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
+2025-04-27 15:56:03,310 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
+2025-04-27 15:58:42,392 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 15:58:42,407 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 15:58:42,411 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 15:58:42,513 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 15:59:49,856 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,450x100,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 16:00:03,091 [INFO] Gpio:277 - dependency for GPIO [ADC1, I2C1, I2S3, RCC, SYS, USART3, USB_OTG_FS]
+2025-04-27 16:00:10,183 [INFO] I2sManager:658 - 5.0E7
+2025-04-27 16:00:10,184 [INFO] I2sManager:195 - I2S Clock Value : 5.0E7
+2025-04-27 16:00:10,185 [INFO] I2sManager:553 - AudioClock : 48828Divider : 2Odd : 0
+2025-04-27 16:00:10,285 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-04-27 16:00:26,010 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 904600480 Bytes (1073741824)
+2025-04-27 16:00:27,691 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 932389792 Bytes (1073741824)
+2025-04-27 16:00:28,242 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 962833560 Bytes (1073741824)
+2025-04-27 16:00:28,511 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8
+2025-04-27 16:00:28,511 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2S
+2025-04-27 16:00:28,511 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-04-27 16:00:28,511 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: ADC
+2025-04-27 16:00:28,511 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-04-27 16:00:28,511 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2C
+2025-04-27 16:00:28,511 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USB_OTG_FS
+2025-04-27 16:00:28,511 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-04-27 16:00:28,511 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-04-27 16:00:28,511 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DMA
+2025-04-27 16:00:28,512 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-04-27 16:00:28,514 [INFO] CodeGenerator:882 - code generatio: config db path: /Users/juno/.stm32cubemx/databases/DB.6.0.140/db/
+2025-04-27 16:00:28,528 [INFO] Argument:325 - Argument : hdmavalue: null
+2025-04-27 16:00:28,528 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 16:00:28,529 [INFO] Argument:325 - Argument : Instancevalue: DMA2_Stream0
+2025-04-27 16:00:28,530 [INFO] Argument:335 - Argument : Instancevalue: DMA2_Stream0
+2025-04-27 16:00:28,530 [INFO] Argument:325 - Argument : Initvalue: null
+2025-04-27 16:00:28,530 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 16:00:28,530 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2025-04-27 16:00:28,531 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2025-04-27 16:00:28,531 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-04-27 16:00:28,531 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-04-27 16:00:28,531 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 16:00:28,531 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 16:00:28,531 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 16:00:28,531 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 16:00:28,531 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 16:00:28,531 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 16:00:28,531 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 16:00:28,531 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 16:00:28,531 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-27 16:00:28,531 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2025-04-27 16:00:28,531 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 16:00:28,531 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 16:00:28,531 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 16:00:28,531 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 16:00:28,531 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2025-04-27 16:00:28,531 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2025-04-27 16:00:28,531 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2025-04-27 16:00:28,531 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2025-04-27 16:00:28,531 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2025-04-27 16:00:28,532 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2025-04-27 16:00:28,532 [INFO] Argument:325 - Argument : Lockvalue: null
+2025-04-27 16:00:28,532 [INFO] Argument:335 - Argument : Lockvalue: null
+2025-04-27 16:00:28,532 [INFO] Argument:325 - Argument : Statevalue: null
+2025-04-27 16:00:28,532 [INFO] Argument:335 - Argument : Statevalue: null
+2025-04-27 16:00:28,532 [INFO] Argument:325 - Argument : Parentvalue: null
+2025-04-27 16:00:28,532 [INFO] Argument:335 - Argument : Parentvalue: null
+2025-04-27 16:00:28,532 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2025-04-27 16:00:28,532 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2025-04-27 16:00:28,532 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 16:00:28,532 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 16:00:28,532 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 16:00:28,532 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 16:00:28,532 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2025-04-27 16:00:28,532 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2025-04-27 16:00:28,532 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2025-04-27 16:00:28,532 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2025-04-27 16:00:28,537 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-04-27 16:00:28,537 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-04-27 16:00:28,540 [INFO] Argument:325 - Argument : hdmavalue: null
+2025-04-27 16:00:28,540 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 16:00:28,540 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Stream0
+2025-04-27 16:00:28,540 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Stream0
+2025-04-27 16:00:28,540 [INFO] Argument:325 - Argument : Initvalue: null
+2025-04-27 16:00:28,540 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 16:00:28,540 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_3
+2025-04-27 16:00:28,540 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_3
+2025-04-27 16:00:28,540 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-04-27 16:00:28,540 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-04-27 16:00:28,540 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 16:00:28,540 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 16:00:28,540 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 16:00:28,540 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 16:00:28,540 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 16:00:28,540 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 16:00:28,540 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 16:00:28,540 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 16:00:28,540 [INFO] Argument:325 - Argument : Modevalue: DMA_NORMAL
+2025-04-27 16:00:28,540 [INFO] Argument:335 - Argument : Modevalue: DMA_NORMAL
+2025-04-27 16:00:28,540 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 16:00:28,540 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 16:00:28,540 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 16:00:28,540 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 16:00:28,540 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2025-04-27 16:00:28,540 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2025-04-27 16:00:28,540 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2025-04-27 16:00:28,540 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2025-04-27 16:00:28,540 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2025-04-27 16:00:28,540 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2025-04-27 16:00:28,540 [INFO] Argument:325 - Argument : Lockvalue: null
+2025-04-27 16:00:28,540 [INFO] Argument:335 - Argument : Lockvalue: null
+2025-04-27 16:00:28,540 [INFO] Argument:325 - Argument : Statevalue: null
+2025-04-27 16:00:28,540 [INFO] Argument:335 - Argument : Statevalue: null
+2025-04-27 16:00:28,541 [INFO] Argument:325 - Argument : Parentvalue: null
+2025-04-27 16:00:28,541 [INFO] Argument:335 - Argument : Parentvalue: null
+2025-04-27 16:00:28,541 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2025-04-27 16:00:28,541 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2025-04-27 16:00:28,541 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 16:00:28,541 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 16:00:28,541 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 16:00:28,541 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 16:00:28,541 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2025-04-27 16:00:28,541 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2025-04-27 16:00:28,541 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2025-04-27 16:00:28,541 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2025-04-27 16:00:28,541 [INFO] Argument:325 - Argument : hdmavalue: null
+2025-04-27 16:00:28,541 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 16:00:28,541 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Stream5
+2025-04-27 16:00:28,542 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Stream5
+2025-04-27 16:00:28,542 [INFO] Argument:325 - Argument : Initvalue: null
+2025-04-27 16:00:28,542 [INFO] Argument:327 - 	 sub Args: 
+2025-04-27 16:00:28,542 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2025-04-27 16:00:28,542 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2025-04-27 16:00:28,542 [INFO] Argument:325 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2025-04-27 16:00:28,542 [INFO] Argument:335 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2025-04-27 16:00:28,542 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 16:00:28,542 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-04-27 16:00:28,542 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 16:00:28,542 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-04-27 16:00:28,542 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 16:00:28,542 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-04-27 16:00:28,542 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 16:00:28,542 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-04-27 16:00:28,542 [INFO] Argument:325 - Argument : Modevalue: DMA_NORMAL
+2025-04-27 16:00:28,542 [INFO] Argument:335 - Argument : Modevalue: DMA_NORMAL
+2025-04-27 16:00:28,542 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 16:00:28,542 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2025-04-27 16:00:28,542 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 16:00:28,542 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2025-04-27 16:00:28,542 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2025-04-27 16:00:28,542 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2025-04-27 16:00:28,542 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2025-04-27 16:00:28,542 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2025-04-27 16:00:28,542 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2025-04-27 16:00:28,542 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2025-04-27 16:00:28,542 [INFO] Argument:325 - Argument : Lockvalue: null
+2025-04-27 16:00:28,542 [INFO] Argument:335 - Argument : Lockvalue: null
+2025-04-27 16:00:28,542 [INFO] Argument:325 - Argument : Statevalue: null
+2025-04-27 16:00:28,542 [INFO] Argument:335 - Argument : Statevalue: null
+2025-04-27 16:00:28,542 [INFO] Argument:325 - Argument : Parentvalue: null
+2025-04-27 16:00:28,542 [INFO] Argument:335 - Argument : Parentvalue: null
+2025-04-27 16:00:28,542 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2025-04-27 16:00:28,542 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2025-04-27 16:00:28,544 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 16:00:28,544 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2025-04-27 16:00:28,544 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 16:00:28,546 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2025-04-27 16:00:28,547 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2025-04-27 16:00:28,548 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2025-04-27 16:00:28,549 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2025-04-27 16:00:28,550 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2025-04-27 16:00:29,111 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/license.tmp_save
+2025-04-27 16:00:29,347 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/license.tmp
+2025-04-27 16:00:29,584 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/gpio.c_save
+2025-04-27 16:00:29,697 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/gpio.c
+2025-04-27 16:00:29,700 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/gpio.h_save
+2025-04-27 16:00:29,755 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/gpio.h
+2025-04-27 16:00:30,487 [WARN] IPConfigManager:3217 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2025-04-27 16:00:30,509 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/adc.c_save
+2025-04-27 16:00:30,618 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/adc.c
+2025-04-27 16:00:30,622 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/adc.h_save
+2025-04-27 16:00:30,676 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/adc.h
+2025-04-27 16:00:30,756 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/dma.c_save
+2025-04-27 16:00:30,814 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/dma.c
+2025-04-27 16:00:30,815 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/dma.h_save
+2025-04-27 16:00:30,867 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/dma.h
+2025-04-27 16:00:30,872 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/i2c.c_save
+2025-04-27 16:00:30,967 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/i2c.c
+2025-04-27 16:00:30,970 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/i2c.h_save
+2025-04-27 16:00:31,020 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/i2c.h
+2025-04-27 16:00:31,024 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/i2s.c_save
+2025-04-27 16:00:31,105 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/i2s.c
+2025-04-27 16:00:31,107 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/i2s.h_save
+2025-04-27 16:00:31,159 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/i2s.h
+2025-04-27 16:00:31,166 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/tim.c_save
+2025-04-27 16:00:31,240 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/tim.c
+2025-04-27 16:00:31,242 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/tim.h_save
+2025-04-27 16:00:31,294 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/tim.h
+2025-04-27 16:00:31,299 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/usart.c_save
+2025-04-27 16:00:31,376 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/usart.c
+2025-04-27 16:00:31,377 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/usart.h_save
+2025-04-27 16:00:31,427 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/usart.h
+2025-04-27 16:00:31,434 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/usb_otg.c_save
+2025-04-27 16:00:31,507 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/usb_otg.c
+2025-04-27 16:00:31,509 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/usb_otg.h_save
+2025-04-27 16:00:31,561 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/usb_otg.h
+2025-04-27 16:00:31,583 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_it.c_save
+2025-04-27 16:00:31,660 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_it.c
+2025-04-27 16:00:31,662 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_it.h_save
+2025-04-27 16:00:31,712 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_it.h
+2025-04-27 16:00:31,722 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_hal_msp.c_save
+2025-04-27 16:00:31,811 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/stm32f4xx_hal_msp.c
+2025-04-27 16:00:31,813 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/system.tmp_save
+2025-04-27 16:00:31,871 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/MXTmpFiles/system.tmp
+2025-04-27 16:00:31,879 [INFO] CodeEngine:319 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_hal_conf.h_save
+2025-04-27 16:00:31,941 [INFO] CodeEngine:343 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/stm32f4xx_hal_conf.h
+2025-04-27 16:00:31,989 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/main.h_save
+2025-04-27 16:00:32,047 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Inc/main.h
+2025-04-27 16:00:32,050 [INFO] CodeEngine:263 - oldGeneratedFile, /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/main.c_save
+2025-04-27 16:00:32,131 [INFO] CodeEngine:287 - Generated code: /Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Core/Src/main.c
+2025-04-27 16:00:32,516 [INFO] ProjectBuilder:3324 - Time for Copy HAL[1] : 81mS.
+2025-04-27 16:00:32,527 [INFO] ProjectBuilder:4912 - Project Generator version: 4.6.0.1-B1
+2025-04-27 16:00:32,630 [INFO] ConfigFileManager:1590 - The Die is : DIE413
+2025-04-27 16:00:34,842 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 2314mS.
+2025-04-27 16:00:34,843 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
+2025-04-27 16:00:34,844 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.

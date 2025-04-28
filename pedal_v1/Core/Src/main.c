@@ -19,7 +19,6 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "adc.h"
-#include "dac.h"
 #include "dma.h"
 #include "i2c.h"
 #include "i2s.h"
@@ -54,10 +53,10 @@ extern ADC_HandleTypeDef hadc1;
 
 #define AUDIO_BLOCK_SIZE 256
 #define ADC_BUFFER_SIZE  AUDIO_BLOCK_SIZE
-#define I2S_BUFFER_SIZE  2 * AUDIO_BLOCK_SIZE
+#define DAC_BUFFER_SIZE  AUDIO_BLOCK_SIZE
 
 uint16_t adcData[ADC_BUFFER_SIZE];
-int16_t dacData[I2S_BUFFER_SIZE];
+int16_t dacData[DAC_BUFFER_SIZE];
 
 static volatile uint16_t *inBufPtr;
 static volatile int16_t *outBufPtr = &dacData[0];
@@ -73,9 +72,6 @@ uint8_t dataReadyFlag;
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-#define AUDIO_BLOCK_SIZE 256
-#define ADC_BUFFER_SIZE  AUDIO_BLOCK_SIZE
-#define I2S_BUFFER_SIZE  2 * AUDIO_BLOCK_SIZE
 
 /* USER CODE END PV */
 
@@ -83,29 +79,50 @@ uint8_t dataReadyFlag;
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
 void processData() {
-	static float leftIn, leftOut;
-	static float rightIn, rightOut;
+	printf("Process data running\n");
 
-	for (uint8_t n = 0; n < AUDIO_BLOCK_SIZE; n += 2) {
+
+	for (uint8_t n = 0; n < AUDIO_BLOCK_SIZE / 2; n += 2) {
+//		uint32_t sample = ((uint32_t *)inBufPtr)[n]; // Cast to 32-bit pointer and read
+//		printf("Buffer[%d] = %lu\n", n, sample);
+//		uint16_t leftIn  = sample & 0xFFFF;         // lower 16 bits
+//		uint16_t rightIn = (sample >> 16) & 0xFFFF; // upper 16 bits
+//
+//		int16_t leftOut = ((int32_t)leftIn - 2048) * 16;
+//		int16_t rightOut = ((int32_t)rightIn - 2048) * 16;
+//
+//		outBufPtr[2 * n] = leftOut;
+//		outBufPtr[2 * n + 1] = rightOut;
+//
+		static float leftIn, leftOut;
+		static float rightIn, rightOut;
 		// Left channel
-		leftIn = ((int16_t)inBufPtr[n] - 2048) / 2047.0f;  // for ADC values
-//		if (leftIn > 1.0f) {
-//			leftIn -= 2.0f;
-//		}
+		leftIn = ((int16_t)inBufPtr[n] - 2300);  // for ADC values
 		leftOut = leftIn;
 
-		outBufPtr[n] = (int16_t) (10000.0f * leftOut);
+		outBufPtr[n] = (int16_t) (16 * leftOut);
+//		printf("LeftOut: %hd\n", (int16_t) (16 * leftOut));
 
 		// Right channel
-		rightIn = ((int16_t)inBufPtr[n + 1] - 2048) / 2047.0f;  // for ADC values
-//		if (rightIn > 1.0f) {
-//			rightIn -= 2.0f;
-//		}
+		rightIn = ((int16_t)inBufPtr[n + 1] - 2300);  // for ADC values
 		rightOut = rightIn;
 
-		outBufPtr[n + 1] = (int16_t) (10000.0f * rightOut);
+		outBufPtr[n + 1] = (int16_t) (16 * rightOut);
+//		printf("RightOut: %hd\n", (int16_t) (16 * rightOut));
 	}
 	dataReadyFlag = 0;
+}
+
+void printADCData(void) {
+    for (uint16_t i = 0; i < ADC_BUFFER_SIZE; i++) {
+        printf("adcData[%d] = %u\n", i, adcData[i]);
+    }
+}
+
+void printDACData(void) {
+    for (uint16_t i = 0; i < DAC_BUFFER_SIZE; i++) {
+        printf("dacData[%d] = %hd\n", i, dacData[i]);
+    }
 }
 /* USER CODE END PFP */
 
@@ -124,7 +141,7 @@ void HAL_I2S_TxHalfCpltCallback(I2S_HandleTypeDef *hi2s)
 void HAL_I2S_TxCpltCallback(I2S_HandleTypeDef *hi2s)
 {
     inBufPtr = &adcData[ADC_BUFFER_SIZE / 2];
-    outBufPtr = &dacData[I2S_BUFFER_SIZE / 2];
+    outBufPtr = &dacData[DAC_BUFFER_SIZE / 2];
 
     dataReadyFlag = 1;
 }
@@ -162,30 +179,31 @@ int main(void)
   MX_GPIO_Init();
   MX_DMA_Init();
   MX_I2C1_Init();
-  MX_SPI1_Init();
-  MX_DAC_Init();
   MX_I2S3_Init();
   MX_ADC1_Init();
   MX_USB_OTG_FS_PCD_Init();
-  MX_USART2_UART_Init();
   MX_TIM2_Init();
+  MX_USART3_UART_Init();
+  MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
   cs43l22_init();
   cs43l22_unmute();  // unmute
 
   HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adcData, ADC_BUFFER_SIZE);
-  HAL_I2S_Transmit_DMA(&hi2s3, (uint16_t*)dacData, I2S_BUFFER_SIZE);
-//  cs43l22_play((int16_t*)dacData, I2S_BUFFER_SIZE);
+  HAL_TIM_Base_Start(&htim2);
+  cs43l22_play((int16_t*)dacData, DAC_BUFFER_SIZE);
   /* USER CODE END 2 */
-  HAL_I2S_TxHalfCpltCallback(&hi2s3);
-  HAL_I2S_TxCpltCallback(&hi2s3);
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
 	  if(dataReadyFlag) {
+
 		  processData();
+		  printDACData();
+//		  printADCData();
+
 	  }
   }
     /* USER CODE END WHILE */
@@ -241,7 +259,17 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+int _write(int file, char *ptr, int len)
+{
+  (void)file;
+  int DataIdx;
 
+  for (DataIdx = 0; DataIdx < len; DataIdx++)
+  {
+    ITM_SendChar(*ptr++);
+  }
+  return len;
+}
 /* USER CODE END 4 */
 
 /**

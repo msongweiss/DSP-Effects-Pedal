@@ -1,5 +1,5 @@
 #include "cs43l22.h"
-#include "stdio.h"
+#include <stdio.h>
 
 static codec_state cs43l22_state = NOTREADY;
 

@@ -1,55 +1,57 @@
-19:52:50 **** Incremental Build of configuration Debug for project pedal_v1 ****
+22:10:38 **** Incremental Build of configuration Debug for project pedal_v1 ****
 make -j9 all 
-/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.macos64_1.0.0.202411102158/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld: ./Core/Src/main.o:/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Debug/../Core/Src/main.c:59: multiple definition of `adcData'; ./Core/Src/audio.o:/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Debug/../Core/Src/audio.c:9: first defined here
-arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.macos64_1.0.0.202411102158/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld: ./Core/Src/main.o:/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Debug/../Core/Src/main.c:60: multiple definition of `dacData'; ./Core/Src/audio.o:/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Debug/../Core/Src/audio.c:10: first defined here
-/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.macos64_1.0.0.202411102158/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld: ./Core/Src/main.o:/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Debug/../Core/Src/main.c:65: multiple definition of `dataReadyFlag'; ./Core/Src/audio.o:/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Debug/../Core/Src/audio.c:12: first defined here
-collect2: error: ld returned 1 exit status
-make: *** [makefile:68: pedal_v1.elf] Error 1
-"make -j9 all" terminated with exit code 2. Build might be incomplete.
-19:53:28 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Core/Src/audio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/audio.d" -MT"Core/Src/audio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/audio.o"
-../Core/Src/audio.c: In function 'Audio_Init':
-../Core/Src/audio.c:18:28: error: 'dacData' undeclared (first use in this function)
-   18 |     cs43l22_play((int16_t*)dacData, I2S_BUFFER_SIZE);
-      |                            ^~~~~~~
-../Core/Src/audio.c:18:28: note: each undeclared identifier is reported only once for each function it appears in
-../Core/Src/audio.c: In function 'Audio_Start':
-../Core/Src/audio.c:24:42: error: 'adcData' undeclared (first use in this function)
-   24 |     HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adcData, ADC_BUFFER_SIZE);
-      |                                          ^~~~~~~
-../Core/Src/audio.c:25:54: error: 'dacData' undeclared (first use in this function)
-   25 |     HAL_I2SEx_TransmitReceive_DMA(&hi2s3, (uint16_t*)dacData, (uint16_t*)adcData, I2S_BUFFER_SIZE);
-      |                                                      ^~~~~~~
-make: *** [Core/Src/subdir.mk:73: Core/Src/audio.o] Error 1
-"make -j9 all" terminated with exit code 2. Build might be incomplete.
-19:54:30 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o"
+arm-none-eabi-gcc "../Drivers/BSP/STM32F4-Discovery/stm32f4_discovery.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/BSP/STM32F4-Discovery/stm32f4_discovery.d" -MT"Drivers/BSP/STM32F4-Discovery/stm32f4_discovery.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/BSP/STM32F4-Discovery/stm32f4_discovery.o"
+arm-none-eabi-gcc "../Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_accelerometer.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_accelerometer.d" -MT"Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_accelerometer.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_accelerometer.o"
+arm-none-eabi-gcc "../Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_audio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_audio.d" -MT"Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_audio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_audio.o"
 arm-none-eabi-gcc "../Core/Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/adc.d" -MT"Core/Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/adc.o"
 arm-none-eabi-gcc "../Core/Src/cs43l22.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/cs43l22.d" -MT"Core/Src/cs43l22.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/cs43l22.o"
-arm-none-eabi-gcc "../Core/Src/dac.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/dac.d" -MT"Core/Src/dac.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/dac.o"
+In file included from ../Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_audio.c:115:
+../Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_audio.h:33:10: fatal error: ../../../Middlewares/ST/STM32_Audio/Addons/PDM/Inc/pdm2pcm_glo.h: No such file or directory
+   33 | #include "../../../Middlewares/ST/STM32_Audio/Addons/PDM/Inc/pdm2pcm_glo.h"
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Drivers/BSP/STM32F4-Discovery/subdir.mk:25: Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_audio.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j9 all" terminated with exit code 2. Build might be incomplete.
+22:11:03 **** Incremental Build of configuration Debug for project pedal_v1 ****
+make -j9 all 
+arm-none-eabi-gcc "../Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_audio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_audio.d" -MT"Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_audio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_audio.o"
 arm-none-eabi-gcc "../Core/Src/dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/dma.d" -MT"Core/Src/dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/dma.o"
 arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
 arm-none-eabi-gcc "../Core/Src/i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/i2c.d" -MT"Core/Src/i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/i2c.o"
 arm-none-eabi-gcc "../Core/Src/i2s.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/i2s.d" -MT"Core/Src/i2s.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/i2s.o"
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc "../Core/Src/retarget.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/retarget.d" -MT"Core/Src/retarget.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/retarget.o"
-../Core/Src/main.c:35:10: fatal error: audio.h: No such file or directory
-   35 | #include "audio.h"
-      |          ^~~~~~~~~
-compilation terminated.
-make: *** [Core/Src/subdir.mk:70: Core/Src/main.o] Error 1
-make: *** Waiting for unfinished jobs....
-"make -j9 all" terminated with exit code 2. Build might be incomplete.
-19:54:43 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc "../Core/Src/spi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/spi.d" -MT"Core/Src/spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/spi.o"
 arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
 arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
-arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
-arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
 arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
 arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
 arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usart.o"
@@ -60,404 +62,33 @@ Finished building target: pedal_v1.elf
 arm-none-eabi-size  pedal_v1.elf 
 arm-none-eabi-objdump -h -S pedal_v1.elf  > "pedal_v1.list"
    text	   data	    bss	    dec	    hex	filename
-  32636	     20	   5148	  37804	   93ac	pedal_v1.elf
+  37344	    112	   4952	  42408	   a5a8	pedal_v1.elf
 Finished building: default.size.stdout
  
 Finished building: pedal_v1.list
  
-20:00:08 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: pedal_v1.elf
- 
-arm-none-eabi-size  pedal_v1.elf 
-arm-none-eabi-objdump -h -S pedal_v1.elf  > "pedal_v1.list"
-   text	   data	    bss	    dec	    hex	filename
-  32624	     20	   5148	  37792	   93a0	pedal_v1.elf
-Finished building: default.size.stdout
- 
-Finished building: pedal_v1.list
- 
-20:01:12 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: pedal_v1.elf
- 
-arm-none-eabi-size  pedal_v1.elf 
-arm-none-eabi-objdump -h -S pedal_v1.elf  > "pedal_v1.list"
-   text	   data	    bss	    dec	    hex	filename
-  32620	     20	   5148	  37788	   939c	pedal_v1.elf
-Finished building: default.size.stdout
- 
-Finished building: pedal_v1.list
- 
-20:08:52 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'processData':
-../Core/Src/main.c:113:35: warning: implicit declaration of function 'sinf' [-Wimplicit-function-declaration]
-  113 |             float sample = 0.3f * sinf(2.0f * M_PI * test_freq * phase / fs);
-      |                                   ^~~~
-../Core/Src/main.c:37:1: note: include '<math.h>' or provide a declaration of 'sinf'
-   36 | #include <stdio.h>
-  +++ |+#include <math.h>
-   37 | /* USER CODE END Includes */
-../Core/Src/main.c:113:35: warning: incompatible implicit declaration of built-in function 'sinf' [-Wbuiltin-declaration-mismatch]
-  113 |             float sample = 0.3f * sinf(2.0f * M_PI * test_freq * phase / fs);
-      |                                   ^~~~
-../Core/Src/main.c:113:35: note: include '<math.h>' or provide a declaration of 'sinf'
-../Core/Src/main.c:113:47: error: 'M_PI' undeclared (first use in this function)
-  113 |             float sample = 0.3f * sinf(2.0f * M_PI * test_freq * phase / fs);
-      |                                               ^~~~
-../Core/Src/main.c:113:47: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [Core/Src/subdir.mk:70: Core/Src/main.o] Error 1
-"make -j9 all" terminated with exit code 2. Build might be incomplete.
-20:09:10 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'processData':
-../Core/Src/main.c:113:35: warning: implicit declaration of function 'sinf' [-Wimplicit-function-declaration]
-  113 |             float sample = 0.3f * sinf(2.0f * 3.14 * test_freq * phase / fs);
-      |                                   ^~~~
-../Core/Src/main.c:37:1: note: include '<math.h>' or provide a declaration of 'sinf'
-   36 | #include <stdio.h>
-  +++ |+#include <math.h>
-   37 | /* USER CODE END Includes */
-../Core/Src/main.c:113:35: warning: incompatible implicit declaration of built-in function 'sinf' [-Wbuiltin-declaration-mismatch]
-  113 |             float sample = 0.3f * sinf(2.0f * 3.14 * test_freq * phase / fs);
-      |                                   ^~~~
-../Core/Src/main.c:113:35: note: include '<math.h>' or provide a declaration of 'sinf'
-arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: pedal_v1.elf
- 
-arm-none-eabi-size  pedal_v1.elf 
-arm-none-eabi-objdump -h -S pedal_v1.elf  > "pedal_v1.list"
-   text	   data	    bss	    dec	    hex	filename
-  38328	     20	   5140	  43488	   a9e0	pedal_v1.elf
-Finished building: default.size.stdout
- 
-Finished building: pedal_v1.list
- 
-20:09:22 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'processData':
-../Core/Src/main.c:113:35: warning: implicit declaration of function 'sin' [-Wimplicit-function-declaration]
-  113 |             float sample = 0.3f * sin(2.0f * 3.14 * test_freq * phase / fs);
-      |                                   ^~~
-../Core/Src/main.c:37:1: note: include '<math.h>' or provide a declaration of 'sin'
-   36 | #include <stdio.h>
-  +++ |+#include <math.h>
-   37 | /* USER CODE END Includes */
-../Core/Src/main.c:113:35: warning: incompatible implicit declaration of built-in function 'sin' [-Wbuiltin-declaration-mismatch]
-  113 |             float sample = 0.3f * sin(2.0f * 3.14 * test_freq * phase / fs);
-      |                                   ^~~
-../Core/Src/main.c:113:35: note: include '<math.h>' or provide a declaration of 'sin'
-arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: pedal_v1.elf
- 
-arm-none-eabi-size  pedal_v1.elf 
-arm-none-eabi-objdump -h -S pedal_v1.elf  > "pedal_v1.list"
-   text	   data	    bss	    dec	    hex	filename
-  39704	     20	   5140	  44864	   af40	pedal_v1.elf
-Finished building: default.size.stdout
- 
-Finished building: pedal_v1.list
- 
-20:12:42 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: pedal_v1.elf
- 
-arm-none-eabi-size  pedal_v1.elf 
-arm-none-eabi-objdump -h -S pedal_v1.elf  > "pedal_v1.list"
-   text	   data	    bss	    dec	    hex	filename
-  39704	     20	   5140	  44864	   af40	pedal_v1.elf
-Finished building: default.size.stdout
- 
-Finished building: pedal_v1.list
- 
-20:17:46 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'processData':
-../Core/Src/main.c:111:22: warning: unused variable 'phase' [-Wunused-variable]
-  111 |         static float phase = 0.0f;
-      |                      ^~~~~
-arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: pedal_v1.elf
- 
-arm-none-eabi-size  pedal_v1.elf 
-arm-none-eabi-objdump -h -S pedal_v1.elf  > "pedal_v1.list"
-   text	   data	    bss	    dec	    hex	filename
-  38768	     20	   5132	  43920	   ab90	pedal_v1.elf
-Finished building: default.size.stdout
- 
-Finished building: pedal_v1.list
- 
-20:20:27 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: pedal_v1.elf
- 
-arm-none-eabi-size  pedal_v1.elf 
-arm-none-eabi-objdump -h -S pedal_v1.elf  > "pedal_v1.list"
-   text	   data	    bss	    dec	    hex	filename
-  38768	     20	   5132	  43920	   ab90	pedal_v1.elf
-Finished building: default.size.stdout
- 
-Finished building: pedal_v1.list
- 
-20:24:00 **** Incremental Build of configuration Debug for project pedal_v1 ****
+22:11:37 **** Incremental Build of configuration Debug for project pedal_v1 ****
 make -j9 all 
 arm-none-eabi-size  pedal_v1.elf 
    text	   data	    bss	    dec	    hex	filename
-  38768	     20	   5132	  43920	   ab90	pedal_v1.elf
+  37344	    112	   4952	  42408	   a5a8	pedal_v1.elf
 Finished building: default.size.stdout
  
-20:31:32 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Core/Src/cs43l22.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/cs43l22.d" -MT"Core/Src/cs43l22.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/cs43l22.o"
-arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: pedal_v1.elf
- 
-arm-none-eabi-size  pedal_v1.elf 
-arm-none-eabi-objdump -h -S pedal_v1.elf  > "pedal_v1.list"
-   text	   data	    bss	    dec	    hex	filename
-  38208	     20	   5132	  43360	   a960	pedal_v1.elf
-Finished building: default.size.stdout
- 
-Finished building: pedal_v1.list
- 
-20:33:55 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Core/Src/cs43l22.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/cs43l22.d" -MT"Core/Src/cs43l22.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/cs43l22.o"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: pedal_v1.elf
- 
-arm-none-eabi-size  pedal_v1.elf 
-arm-none-eabi-objdump -h -S pedal_v1.elf  > "pedal_v1.list"
-   text	   data	    bss	    dec	    hex	filename
-  37616	     20	   5132	  42768	   a710	pedal_v1.elf
-Finished building: default.size.stdout
- 
-Finished building: pedal_v1.list
- 
-20:41:49 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: pedal_v1.elf
- 
-arm-none-eabi-size  pedal_v1.elf 
-arm-none-eabi-objdump -h -S pedal_v1.elf  > "pedal_v1.list"
-   text	   data	    bss	    dec	    hex	filename
-  30176	     20	   5132	  35328	   8a00	pedal_v1.elf
-Finished building: default.size.stdout
- 
-Finished building: pedal_v1.list
- 
-20:42:35 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.macos64_1.0.0.202411102158/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld: ./Core/Src/main.o: in function `HAL_I2S_TxHalfCpltCallback':
-/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Debug/../Core/Src/main.c:117: multiple definition of `HAL_I2S_TxHalfCpltCallback'; ./Core/Src/cs43l22.o:/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Debug/../Core/Src/cs43l22.c:255: first defined here
-/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.macos64_1.0.0.202411102158/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld: ./Core/Src/main.o: in function `HAL_I2S_TxCpltCallback':
-/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Debug/../Core/Src/main.c:125: multiple definition of `HAL_I2S_TxCpltCallback'; ./Core/Src/cs43l22.o:/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Debug/../Core/Src/cs43l22.c:247: first defined here
-collect2: error: ld returned 1 exit status
-make: *** [makefile:68: pedal_v1.elf] Error 1
-"make -j9 all" terminated with exit code 2. Build might be incomplete.
-20:44:10 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Core/Src/cs43l22.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/cs43l22.d" -MT"Core/Src/cs43l22.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/cs43l22.o"
-arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: pedal_v1.elf
- 
-arm-none-eabi-size  pedal_v1.elf 
-arm-none-eabi-objdump -h -S pedal_v1.elf  > "pedal_v1.list"
-   text	   data	    bss	    dec	    hex	filename
-  30164	     20	   5132	  35316	   89f4	pedal_v1.elf
-Finished building: default.size.stdout
- 
-Finished building: pedal_v1.list
- 
-20:46:34 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Core/Src/cs43l22.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/cs43l22.d" -MT"Core/Src/cs43l22.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/cs43l22.o"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: pedal_v1.elf
- 
-arm-none-eabi-size  pedal_v1.elf 
-arm-none-eabi-objdump -h -S pedal_v1.elf  > "pedal_v1.list"
-   text	   data	    bss	    dec	    hex	filename
-  30164	     20	   5132	  35316	   89f4	pedal_v1.elf
-Finished building: default.size.stdout
- 
-Finished building: pedal_v1.list
- 
-13:38:50 **** Incremental Build of configuration Debug for project pedal_v1 ****
+22:15:31 **** Incremental Build of configuration Debug for project pedal_v1 ****
 make -j9 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:175:16: warning: pointer targets in passing argument 1 of 'cs43l22_play' differ in signedness [-Wpointer-sign]
-  175 |   cs43l22_play((uint16_t*)dacData, I2S_BUFFER_SIZE);
-      |                ^~~~~~~~~~~~~~~~~~
-      |                |
-      |                uint16_t * {aka short unsigned int *}
-In file included from ../Core/Src/main.c:35:
-../Core/Src/cs43l22.h:64:27: note: expected 'int16_t *' {aka 'short int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
-   64 | int cs43l22_play(int16_t *pbuffer, uint32_t size);
-      |                  ~~~~~~~~~^~~~~~~
+../Core/Src/main.c:204:19: warning: implicit declaration of function 'printDacData'; did you mean 'printDACData'? [-Wimplicit-function-declaration]
+  204 |                   printDacData();
+      |                   ^~~~~~~~~~~~
+      |                   printDACData
 arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: pedal_v1.elf
- 
-arm-none-eabi-size  pedal_v1.elf 
-arm-none-eabi-objdump -h -S pedal_v1.elf  > "pedal_v1.list"
-   text	   data	    bss	    dec	    hex	filename
-  31456	     20	   5148	  36624	   8f10	pedal_v1.elf
-Finished building: default.size.stdout
- 
-Finished building: pedal_v1.list
- 
-13:39:42 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: pedal_v1.elf
- 
-arm-none-eabi-size  pedal_v1.elf 
-arm-none-eabi-objdump -h -S pedal_v1.elf  > "pedal_v1.list"
-   text	   data	    bss	    dec	    hex	filename
-  31456	     20	   5148	  36624	   8f10	pedal_v1.elf
-Finished building: default.size.stdout
- 
-Finished building: pedal_v1.list
- 
-13:42:12 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Core/Src/cs43l22.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/cs43l22.d" -MT"Core/Src/cs43l22.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/cs43l22.o"
-arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: pedal_v1.elf
- 
-arm-none-eabi-size  pedal_v1.elf 
-arm-none-eabi-objdump -h -S pedal_v1.elf  > "pedal_v1.list"
-   text	   data	    bss	    dec	    hex	filename
-  31456	     20	   5148	  36624	   8f10	pedal_v1.elf
-Finished building: default.size.stdout
- 
-Finished building: pedal_v1.list
- 
-13:51:02 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: pedal_v1.elf
- 
-arm-none-eabi-size  pedal_v1.elf 
-arm-none-eabi-objdump -h -S pedal_v1.elf  > "pedal_v1.list"
-   text	   data	    bss	    dec	    hex	filename
-  31336	     20	   5148	  36504	   8e98	pedal_v1.elf
-Finished building: default.size.stdout
- 
-Finished building: pedal_v1.list
- 
-13:52:47 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-size  pedal_v1.elf 
-   text	   data	    bss	    dec	    hex	filename
-  31336	     20	   5148	  36504	   8e98	pedal_v1.elf
-Finished building: default.size.stdout
- 
-14:00:39 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:176:21: warning: unused variable 'i2s_init_result' [-Wunused-variable]
-  176 |   HAL_StatusTypeDef i2s_init_result = HAL_I2S_Transmit_DMA(&hi2s3, (uint16_t*)dacData, I2S_BUFFER_SIZE);
-      |                     ^~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: pedal_v1.elf
- 
-arm-none-eabi-size  pedal_v1.elf 
-arm-none-eabi-objdump -h -S pedal_v1.elf  > "pedal_v1.list"
-   text	   data	    bss	    dec	    hex	filename
-  31340	     20	   5148	  36508	   8e9c	pedal_v1.elf
-Finished building: default.size.stdout
- 
-Finished building: pedal_v1.list
- 
-14:04:35 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:176:21: warning: unused variable 'i2s_init_result' [-Wunused-variable]
-  176 |   HAL_StatusTypeDef i2s_init_result = HAL_I2S_Transmit_DMA(&hi2s3, (uint16_t*)dacData, I2S_BUFFER_SIZE);
-      |                     ^~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: pedal_v1.elf
- 
-arm-none-eabi-size  pedal_v1.elf 
-arm-none-eabi-objdump -h -S pedal_v1.elf  > "pedal_v1.list"
-   text	   data	    bss	    dec	    hex	filename
-  31352	     20	   5148	  36520	   8ea8	pedal_v1.elf
-Finished building: default.size.stdout
- 
-Finished building: pedal_v1.list
- 
-14:05:11 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-size  pedal_v1.elf 
-   text	   data	    bss	    dec	    hex	filename
-  31352	     20	   5148	  36520	   8ea8	pedal_v1.elf
-Finished building: default.size.stdout
- 
-14:07:41 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:182:21: warning: unused variable 'i2s_init_result' [-Wunused-variable]
-  182 |   HAL_StatusTypeDef i2s_init_result = HAL_I2S_Transmit_DMA(&hi2s3, (uint16_t*)dacData, I2S_BUFFER_SIZE);
-      |                     ^~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.macos64_1.0.0.202411102158/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld: ./Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_audio.o: in function `HAL_I2S_ErrorCallback':
-/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Debug/../Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_audio.c:1094: multiple definition of `HAL_I2S_ErrorCallback'; ./Core/Src/main.o:/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Debug/../Core/Src/main.c:133: first defined here
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.macos64_1.0.0.202411102158/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld: ./Core/Src/main.o: in function `main':
+/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Debug/../Core/Src/main.c:204:(.text.main+0x60): undefined reference to `printDacData'
 collect2: error: ld returned 1 exit status
 make: *** [makefile:68: pedal_v1.elf] Error 1
 "make -j9 all" terminated with exit code 2. Build might be incomplete.
-14:08:02 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.macos64_1.0.0.202411102158/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld: ./Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_audio.o: in function `HAL_I2S_ErrorCallback':
-/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Debug/../Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_audio.c:1094: multiple definition of `HAL_I2S_ErrorCallback'; ./Core/Src/main.o:/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Debug/../Core/Src/main.c:133: first defined here
-collect2: error: ld returned 1 exit status
-make: *** [makefile:68: pedal_v1.elf] Error 1
-"make -j9 all" terminated with exit code 2. Build might be incomplete.
-14:08:09 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.macos64_1.0.0.202411102158/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld: ./Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_audio.o: in function `HAL_I2S_ErrorCallback':
-/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Debug/../Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_audio.c:1094: multiple definition of `HAL_I2S_ErrorCallback'; ./Core/Src/main.o:/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Debug/../Core/Src/main.c:133: first defined here
-collect2: error: ld returned 1 exit status
-make: *** [makefile:68: pedal_v1.elf] Error 1
-"make -j9 all" terminated with exit code 2. Build might be incomplete.
-14:08:16 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.macos64_1.0.0.202411102158/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld: ./Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_audio.o: in function `HAL_I2S_ErrorCallback':
-/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Debug/../Drivers/BSP/STM32F4-Discovery/stm32f4_discovery_audio.c:1094: multiple definition of `HAL_I2S_ErrorCallback'; ./Core/Src/main.o:/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/Debug/../Core/Src/main.c:133: first defined here
-collect2: error: ld returned 1 exit status
-make: *** [makefile:68: pedal_v1.elf] Error 1
-"make -j9 all" terminated with exit code 2. Build might be incomplete.
-14:09:40 **** Incremental Build of configuration Debug for project pedal_v1 ****
+22:15:51 **** Incremental Build of configuration Debug for project pedal_v1 ****
 make -j9 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -466,49 +97,7 @@ Finished building target: pedal_v1.elf
 arm-none-eabi-size  pedal_v1.elf 
 arm-none-eabi-objdump -h -S pedal_v1.elf  > "pedal_v1.list"
    text	   data	    bss	    dec	    hex	filename
-  31348	     20	   5148	  36516	   8ea4	pedal_v1.elf
-Finished building: default.size.stdout
- 
-Finished building: pedal_v1.list
- 
-14:12:00 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-size  pedal_v1.elf 
-   text	   data	    bss	    dec	    hex	filename
-  31348	     20	   5148	  36516	   8ea4	pedal_v1.elf
-Finished building: default.size.stdout
- 
-14:12:18 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-size  pedal_v1.elf 
-   text	   data	    bss	    dec	    hex	filename
-  31348	     20	   5148	  36516	   8ea4	pedal_v1.elf
-Finished building: default.size.stdout
- 
-14:28:32 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: pedal_v1.elf
- 
-arm-none-eabi-size  pedal_v1.elf 
-arm-none-eabi-objdump -h -S pedal_v1.elf  > "pedal_v1.list"
-   text	   data	    bss	    dec	    hex	filename
-  31288	     20	   5148	  36456	   8e68	pedal_v1.elf
-Finished building: default.size.stdout
- 
-Finished building: pedal_v1.list
- 
-14:37:30 **** Incremental Build of configuration Debug for project pedal_v1 ****
-make -j9 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/BSP/STM32F4-Discovery -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "pedal_v1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/pedal_v1/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pedal_v1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: pedal_v1.elf
- 
-arm-none-eabi-size  pedal_v1.elf 
-arm-none-eabi-objdump -h -S pedal_v1.elf  > "pedal_v1.list"
-   text	   data	    bss	    dec	    hex	filename
-  31272	     20	   5148	  36440	   8e58	pedal_v1.elf
+  37324	    112	   4952	  42388	   a594	pedal_v1.elf
 Finished building: default.size.stdout
  
 Finished building: pedal_v1.list
