@@ -54,6 +54,7 @@ extern ADC_HandleTypeDef hadc1;
 #define AUDIO_BLOCK_SIZE 256
 #define ADC_BUFFER_SIZE  AUDIO_BLOCK_SIZE
 #define DAC_BUFFER_SIZE  AUDIO_BLOCK_SIZE
+#define CS43L22_I2C_ADDRESS 0x94
 
 uint16_t adcData[ADC_BUFFER_SIZE];
 int16_t dacData[DAC_BUFFER_SIZE];
@@ -61,7 +62,6 @@ int16_t dacData[DAC_BUFFER_SIZE];
 static volatile uint16_t *inBufPtr;
 static volatile int16_t *outBufPtr = &dacData[0];
 
-uint8_t dataReadyFlag;
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -91,27 +91,45 @@ void printDACData(void) {
 }
 
 void processData() {
-	printDACData();
+////	printDACData();
+//
+//	float leftIn, leftOut;
+//	float rightIn, rightOut;
+//
+//	for (uint8_t n = 0; n < (AUDIO_BLOCK_SIZE / 2) - 1; n += 2) {
+//
+//
+//		// Left channel
+//		leftIn = ((int16_t)inBufPtr[n] - 2300);  // for ADC values
+//		leftOut = leftIn;
+//
+//		outBufPtr[n] = (int16_t) (16 * leftOut);
+////		printf("LeftOut[%u]: %hd\n", n, (int16_t) (16 * leftOut));
+//
+//		// Right channel
+//		rightIn = ((int16_t)inBufPtr[n + 1] - 2300);  // for ADC values
+//		rightOut = rightIn;
+//
+//		outBufPtr[n + 1] = (int16_t) (16 * rightOut);
+////		printf("RightOut[%u]: %hd\n", n+1, (int16_t) (16 * rightOut));
+//	}
+    static int16_t squareWaveValue = 30000; // Amplitude
+    static uint8_t toggle = 0;
 
-	for (uint8_t n = 0; n < (AUDIO_BLOCK_SIZE / 2) - 1; n += 2) {
+    for (uint8_t n = 0; n < (AUDIO_BLOCK_SIZE / 2) - 1; n += 2) {
+        // Alternate between +Amplitude and -Amplitude every few samples
+        if (n % 50 == 0) { // Adjust 100 to control tone frequency
+            toggle = !toggle;
+        }
 
-		static float leftIn, leftOut;
-		static float rightIn, rightOut;
-		// Left channel
-		leftIn = ((int16_t)inBufPtr[n] - 2300);  // for ADC values
-		leftOut = leftIn;
+        int16_t sample = toggle ? squareWaveValue : -squareWaveValue;
 
-		outBufPtr[n] = (int16_t) (16 * leftOut);
-//		printf("LeftOut[%u]: %hd\n", n, (int16_t) (16 * leftOut));
+        // Left channel
+        outBufPtr[n] = sample;
 
-		// Right channel
-		rightIn = ((int16_t)inBufPtr[n + 1] - 2300);  // for ADC values
-		rightOut = rightIn;
-
-		outBufPtr[n + 1] = (int16_t) (16 * rightOut);
-//		printf("RightOut[%u]: %hd\n", n+1, (int16_t) (16 * rightOut));
-	}
-	dataReadyFlag = 0;
+        // Right channel
+        outBufPtr[n + 1] = sample;
+    }
 }
 
 /* USER CODE END PFP */
@@ -122,20 +140,32 @@ void processData() {
 
 void HAL_I2S_TxHalfCpltCallback(I2S_HandleTypeDef *hi2s)
 {
-    inBufPtr = &adcData[0];
-    outBufPtr = &dacData[0];
+	inBufPtr = &adcData[0];
+	outBufPtr = &dacData[0];
 
-    dataReadyFlag = 1;
-    processData();
+	processData();
+	HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_15);
 }
 
 void HAL_I2S_TxCpltCallback(I2S_HandleTypeDef *hi2s)
 {
-    inBufPtr = &adcData[ADC_BUFFER_SIZE / 2];
-    outBufPtr = &dacData[DAC_BUFFER_SIZE / 2];
+	inBufPtr = &adcData[ADC_BUFFER_SIZE / 2];
+	outBufPtr = &dacData[DAC_BUFFER_SIZE / 2];
 
-    dataReadyFlag = 1;
-    processData();
+	processData();
+}
+
+void HAL_ADC_ConvHalfCpltCallback(ADC_HandleTypeDef* hadc)
+{
+//    printf("ADC Half Complete\n");
+    // call your processData() here
+}
+
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
+{
+//    printf("ADC Complete\n");
+    // call your processData() here
+
 }
 
 /* USER CODE END 0 */
@@ -177,28 +207,19 @@ int main(void)
   MX_TIM2_Init();
   MX_USART3_UART_Init();
   MX_SPI1_Init();
+  MX_I2C3_Init();
   /* USER CODE BEGIN 2 */
-  cs43l22_init();
-  cs43l22_unmute();  // unmute
-
+  cs43l22_Init(CS43L22_I2C_ADDRESS, OUTPUT_DEVICE_HEADPHONE, 100, AUDIO_FREQUENCY_48K);
+  HAL_I2S_Transmit_DMA(&hi2s3, (uint16_t*)dacData, DAC_BUFFER_SIZE);
   HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adcData, ADC_BUFFER_SIZE);
   HAL_TIM_Base_Start(&htim2);
-  cs43l22_stop();
-  cs43l22_play((int16_t*)dacData, DAC_BUFFER_SIZE);
-//  HAL_I2S_Transmit_DMA(&hi2s3, (uint16_t *)dacData, DAC_BUFFER_SIZE);
+  cs43l22_Play(CS43L22_I2C_ADDRESS, (uint16_t*)dacData, DAC_BUFFER_SIZE);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  if(dataReadyFlag) {
-
-
-//		  printDACData();
-//		  printADCData();
-
-	  }
   }
     /* USER CODE END WHILE */
 
