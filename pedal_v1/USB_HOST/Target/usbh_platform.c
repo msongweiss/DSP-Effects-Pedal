@@ -25,6 +25,9 @@
 
 /* USER CODE END INCLUDE */
 
+/* External variables ---------------------------------------------------------*/
+extern I2C_HandleTypeDef hi2c3;
+
 /**
   * @brief  Drive VBUS.
   * @param  state : VBUS state
@@ -34,19 +37,26 @@
   */
 void MX_DriverVbusFS(uint8_t state)
 {
+  /* USER CODE BEGIN PREPARE_I2C_REG_VBUS_FS */
+  uint8_t Component_Reg  = 0;
+  /* USER CODE END PREPARE_I2C_REG_VBUS_FS */
+  HAL_StatusTypeDef status = HAL_OK;
+  /* USER CODE BEGIN PREPARE_I2C_ADDR_VBUS_FS */
+  uint8_t Component_Addr = 0 << 1;
+  /* USER CODE END PREPARE_I2C_ADDR_VBUS_FS */
+  /* USER CODE BEGIN PREPARE_I2C_DATA_VBUS_FS */
   uint8_t data = state;
-  /* USER CODE BEGIN PREPARE_GPIO_DATA_VBUS_FS */
-  if(state == 0)
+  /* USER CODE END PREPARE_I2C_DATA_VBUS_FS */
+  uint8_t data_tmp = 0;
+  status = HAL_I2C_Mem_Read(&hi2c3, Component_Addr, (uint16_t)Component_Reg, I2C_MEMADD_SIZE_8BIT, &data_tmp, 1, 100);
+  data |= data_tmp;
+  status = HAL_I2C_Mem_Write(&hi2c3,Component_Addr,(uint16_t)Component_Reg, I2C_MEMADD_SIZE_8BIT,&data, 1, 100);
+  /* USER CODE BEGIN CHECK_STATUS_VBUS_FS */
+  /* Check the communication status */
+  if(status != HAL_OK)
   {
-    /* Drive high Charge pump */
-    data = GPIO_PIN_RESET;
+
   }
-  else
-  {
-    /* Drive low Charge pump */
-    data = GPIO_PIN_SET;
-  }
-  /* USER CODE END PREPARE_GPIO_DATA_VBUS_FS */
-  HAL_GPIO_WritePin(GPIOC,GPIO_PIN_0,(GPIO_PinState)data);
+  /* USER CODE END CHECK_STATUS_VBUS_FS */
 }
 

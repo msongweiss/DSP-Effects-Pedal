@@ -1,0 +1,10 @@
+16:56:49 **** Incremental Build of configuration Debug for project poop_v3 ****
+make -j9 all 
+arm-none-eabi-size  poop_v3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  47392	    128	   4568	  52088	   cb78	poop_v3.elf
+Finished building: default.size.stdout
+ 
+
+16:56:49 Build Finished. 0 errors, 0 warnings. (took 430ms)
+

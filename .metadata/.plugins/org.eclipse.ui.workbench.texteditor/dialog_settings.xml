@@ -3,8 +3,20 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="false"/>
 	<list key="searchhistory">
-		<item value="putchar"/>
-		<item value="uart_init"/>
-		<item value="write"/>
+		<item value="usb_host"/>
+		<item value="MX_I2S3_Init"/>
+		<item value="spi"/>
+		<item value="spi3"/>
+		<item value="i2s"/>
+		<item value="headphone"/>
+		<item value="Is_cs43l22_Stop"/>
+		<item value="CODEC_IO_Write(DeviceAddr, CS43L22_REG_POWER_CTL1"/>
+		<item value="unmute"/>
+		<item value="printdac"/>
+		<item value="printdacdata"/>
+		<item value="cs43l22_init"/>
+		<item value="init"/>
+		<item value="set_volume"/>
+		<item value="setfreq"/>
 	</list>
 </section>

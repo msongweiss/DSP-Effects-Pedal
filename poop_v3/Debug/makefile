@@ -64,8 +64,8 @@ all: main-build
 main-build: poop_v3.elf secondary-outputs
 
 # Tool invocations
-poop_v3.elf poop_v3.map: $(OBJS) $(USER_OBJS) C:\Users\milos\STM32CubeIDE\workspace_1.18.0\poop_v3\STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "poop_v3.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\milos\STM32CubeIDE\workspace_1.18.0\poop_v3\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="poop_v3.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+poop_v3.elf poop_v3.map: $(OBJS) $(USER_OBJS) /Users/juno/github.com/DSP-Effects-Pedal/poop_v3/STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "poop_v3.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/Users/juno/github.com/DSP-Effects-Pedal/poop_v3/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="poop_v3.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

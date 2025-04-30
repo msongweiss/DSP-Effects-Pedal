@@ -18,14 +18,12 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "adc.h"
 #include "dma.h"
 #include "i2c.h"
 #include "i2s.h"
 #include "spi.h"
-#include "tim.h"
 #include "usart.h"
-#include "usb_otg.h"
+#include "usb_host.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -43,24 +41,6 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define CODEC_ADDRESS 0x94  // 7-bit address left-shifted (0x4A << 1)
-
-extern UART_HandleTypeDef huart2;
-
-extern I2C_HandleTypeDef hi2c1;
-extern I2S_HandleTypeDef hi2s3;
-extern ADC_HandleTypeDef hadc1;
-
-#define AUDIO_BLOCK_SIZE 256
-#define ADC_BUFFER_SIZE  AUDIO_BLOCK_SIZE
-#define DAC_BUFFER_SIZE  AUDIO_BLOCK_SIZE
-#define CS43L22_I2C_ADDRESS 0x94
-
-uint16_t adcData[ADC_BUFFER_SIZE];
-int16_t dacData[DAC_BUFFER_SIZE];
-
-static volatile uint16_t *inBufPtr;
-static volatile int16_t *outBufPtr = &dacData[0];
 
 /* USER CODE END PD */
 
@@ -77,60 +57,21 @@ static volatile int16_t *outBufPtr = &dacData[0];
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
+void MX_USB_HOST_Process(void);
+
 /* USER CODE BEGIN PFP */
-void printADCData(void) {
-    for (uint16_t i = 0; i < ADC_BUFFER_SIZE; i++) {
-        printf("adcData[%d] = %u\n", i, adcData[i]);
-    }
-}
+#define BLOCK_SIZE_FLOAT 512
+#define BLOCK_SIZE_U16 2048
 
-void printDACData(void) {
-    for (uint16_t i = 0; i < DAC_BUFFER_SIZE; i++) {
-        printf("dacData[%d] = %u\n", i, (uint16_t)dacData[i]);
-    }
-}
+uint8_t callback_state = 0;
 
-void processData() {
-////	printDACData();
-//
-//	float leftIn, leftOut;
-//	float rightIn, rightOut;
-//
-//	for (uint8_t n = 0; n < (AUDIO_BLOCK_SIZE / 2) - 1; n += 2) {
-//
-//
-//		// Left channel
-//		leftIn = ((int16_t)inBufPtr[n] - 2300);  // for ADC values
-//		leftOut = leftIn;
-//
-//		outBufPtr[n] = (int16_t) (16 * leftOut);
-////		printf("LeftOut[%u]: %hd\n", n, (int16_t) (16 * leftOut));
-//
-//		// Right channel
-//		rightIn = ((int16_t)inBufPtr[n + 1] - 2300);  // for ADC values
-//		rightOut = rightIn;
-//
-//		outBufPtr[n + 1] = (int16_t) (16 * rightOut);
-////		printf("RightOut[%u]: %hd\n", n+1, (int16_t) (16 * rightOut));
-//	}
-    static int16_t squareWaveValue = 30000; // Amplitude
-    static uint8_t toggle = 0;
+uint16_t rxBuf[BLOCK_SIZE_U16*2];
+uint16_t txBuf[BLOCK_SIZE_U16*2];
+float l_buf_in [BLOCK_SIZE_FLOAT*2];
+float r_buf_in [BLOCK_SIZE_FLOAT*2];
+float l_buf_out [BLOCK_SIZE_FLOAT*2];
+float r_buf_out [BLOCK_SIZE_FLOAT*2];
 
-    for (uint8_t n = 0; n < (AUDIO_BLOCK_SIZE / 2) - 1; n += 2) {
-        // Alternate between +Amplitude and -Amplitude every few samples
-        if (n % 50 == 0) { // Adjust 100 to control tone frequency
-            toggle = !toggle;
-        }
-
-        int16_t sample = toggle ? squareWaveValue : -squareWaveValue;
-
-        // Left channel
-        outBufPtr[n] = sample;
-
-        // Right channel
-        outBufPtr[n + 1] = sample;
-    }
-}
 
 /* USER CODE END PFP */
 
@@ -138,36 +79,19 @@ void processData() {
 /* USER CODE BEGIN 0 */
 // === DMA callbacks ===
 
-void HAL_I2S_TxHalfCpltCallback(I2S_HandleTypeDef *hi2s)
-{
-	inBufPtr = &adcData[0];
-	outBufPtr = &dacData[0];
+void HAL_I2SEx_TxRxHalfCpltCallback(I2S_HandleTypeDef *hi2s){
 
-	processData();
-	HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_15);
-}
+	callback_state = 1;
 
-void HAL_I2S_TxCpltCallback(I2S_HandleTypeDef *hi2s)
-{
-	inBufPtr = &adcData[ADC_BUFFER_SIZE / 2];
-	outBufPtr = &dacData[DAC_BUFFER_SIZE / 2];
-
-	processData();
-}
-
-void HAL_ADC_ConvHalfCpltCallback(ADC_HandleTypeDef* hadc)
-{
-//    printf("ADC Half Complete\n");
-    // call your processData() here
-}
-
-void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
-{
-//    printf("ADC Complete\n");
-    // call your processData() here
 
 }
 
+void HAL_I2SEx_TxRxCpltCallback(I2S_HandleTypeDef *hi2s){
+
+	callback_state = 2;
+
+
+}
 /* USER CODE END 0 */
 
 /**
@@ -200,31 +124,70 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_DMA_Init();
-  MX_I2C1_Init();
-  MX_I2S3_Init();
-  MX_ADC1_Init();
-  MX_USB_OTG_FS_PCD_Init();
-  MX_TIM2_Init();
   MX_USART3_UART_Init();
   MX_SPI1_Init();
   MX_I2C3_Init();
+  MX_USB_HOST_Init();
+  MX_I2S2_Init();
   /* USER CODE BEGIN 2 */
-  cs43l22_Init(CS43L22_I2C_ADDRESS, OUTPUT_DEVICE_HEADPHONE, 100, AUDIO_FREQUENCY_48K);
-  HAL_I2S_Transmit_DMA(&hi2s3, (uint16_t*)dacData, DAC_BUFFER_SIZE);
-  HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adcData, ADC_BUFFER_SIZE);
-  HAL_TIM_Base_Start(&htim2);
-  cs43l22_Play(CS43L22_I2C_ADDRESS, (uint16_t*)dacData, DAC_BUFFER_SIZE);
+  //start i2s with 2048 samples transmission => 4096*u16 words
+  HAL_I2SEx_TransmitReceive_DMA (&hi2s2, txBuf, rxBuf, BLOCK_SIZE_U16);
+  int offset_r_ptr;
+  int offset_w_ptr, w_ptr;
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-  }
+	  if (callback_state != 0) {
+
+		  //decide if it was half or cplt callback
+		  if (callback_state == 1)   {
+			  	  offset_r_ptr = 0;
+			  	  offset_w_ptr = 0;
+			  	  w_ptr = 0;
+			  }
+
+		  else if (callback_state == 2) {
+			  offset_r_ptr = BLOCK_SIZE_U16;
+			  offset_w_ptr = BLOCK_SIZE_FLOAT;
+			  w_ptr = BLOCK_SIZE_FLOAT;
+		  }
+
+
+		  //restore input sample buffer to float array
+		  for (int i=offset_r_ptr; i<offset_r_ptr+BLOCK_SIZE_U16; i=i+4) {
+			  l_buf_in[w_ptr] = (float) ((int) (rxBuf[i]<<16)|rxBuf[i+1]);
+			  r_buf_in[w_ptr] = (float) ((int) (rxBuf[i+2]<<16)|rxBuf[i+3]);
+			  w_ptr++;
+		  }
+
+
+		  for (int i=offset_w_ptr; i<offset_w_ptr+BLOCK_SIZE_FLOAT; i++) {
+			  l_buf_out[i] = l_buf_in[i];
+			  r_buf_out[i] = r_buf_in[i];
+		  }
+
+		  //restore processed float-array to output sample-buffer
+		  w_ptr = offset_w_ptr;
+
+		  for (int i=offset_r_ptr; i<offset_r_ptr+BLOCK_SIZE_U16; i=i+4) {
+			txBuf[i] =  (((int)l_buf_out[w_ptr])>>16)&0xFFFF;
+			txBuf[i+1] = ((int)l_buf_out[w_ptr])&0xFFFF;
+			txBuf[i+2] = (((int)r_buf_out[w_ptr])>>16)&0xFFFF;
+			txBuf[i+3] = ((int)r_buf_out[w_ptr])&0xFFFF;
+			w_ptr++;
+		  }
+
+		  callback_state = 0;
+
+	  }
     /* USER CODE END WHILE */
+    MX_USB_HOST_Process();
 
     /* USER CODE BEGIN 3 */
-
+  }
   /* USER CODE END 3 */
 }
 
@@ -250,9 +213,9 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
   RCC_OscInitStruct.PLL.PLLM = 8;
-  RCC_OscInitStruct.PLL.PLLN = 168;
+  RCC_OscInitStruct.PLL.PLLN = 72;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
-  RCC_OscInitStruct.PLL.PLLQ = 7;
+  RCC_OscInitStruct.PLL.PLLQ = 3;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -267,7 +230,7 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_5) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
   {
     Error_Handler();
   }

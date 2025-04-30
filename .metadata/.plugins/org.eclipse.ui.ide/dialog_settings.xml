@@ -9,6 +9,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/Users/juno/github.com/DSP-Effects-Pedal/STM32F4_ADC_to_I2S_DMA-main"/>
+			<item value="/Users/juno/github.com/DSP-Effects-Pedal/poop_v3"/>
 			<item value="/Users/juno/github.com/DSP-Effects-Pedal"/>
 		</list>
 		<section name="SmartImportWizard.dialogBounds">
