@@ -13,8 +13,6 @@ void Tremolo_Init(Tremolo *tr, float samplingFreqHz, float rate, float depth) {
 //	}
 }
 
-
-
 float Tremolo_Update(Tremolo *tr, float inp) {
 	float lfo = 0.5f*tr->depth*sinf(2.0f*M_PI*tr->rate*tr->phase) + (1.0f - 0.5f*tr->depth);
 	tr->out = inp*lfo;
@@ -32,4 +30,12 @@ float Tremolo_Update(Tremolo *tr, float inp) {
 	}
 
 	return tr->out;
+}
+
+void Tremolo_Set_Rate(Tremolo *tr, float rate) {
+	tr->rate = rate;
+}
+
+void Tremolo_Set_Depth(Tremolo *tr, float depth) {
+	tr->depth = depth;
 }

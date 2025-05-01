@@ -19,6 +19,9 @@ void Overdrive_Init(Overdrive *od, float samplingFreqHz, float hpfCutoffFreqHz, 
 
 }
 
+void Overdrive_Set_Gain(Overdrive *od, float odPreGain) {
+	od->preGain = odPreGain;
+}
 
 float Overdrive_Update(Overdrive *od, float inp) {
 	// Get new sample and push everything down by one spot

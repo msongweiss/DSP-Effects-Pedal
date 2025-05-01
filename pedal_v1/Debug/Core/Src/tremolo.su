@@ -1,2 +1,4 @@
 ../Core/Src/tremolo.c:4:6:Tremolo_Init	24	static
-../Core/Src/tremolo.c:18:7:Tremolo_Update	40	static
+../Core/Src/tremolo.c:16:7:Tremolo_Update	40	static
+../Core/Src/tremolo.c:35:6:Tremolo_Set_Rate	16	static
+../Core/Src/tremolo.c:39:6:Tremolo_Set_Depth	16	static

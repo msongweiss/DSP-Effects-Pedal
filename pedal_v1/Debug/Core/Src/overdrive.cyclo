@@ -1,2 +1,3 @@
 ../Core/Src/overdrive.c:4:6:Overdrive_Init	1
-../Core/Src/overdrive.c:23:7:Overdrive_Update	7
+../Core/Src/overdrive.c:22:6:Overdrive_Set_Gain	1
+../Core/Src/overdrive.c:26:7:Overdrive_Update	7

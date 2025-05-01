@@ -34,6 +34,7 @@ typedef struct {
 
 void Overdrive_Init(Overdrive *od, float samplingFreqHz, float hpfCutoffFreqHz, float lpfCutoffFreqHz, float odPreGain);
 void Overdrive_SetLPF(Overdrive *od, float lpfCutOffFreqHz, float lpfDamping);
+void Overdrive_Set_Gain(Overdrive *od, float odPreGain);
 float Overdrive_Update(Overdrive *od, float inp);
 
 #endif

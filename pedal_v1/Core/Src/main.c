@@ -71,7 +71,8 @@ void MX_USB_HOST_Process(void);
 #define TR_RATE 5.0f // Hz
 
 uint8_t callback_state = 0;
-uint16_t adcControlData;
+uint16_t adcControlData[1];
+uint16_t adcControlDataLast = 69;
 
 uint16_t rxBuf[BLOCK_SIZE_U16*2];
 uint16_t txBuf[BLOCK_SIZE_U16*2];
@@ -165,7 +166,14 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  printf("ADC data: %d\n", adcControlData);
+	  if (fabs(adcControlDataLast - adcControlData[0]) > 10) {
+//		  Tremolo_Set_Depth(&tr, adcControlData[0] / 4095.0f);
+		  Overdrive_Set_Gain(&od, 100.0f * adcControlData[0] / 4095.0f);
+		  HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_15);
+	  }
+
+	  adcControlDataLast = adcControlData[0];
+
 	  if (callback_state != 0) {
 
 		  // decide if it was half or cplt callback
@@ -215,12 +223,12 @@ int main(void)
 //			  r_buf_out[i] = r_buf_in[i];
 
 //			  // Populate output buffer with overdrive-processed input buffer data
-//			  l_buf_out[i] = Overdrive_Update(&od, l_buf_in[i])/32.0f; // 1/16 for appropriate amp-level volume
-//			  r_buf_out[i] = Overdrive_Update(&od, r_buf_in[i])/32.0f;
+			  l_buf_out[i] = Overdrive_Update(&od, l_buf_in[i])/32.0f; // 1/16 for appropriate amp-level volume
+			  r_buf_out[i] = Overdrive_Update(&od, r_buf_in[i])/32.0f;
 
 			  // Populate output buffer with tremolo-processed input buffer data
-			  l_buf_out[i] = Tremolo_Update(&tr, l_buf_in[i]); // 1/16 for appropriate amp-level volume
-			  r_buf_out[i] = Tremolo_Update(&tr, l_buf_in[i]);
+//			  l_buf_out[i] = Tremolo_Update(&tr, l_buf_in[i]); // 1/16 for appropriate amp-level volume
+//			  r_buf_out[i] = Tremolo_Update(&tr, l_buf_in[i]);
 		  }
 
 		  //restore processed float-array to output sample-buffer
