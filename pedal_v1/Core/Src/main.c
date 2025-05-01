@@ -18,10 +18,12 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "adc.h"
 #include "dma.h"
 #include "i2c.h"
 #include "i2s.h"
 #include "spi.h"
+#include "tim.h"
 #include "usart.h"
 #include "usb_host.h"
 #include "gpio.h"
@@ -69,6 +71,7 @@ void MX_USB_HOST_Process(void);
 #define TR_RATE 5.0f // Hz
 
 uint8_t callback_state = 0;
+uint16_t adcControlData;
 
 uint16_t rxBuf[BLOCK_SIZE_U16*2];
 uint16_t txBuf[BLOCK_SIZE_U16*2];
@@ -133,6 +136,8 @@ int main(void)
   MX_I2C3_Init();
   MX_USB_HOST_Init();
   MX_I2S2_Init();
+  MX_ADC1_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
 
   // Initialize overdrive
@@ -142,18 +147,25 @@ int main(void)
   // See OD_GAIN defined in user defines
   Overdrive_Init(&od, 41666.0f, 800.0f, 4000.0f, OD_GAIN);
 
+  // Initialize Tremolo
   Tremolo_Init(&tr, 41666.0f, TR_RATE, TR_DEPTH);
 
   // Initialize I2S DMA
   HAL_I2SEx_TransmitReceive_DMA (&hi2s2, txBuf, rxBuf, BLOCK_SIZE_U16);
   int offset_r_ptr;
   int offset_w_ptr, w_ptr;
+
+  // Initialize pot ADC
+  HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adcControlData, 1);
+  HAL_TIM_Base_Start(&htim2);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  printf("ADC data: %d\n", adcControlData);
 	  if (callback_state != 0) {
 
 		  // decide if it was half or cplt callback
