@@ -1,0 +1,97 @@
+#include "overdrive.h"
+#include <stdint.h>
+
+float OVERDRIVE_BPF_COEFFS[OVERDRIVE_BPF_LENGTH] =  {
+  -0.1089392198135885,
+  0.01121432043258386,
+  0.011512520168128594,
+  0.008733382076020948,
+  0.0004375785066380712,
+  -0.012892991482335013,
+  -0.027178756684228852,
+  -0.03657086392461616,
+  -0.035515178929965294,
+  -0.023722307249252984,
+  -0.006043994402063582,
+  0.008422507878182684,
+  0.010511053982242755,
+  -0.004072777701603187,
+  -0.0314937719747432,
+  -0.05964200142010025,
+  -0.07273784912131982,
+  -0.05767249101553009,
+  -0.01050617834027003,
+  0.0604705334473265,
+  0.13648415526842003,
+  0.1946055042811411,
+  1.2163523017928115,
+  0.1946055042811411,
+  0.13648415526842003,
+  0.0604705334473265,
+  -0.01050617834027003,
+  -0.05767249101553009,
+  -0.07273784912131982,
+  -0.05964200142010025,
+  -0.0314937719747432,
+  -0.004072777701603187,
+  0.010511053982242755,
+  0.008422507878182684,
+  -0.006043994402063582,
+  -0.023722307249252984,
+  -0.035515178929965294,
+  -0.03657086392461616,
+  -0.027178756684228852,
+  -0.012892991482335013,
+  0.0004375785066380712,
+  0.008733382076020948,
+  0.011512520168128594,
+  0.01121432043258386,
+  -0.1089392198135885
+};
+
+
+void Overdrive_Init(Overdrive *od, float samplingFreqHz, float odPreGain) {
+    od->T = 1.0f / samplingFreqHz;
+    od->preGain = odPreGain;
+    od->threshold = 1.0f/3.0f;
+}
+
+float Overdrive_Update(Overdrive *od, float inp) {
+    // Band pass filter
+    od->bpfInpBuf[od->bpfInputBufIndex] = inp;
+    od->bpfInputBufIndex++;
+
+    if (od->bpfInputBufIndex == OVERDRIVE_BPF_LENGTH) {
+        od->bpfInputBufIndex = 0;
+    }
+
+    od->bpfInpOut = 0.0f;
+    uint8_t index = od->bpfInputBufIndex;
+    for (uint8_t n = 0; n < OVERDRIVE_BPF_LENGTH; n++) {
+        if (index == 0) {
+            index = OVERDRIVE_BPF_LENGTH - 1;
+        } else {
+            index--;
+        }
+
+        od->bpfInpOut += OVERDRIVE_BPF_COEFFS[n] * od->bpfInpBuf[index];
+    }
+    
+    // Overdrive
+    float clipIn = od->preGain * inp;
+    float absClipIn = fabs(clipIn);
+    float signClipIn = (clipIn >= 0.0f) ? 1.0f : -1.0f;
+    
+    float clipOut = 0.0f;
+    
+    if (absClipIn < od->threshold) {
+        clipOut = 2.0f * clipIn;
+    } else if (absClipIn >= od->threshold && absClipIn < (2.0f * od->threshold)) {
+        clipOut = signClipIn * (3.0f - (2.0f - 3.0f*absClipIn)*(2.0f - 3.0f*absClipIn)) / 3.0f;
+    } else {
+        clipOut = signClipIn * 2.0f * od->threshold ;
+    }
+    od->out = clipOut;
+    
+    return od->out;
+}

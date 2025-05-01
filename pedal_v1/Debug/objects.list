@@ -3,6 +3,7 @@
 "./Core/Src/i2c.o"
 "./Core/Src/i2s.o"
 "./Core/Src/main.o"
+"./Core/Src/overdrive.o"
 "./Core/Src/retarget.o"
 "./Core/Src/spi.o"
 "./Core/Src/stm32f4xx_hal_msp.o"

@@ -1,0 +1,50 @@
+21:57:42 : STM32CubeProgrammer API v2.19.0 | MacOS-64Bits 
+21:57:44 : UR connection mode is defined with the HWrst reset mode
+21:57:44 : ST-LINK SN  : 066BFF363242423143211820
+21:57:44 : ST-LINK FW  : V2J46M31
+21:57:44 : Board       : STM32F4DISCOVERY
+21:57:44 : Voltage     : 2.91V
+21:57:44 : SWD freq    : 4000 KHz
+21:57:44 : Connect mode: Normal
+21:57:44 : Reset mode  : Software reset
+21:57:44 : Device ID   : 0x413
+21:57:44 : Revision ID : --
+21:57:44 : Debug in Low Power mode is not supported for this device.
+21:57:45 : UPLOADING OPTION BYTES DATA ...
+21:57:45 :   Bank          : 0x00
+21:57:45 :   Address       : 0x40023c14
+21:57:45 :   Size          : 4 Bytes
+21:57:45 : UPLOADING ...
+21:57:45 :   Size          : 1024 Bytes
+21:57:45 :   Address       : 0x8000000
+21:57:45 : Read progress:
+21:57:45 : Data read successfully
+21:57:45 : Time elapsed during the read operation is: 00:00:00.029
+21:57:48 : SWV reception started.
+21:57:48 : Trace history will be logged in real time in the file: /Users/juno/STMicroelectronics/STM32CubeProgrammer/SWV_Log/swv.log
+21:57:49 : SWV reception stopped
+21:57:53 : SWV reception started.
+21:57:53 : Trace history will be logged in real time in the file: /Users/juno/STMicroelectronics/STM32CubeProgrammer/SWV_Log/swv.log
+21:57:54 : SWV reception stopped
+22:01:50 : Disconnected from device.
+22:05:25 : UR connection mode is defined with the HWrst reset mode
+22:05:25 : ST-LINK SN  : 066BFF363242423143211820
+22:05:25 : ST-LINK FW  : V2J46M31
+22:05:25 : Board       : STM32F4DISCOVERY
+22:05:25 : Voltage     : 2.91V
+22:05:25 : SWD freq    : 4000 KHz
+22:05:25 : Connect mode: Normal
+22:05:25 : Reset mode  : Software reset
+22:05:25 : Device ID   : 0x413
+22:05:25 : Revision ID : --
+22:05:25 : Debug in Low Power mode is not supported for this device.
+22:05:26 : UPLOADING OPTION BYTES DATA ...
+22:05:26 :   Bank          : 0x00
+22:05:26 :   Address       : 0x40023c14
+22:05:26 :   Size          : 4 Bytes
+22:05:26 : UPLOADING ...
+22:05:26 :   Size          : 1024 Bytes
+22:05:26 :   Address       : 0x8000000
+22:05:26 : Read progress:
+22:05:26 : Data read successfully
+22:05:26 : Time elapsed during the read operation is: 00:00:00.033

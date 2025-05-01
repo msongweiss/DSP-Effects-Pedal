@@ -1,0 +1,146 @@
+#include "overdrive.h"
+#include <stdint.h>
+
+float OVERDRIVE_LPF_COEFFS[OVERDRIVE_LPF_LENGTH] = {
+  0.010321253578631775,
+  0.012930754124235383,
+  -0.0030240789231014233,
+  -0.010477213243976448,
+  0.002797341404864414,
+  0.01540826261203952,
+  -0.004499641135398691,
+  -0.01997243047359604,
+  0.004225335479217415,
+  0.02830898291866236,
+  -0.005213942132629154,
+  -0.03935473615639336,
+  0.005089956838519569,
+  0.05951889084479704,
+  -0.005672459286097256,
+  -0.10331777005045698,
+  0.005517770448124195,
+  0.3175577721100755,
+  0.49415962786644185,
+  0.3175577721100755,
+  0.005517770448124195,
+  -0.10331777005045698,
+  -0.005672459286097256,
+  0.05951889084479704,
+  0.005089956838519569,
+  -0.03935473615639336,
+  -0.005213942132629154,
+  0.02830898291866236,
+  0.004225335479217415,
+  -0.01997243047359604,
+  -0.004499641135398691,
+  0.01540826261203952,
+  0.002797341404864414,
+  -0.010477213243976448,
+  -0.0030240789231014233,
+  0.012930754124235383,
+  0.010321253578631775
+};
+
+
+void Overdrive_Init(Overdrive *od, float samplingFreqHz, float lpfCutoffFreqHz, float odPreGain) {
+    od->T = 1.0f / samplingFreqHz;
+    od->preGain = odPreGain;
+    od->threshold = 1.0f/3.0f;
+//    od->lpfWPtr = 0;
+//    od->lpfInputBufIndex = 0;
+
+    od->lpfOutWcT = 2.0f * M_PI * lpfCutoffFreqHz * od->T;
+    od->lpfOutDamp = 1.0f;
+
+}
+
+//void Calc_LPF_FIR(Overdrive *od, float inp) {
+//	od->lpfInpOut = 0.0f;
+//
+//	for (int i = 0; i < OVERDRIVE_LPF_LENGTH; i++) {
+//		od->lpfInpOut += (od->lpfInpBuf[i]*OVERDRIVE_LPF_COEFFS[od->lpfInpPtr[i]]);
+//		od->lpfInpPtr[i]++;
+//	}
+//
+//	od->lpfInpBuf[od->lpfWPtr] = inp;
+//	od->lpfInpPtr[od->lpfWPtr] = 0;
+//	od->lpfWPtr++;
+//	if (od->lpfWPtr == OVERDRIVE_LPF_LENGTH) {
+//		od->lpfWPtr = 0;
+//	}
+//}
+
+void Calc_LPF_FIR(Overdrive *od, float inp) {
+    od->lpfInpBuf[od->lpfWPtr] = inp;
+
+    od->lpfInpOut = 0.0f;
+    int idx = od->lpfWPtr;
+    for (int i = 0; i < OVERDRIVE_LPF_LENGTH; i++) {
+        od->lpfInpOut += od->lpfInpBuf[idx] * OVERDRIVE_LPF_COEFFS[i];
+        idx--;
+        if (idx < 0)
+            idx = OVERDRIVE_LPF_LENGTH - 1;
+    }
+
+    od->lpfWPtr++;
+    if (od->lpfWPtr == OVERDRIVE_LPF_LENGTH)
+        od->lpfWPtr = 0;
+}
+
+
+float Overdrive_Update(Overdrive *od, float inp) {
+//    // Band pass filter
+//    od->lpfInpBuf[od->lpfInputBufIndex] = inp;
+//    od->lpfInputBufIndex++;
+//
+//    if (od->lpfInputBufIndex == OVERDRIVE_LPF_LENGTH) {
+//        od->lpfInputBufIndex = 0;
+//    }
+//
+//    od->lpfInpOut = 0.0f;
+//    uint8_t index = od->lpfInputBufIndex;
+//    for (uint8_t n = 0; n < OVERDRIVE_LPF_LENGTH; n++) {
+//        if (index == 0) {
+//            index = OVERDRIVE_LPF_LENGTH - 1;
+//        } else {
+//            index--;
+//        }
+//
+//        od->lpfInpOut += OVERDRIVE_LPF_COEFFS[n] * od->lpfInpBuf[index];
+//    }
+
+//	Calc_LPF_FIR(od, inp);
+    
+    // Overdrive
+    float clipIn = od->preGain * inp;
+    float absClipIn = fabs(clipIn);
+    float signClipIn = (clipIn >= 0.0f) ? 1.0f : -1.0f;
+    
+    float clipOut = 0.0f;
+    
+    if (absClipIn < od->threshold) {
+        clipOut = 2.0f * clipIn;
+    } else if (absClipIn >= od->threshold && absClipIn < (2.0f * od->threshold)) {
+        clipOut = signClipIn * (3.0f - (2.0f - 3.0f*absClipIn)*(2.0f - 3.0f*absClipIn)) / 3.0f;
+    } else {
+        clipOut = signClipIn * 2.0f * od->threshold ;
+    }
+    
+    od->lpfOutBufIn[2] = od->lpfOutBufIn[1];
+    od->lpfOutBufIn[1] = od->lpfOutBufIn[0];
+    od->lpfOutBufIn[0] = clipOut;
+
+    od->lpfOutBufOut[2] = od->lpfOutBufOut[1];
+    od->lpfOutBufOut[1] = od->lpfOutBufOut[0];
+    od->lpfOutBufOut[0] = od->lpfOutWcT * od->lpfOutWcT * (od->lpfOutBufIn[0] + 2.0f * od->lpfOutBufIn[1] + od->lpfOutBufIn[2])
+                        - 2.0f * (od->lpfOutWcT * od->lpfOutWcT - 4.0f) * od->lpfOutBufOut[1]
+                        - (4.0f - 4.0f * od->lpfOutDamp * od->lpfOutWcT + od->lpfOutWcT * od->lpfOutWcT) * od->lpfOutBufOut[2];
+
+    od->lpfOutBufOut[0] /= (4.0f + 4.0f * od->lpfOutDamp * od->lpfOutWcT + od->lpfOutWcT * od->lpfOutWcT);
+
+    od->lpfOutOut = od->lpfOutBufOut[0];
+
+    od->out = od->lpfOutOut;
+
+    return od->out;
+}

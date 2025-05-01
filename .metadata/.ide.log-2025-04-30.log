@@ -1,0 +1,5 @@
+2025-04-30 00:19:16,840 [ERROR] :60 - Project setup error checking project compliancy: STM32_Waveshaper_Distortion-master
+2025-04-30 00:56:42,680 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2025-04-30 00:56:46,020 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2025-04-30 00:56:48,598 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2025-04-30 00:56:50,428 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true

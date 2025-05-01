@@ -1,0 +1,32 @@
+#ifndef OVERDRIVE_H
+#define OVERDRIVE_H
+
+#define _USE_MATH_DEFINES
+
+#include <stdint.h>
+#include <math.h>
+
+#define OVERDRIVE_LPF_LENGTH 39
+extern float OVERDRIVE_LPF_COEFFS[OVERDRIVE_LPF_LENGTH];
+
+typedef struct {
+    // Sampling time
+    float T;
+    
+    float lpfInpBuf[OVERDRIVE_LPF_LENGTH];
+    int lpfInpPtr[OVERDRIVE_LPF_LENGTH];
+    int lpfWPtr = 0;
+    float lpfInpOut;
+    
+    // OD settings
+    float preGain;
+    float threshold;
+    
+    float out;
+} Overdrive;
+
+void Overdrive_Init(Overdrive *od, float samplingFreqHz, float odPreGain);
+
+float Overdrive_Update(Overdrive *od, float inp);
+
+#endif

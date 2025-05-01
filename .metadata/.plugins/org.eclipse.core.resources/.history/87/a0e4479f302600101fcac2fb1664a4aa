@@ -1,0 +1,88 @@
+#include "overdrive.h"
+#include <stdint.h>
+
+float OVERDRIVE_BPF_COEFFS[OVERDRIVE_BPF_LENGTH] = {
+  -0.19594614434660773,
+  -0.20011706397107196,
+  -0.23158127477107293,
+  -0.20975261278752289,
+  -0.1355503187975394,
+  -0.03544938252897462,
+  0.044671704216540715,
+  0.05711957515191789,
+  -0.02564110929447448,
+  -0.19337785771275245,
+  -0.3930284829577012,
+  -0.5413738219958958,
+  -0.5531090741642679,
+  -0.374262258998248,
+  -0.008046158441835373,
+  0.47764842531597573,
+  0.966123664101152,
+  1.3273128402074492,
+  2.4603361530598753,
+  1.3273128402074492,
+  0.966123664101152,
+  0.47764842531597573,
+  -0.008046158441835373,
+  -0.374262258998248,
+  -0.5531090741642679,
+  -0.5413738219958958,
+  -0.3930284829577012,
+  -0.19337785771275245,
+  -0.02564110929447448,
+  0.05711957515191789,
+  0.044671704216540715,
+  -0.03544938252897462,
+  -0.1355503187975394,
+  -0.20975261278752289,
+  -0.23158127477107293,
+  -0.20011706397107196,
+  -0.19594614434660773
+};
+
+void Overdrive_Init(Overdrive *od, float samplingFreqHz, float odPreGain, float threshold) {
+    od->T = 1.0f / samplingFreqHz;
+    od->preGain = odPreGain;
+    od->threshold = threshold;
+}
+
+float Overdrive_Update(Overdrive *od, float inp) {
+    // Band pass filter
+    od->bpfInpBuf[od->bpfInputBufIndex] = inp;
+    od->bpfInputBufIndex++;
+    
+    if (od->bpfInputBufIndex == OVERDRIVE_BPF_LENGTH) {
+        od->bpfInputBufIndex = 0;
+    }
+    
+    od->bpfInpOut = 0.0f;
+    uint8_t index = od->bpfInputBufIndex;
+    for (uint8_t n = 0; n < OVERDRIVE_BPF_LENGTH; n++) {
+        if (index == 0) {
+            index = OVERDRIVE_BPF_LENGTH - 1;
+        } else {
+            index--;
+        }
+        
+        od->bpfInpOut += OVERDRIVE_BPF_COEFFS[n] * od->bpfInpBuf[index];
+    }
+    
+    // Overdrive
+    float clipIn = od->preGain * od->bpfInpOut;
+    float absClipIn = fabs(clipIn);
+    float signClipIn = (clipIn >= 0.0f) ? 1.0f : -1.0f;
+    
+    float clipOut = 0.0f;
+    
+    if (absClipIn < od->threshold) {
+        clipOut = 2.0f * clipIn;
+    } else if (absClipIn >= od->threshold && absClipIn < (2.0f * od->threshold)) {
+        clipOut = signClipIn * (3.0f - (2.0f - 3.0f*absClipIn)*(2.0f - 3.0f*absClipIn)) / 3.0f;
+    } else {
+        clipOut = signClipIn;
+    }
+    od->out = clipOut;
+    
+    return od->out;
+}

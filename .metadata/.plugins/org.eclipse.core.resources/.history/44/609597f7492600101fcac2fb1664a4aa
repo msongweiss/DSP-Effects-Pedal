@@ -1,0 +1,103 @@
+#include "overdrive.h"
+#include <stdint.h>
+
+float OVERDRIVE_LPF_COEFFS[OVERDRIVE_LPF_LENGTH] = {
+  0.06859094519639967,
+  0.0018463665486252196,
+  -0.13141165039563757,
+  -0.13701169318663636,
+  0.11999719174656005,
+  0.4199192229606256,
+  0.4199192229606256,
+  0.11999719174656005,
+  -0.13701169318663636,
+  -0.13141165039563757,
+  0.0018463665486252196,
+  0.06859094519639967
+};
+
+
+
+void Overdrive_Init(Overdrive *od, float samplingFreqHz, float odPreGain) {
+    od->T = 1.0f / samplingFreqHz;
+    od->preGain = odPreGain;
+    od->threshold = 1.0f/3.0f;
+    od->lpfWPtr = 0;
+    od->lpfInputBufIndex = 0;
+}
+
+//void Calc_LPF_FIR(Overdrive *od, float inp) {
+//	od->lpfInpOut = 0.0f;
+//
+//	for (int i = 0; i < OVERDRIVE_LPF_LENGTH; i++) {
+//		od->lpfInpOut += (od->lpfInpBuf[i]*OVERDRIVE_LPF_COEFFS[od->lpfInpPtr[i]]);
+//		od->lpfInpPtr[i]++;
+//	}
+//
+//	od->lpfInpBuf[od->lpfWPtr] = inp;
+//	od->lpfInpPtr[od->lpfWPtr] = 0;
+//	od->lpfWPtr++;
+//	if (od->lpfWPtr == OVERDRIVE_LPF_LENGTH) {
+//		od->lpfWPtr = 0;
+//	}
+//}
+
+void Calc_LPF_FIR(Overdrive *od, float inp) {
+    od->lpfInpBuf[od->lpfWPtr] = inp;
+
+    od->lpfInpOut = 0.0f;
+    int idx = od->lpfWPtr;
+    for (int i = 0; i < OVERDRIVE_LPF_LENGTH; i++) {
+        od->lpfInpOut += od->lpfInpBuf[idx] * OVERDRIVE_LPF_COEFFS[i];
+        idx--;
+        if (idx < 0)
+            idx = OVERDRIVE_LPF_LENGTH - 1;
+    }
+
+    od->lpfWPtr++;
+    if (od->lpfWPtr == OVERDRIVE_LPF_LENGTH)
+        od->lpfWPtr = 0;
+}
+
+
+float Overdrive_Update(Overdrive *od, float inp) {
+//    // Band pass filter
+//    od->lpfInpBuf[od->lpfInputBufIndex] = inp;
+//    od->lpfInputBufIndex++;
+//
+//    if (od->lpfInputBufIndex == OVERDRIVE_LPF_LENGTH) {
+//        od->lpfInputBufIndex = 0;
+//    }
+//
+//    od->lpfInpOut = 0.0f;
+//    uint8_t index = od->lpfInputBufIndex;
+//    for (uint8_t n = 0; n < OVERDRIVE_LPF_LENGTH; n++) {
+//        if (index == 0) {
+//            index = OVERDRIVE_LPF_LENGTH - 1;
+//        } else {
+//            index--;
+//        }
+//
+//        od->lpfInpOut += OVERDRIVE_LPF_COEFFS[n] * od->lpfInpBuf[index];
+//    }
+
+	Calc_LPF_FIR(od, inp);
+    
+    // Overdrive
+    float clipIn = od->preGain * od->lpfInpOut;
+    float absClipIn = fabs(clipIn);
+    float signClipIn = (clipIn >= 0.0f) ? 1.0f : -1.0f;
+    
+    float clipOut = 0.0f;
+    
+    if (absClipIn < od->threshold) {
+        clipOut = 2.0f * clipIn;
+    } else if (absClipIn >= od->threshold && absClipIn < (2.0f * od->threshold)) {
+        clipOut = signClipIn * (3.0f - (2.0f - 3.0f*absClipIn)*(2.0f - 3.0f*absClipIn)) / 3.0f;
+    } else {
+        clipOut = signClipIn * 2.0f * od->threshold ;
+    }
+    od->out = clipOut;
+    
+    return od->out;
+}

@@ -1,0 +1,38 @@
+#ifndef OVERDRIVE_H
+#define OVERDRIVE_H
+
+#define _USE_MATH_DEFINES
+
+#include <stdint.h>
+#include <math.h>
+
+typedef struct {
+    // Sampling time
+    float T;
+    
+    // Input IIR high pass filter
+    float hpfInpBufIn[2];
+    float hpfInpBufOut[2];
+    float hpfInpWcT;
+    float hpfInpOut;
+    
+
+    // OD settings
+    float preGain;
+    float threshold;
+    
+    // Output IIR low pass filter
+    float lpfOutBufIn[3];
+    float lpfOutBufOut[3];
+    float lpfOutWcT;
+    float lpfOutDamp;
+    float lpfOutOut;
+
+    float out;
+} Overdrive;
+
+void Overdrive_Init(Overdrive *od, float samplingFreqHz, float hpfCutoffFreqHz, float lpfCutoffFreqHz, float odPreGain);
+void Overdrive_SetLPF(Overdrive *od, float lpfCutOffFreqHz, float lpfDamping);
+float Overdrive_Update(Overdrive *od, float inp);
+
+#endif

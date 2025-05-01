@@ -1,0 +1,30 @@
+#ifndef OVERDRIVE_H
+#define OVERDRIVE_H
+
+#define _USE_MATH_DEFINES
+
+#include <stdint.h>
+#include <math.h>
+
+#define OVERDRIVE_BPF_LENGTH 37
+extern float OVERDRIVE_BPF_COEFFS[OVERDRIVE_BPF_LENGTH];
+
+typedef struct {
+    // Sampling time
+    float T;
+    
+    float bpfInpBuf[OVERDRIVE_BPF_LENGTH];
+    uint8_t bpfInputBufIndex;
+    float bpfInpOut;
+    
+    // OD settings
+    float preGain;
+    float threshold;
+    
+    float out;
+} Overdrive;
+
+void Overdrive_Init(Overdrive *od, float samplingFreqHz, float odPreGain);
+float Overdrive_Update(Overdrive *od, float inp);
+
+#endif
