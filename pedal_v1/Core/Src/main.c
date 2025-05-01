@@ -31,6 +31,7 @@
 #include "usart.h"
 #include "cs43l22.h"
 #include "overdrive.h"
+#include "tremolo.h"
 #include <stdio.h>
 #include <math.h>
 /* USER CODE END Includes */
@@ -64,6 +65,8 @@ void MX_USB_HOST_Process(void);
 #define BLOCK_SIZE_FLOAT 128
 #define BLOCK_SIZE_U16 512
 #define OD_GAIN 100.0f
+#define TR_DEPTH 1.0f // Depth 0.0 (passthrough) to 1.0 (full wub)
+#define TR_RATE 5.0f // Hz
 
 uint8_t callback_state = 0;
 
@@ -74,6 +77,7 @@ float r_buf_in [BLOCK_SIZE_FLOAT*2];
 float l_buf_out [BLOCK_SIZE_FLOAT*2];
 float r_buf_out [BLOCK_SIZE_FLOAT*2];
 Overdrive od;
+Tremolo tr;
 
 
 /* USER CODE END PFP */
@@ -138,6 +142,8 @@ int main(void)
   // See OD_GAIN defined in user defines
   Overdrive_Init(&od, 41666.0f, 800.0f, 4000.0f, OD_GAIN);
 
+  Tremolo_Init(&tr, 41666.0f, TR_RATE, TR_DEPTH);
+
   // Initialize I2S DMA
   HAL_I2SEx_TransmitReceive_DMA (&hi2s2, txBuf, rxBuf, BLOCK_SIZE_U16);
   int offset_r_ptr;
@@ -195,9 +201,14 @@ int main(void)
 			  // CODE FOR PASSTHROUGH, DON'T DELETE
 //			  l_buf_out[i] = l_buf_in[i];
 //			  r_buf_out[i] = r_buf_in[i];
-			  // Populate output buffer with overdrive-processed input buffer data
-			  l_buf_out[i] = Overdrive_Update(&od, l_buf_in[i])/16.0f; // 1/16 for appropriate amp-level volume
-			  r_buf_out[i] = Overdrive_Update(&od, r_buf_in[i])/16.0f;
+
+//			  // Populate output buffer with overdrive-processed input buffer data
+//			  l_buf_out[i] = Overdrive_Update(&od, l_buf_in[i])/16.0f; // 1/16 for appropriate amp-level volume
+//			  r_buf_out[i] = Overdrive_Update(&od, r_buf_in[i])/16.0f;
+
+			  // Populate output buffer with tremolo-processed input buffer data
+			  l_buf_out[i] = Tremolo_Update(&tr, l_buf_in[i]); // 1/16 for appropriate amp-level volume
+			  r_buf_out[i] = Tremolo_Update(&tr, l_buf_in[i]);
 		  }
 
 		  //restore processed float-array to output sample-buffer
