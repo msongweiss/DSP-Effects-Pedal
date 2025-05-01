@@ -61,8 +61,6 @@ void SystemClock_Config(void);
 void MX_USB_HOST_Process(void);
 
 /* USER CODE BEGIN PFP */
-//#define BLOCK_SIZE_FLOAT 512
-//#define BLOCK_SIZE_U16 2048
 #define BLOCK_SIZE_FLOAT 128
 #define BLOCK_SIZE_U16 512
 #define OD_GAIN 100.0f
@@ -84,18 +82,15 @@ Overdrive od;
 /* USER CODE BEGIN 0 */
 // === DMA callbacks ===
 
+// FOR DOUBLE BUFFERING
+// Half complete buffer
 void HAL_I2SEx_TxRxHalfCpltCallback(I2S_HandleTypeDef *hi2s){
-
 	callback_state = 1;
-
-
 }
 
+// Fully complete buffer
 void HAL_I2SEx_TxRxCpltCallback(I2S_HandleTypeDef *hi2s){
-
 	callback_state = 2;
-
-
 }
 /* USER CODE END 0 */
 
@@ -135,7 +130,15 @@ int main(void)
   MX_USB_HOST_Init();
   MX_I2S2_Init();
   /* USER CODE BEGIN 2 */
+
+  // Initialize overdrive
+  // 41.6kHz Fs
+  // 800Hz HPF input stage
+  // 4000Hz LPF output stage
+  // See OD_GAIN defined in user defines
   Overdrive_Init(&od, 41666.0f, 800.0f, 4000.0f, OD_GAIN);
+
+  // Initialize I2S DMA
   HAL_I2SEx_TransmitReceive_DMA (&hi2s2, txBuf, rxBuf, BLOCK_SIZE_U16);
   int offset_r_ptr;
   int offset_w_ptr, w_ptr;
@@ -147,53 +150,40 @@ int main(void)
   {
 	  if (callback_state != 0) {
 
-		  //decide if it was half or cplt callback
+		  // decide if it was half or cplt callback
 		  if (callback_state == 1)   {
 			  	  offset_r_ptr = 0;
 			  	  offset_w_ptr = 0;
 			  	  w_ptr = 0;
+			  	  // Set pointer to first half of DMA
 			  }
 
 		  else if (callback_state == 2) {
 			  offset_r_ptr = BLOCK_SIZE_U16;
 			  offset_w_ptr = BLOCK_SIZE_FLOAT;
 			  w_ptr = BLOCK_SIZE_FLOAT;
+			  // Set pointer to second half of DMA
 		  }
 
 
 		  //restore input sample buffer to float array
 		  for (int i=offset_r_ptr; i<offset_r_ptr+BLOCK_SIZE_U16; i=i+4) {
-			  // original code, don't delete because this works!
-//			  l_buf_in[w_ptr] = (float) ((int) (rxBuf[i]<<16)|rxBuf[i+1]);
-//			  r_buf_in[w_ptr] = (float) ((int) (rxBuf[i+2]<<16)|rxBuf[i+3]);
 
-//			  w_ptr++;
-
-			  //gpt code: Rebuild signed 24-bit sample from rxBuf
+			  // Rebuild signed 24-bit sample from 16-bit rxBuf
 			  int32_t sample_l = ((int32_t)(rxBuf[i] << 16) | (rxBuf[i + 1]));
 
-			  // Sign-extend from 24 bits to 32 bits
-//			  if (sample_l & 0x800000) {
-//			      sample_l |= 0xFF000000;  // Sign extend negative
-//			  }
+			  // Convert to float in range [-1.0f, 1.0f] for easier DSP
+			  float sample_f_l = sample_l / 2147483648.0f;  // 2^31
 
-			  // Convert to float in range [-1.0f, 1.0f]
-			  float sample_f_l = sample_l / 2147483648.0f;  // 2^23
+			  // Light up debug LED if this is somehow outside of range
 			  if (sample_f_l > 1.0f | sample_f_l < -1.0f) {
 				  HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_15);
 			  }
 			  l_buf_in[w_ptr] = sample_f_l;
 
-
+			  // Repeat for right channel
 			  int32_t sample_r = ((int32_t)(rxBuf[i + 2] << 16) | (rxBuf[i + 3]));
-
-			  // Sign-extend from 24 bits to 32 bits
-//			  if (sample_r & 0x800000) {
-//			      sample_r |= 0xFF000000;  // Sign extend negative
-//			  }
-
-			  // Convert to float in range [-1.0f, 1.0f]
-			  float sample_f_r = sample_r / 2147483648.0f;  // 2^23
+			  float sample_f_r = sample_r / 2147483648.0f;
 			  r_buf_in[w_ptr] = sample_f_r;
 
 
@@ -202,9 +192,11 @@ int main(void)
 
 
 		  for (int i=offset_w_ptr; i<offset_w_ptr+BLOCK_SIZE_FLOAT; i++) {
+			  // CODE FOR PASSTHROUGH, DON'T DELETE
 //			  l_buf_out[i] = l_buf_in[i];
 //			  r_buf_out[i] = r_buf_in[i];
-			  l_buf_out[i] = Overdrive_Update(&od, l_buf_in[i])/16.0f;
+			  // Populate output buffer with overdrive-processed input buffer data
+			  l_buf_out[i] = Overdrive_Update(&od, l_buf_in[i])/16.0f; // 1/16 for appropriate amp-level volume
 			  r_buf_out[i] = Overdrive_Update(&od, r_buf_in[i])/16.0f;
 		  }
 
@@ -212,14 +204,6 @@ int main(void)
 		  w_ptr = offset_w_ptr;
 
 		  for (int i=offset_r_ptr; i<offset_r_ptr+BLOCK_SIZE_U16; i=i+4) {
-//			// Default code
-//			txBuf[i] =  (((int)l_buf_out[w_ptr])>>16)&0xFFFF;
-//			txBuf[i+1] = ((int)l_buf_out[w_ptr])&0xFFFF;
-//			txBuf[i+2] = (((int)r_buf_out[w_ptr])>>16)&0xFFFF;
-//			txBuf[i+3] = ((int)r_buf_out[w_ptr])&0xFFFF;
-//			w_ptr++;
-
-			  // gpt code
 			  int sample_out_l = (int)(l_buf_out[w_ptr] * 2147483648.0f);  // back to 24-bit signed
 			  txBuf[i]   = (sample_out_l >> 16) & 0xFFFF;  // upper 16 bits
 			  txBuf[i+1] = sample_out_l & 0xFFFF;          // lower 16 bits
