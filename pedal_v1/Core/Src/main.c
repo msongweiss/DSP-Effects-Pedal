@@ -203,12 +203,12 @@ int main(void)
 //			  r_buf_out[i] = r_buf_in[i];
 
 //			  // Populate output buffer with overdrive-processed input buffer data
-//			  l_buf_out[i] = Overdrive_Update(&od, l_buf_in[i])/16.0f; // 1/16 for appropriate amp-level volume
-//			  r_buf_out[i] = Overdrive_Update(&od, r_buf_in[i])/16.0f;
+			  l_buf_out[i] = Overdrive_Update(&od, l_buf_in[i])/32.0f; // 1/16 for appropriate amp-level volume
+			  r_buf_out[i] = Overdrive_Update(&od, r_buf_in[i])/32.0f;
 
 			  // Populate output buffer with tremolo-processed input buffer data
-			  l_buf_out[i] = Tremolo_Update(&tr, l_buf_in[i]); // 1/16 for appropriate amp-level volume
-			  r_buf_out[i] = Tremolo_Update(&tr, l_buf_in[i]);
+//			  l_buf_out[i] = Tremolo_Update(&tr, l_buf_in[i]); // 1/16 for appropriate amp-level volume
+//			  r_buf_out[i] = Tremolo_Update(&tr, l_buf_in[i]);
 		  }
 
 		  //restore processed float-array to output sample-buffer
