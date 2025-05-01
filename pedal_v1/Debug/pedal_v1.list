@@ -41,13 +41,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  18 .debug_line   0001f5a5  00000000  00000000  00056af0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    000d12c9  00000000  00000000  00076095  2**0
+ 19 .debug_str    000d12c8  00000000  00000000  00076095  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .comment      00000043  00000000  00000000  0014735e  2**0
+ 20 .comment      00000043  00000000  00000000  0014735d  2**0
                   CONTENTS, READONLY
- 21 .debug_frame  00005e74  00000000  00000000  001473a4  2**2
+ 21 .debug_frame  00005e74  00000000  00000000  001473a0  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_line_str 00000060  00000000  00000000  0014d218  2**0
+ 22 .debug_line_str 00000060  00000000  00000000  0014d214  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -1952,7 +1952,7 @@ int main(void)
   MX_I2S2_Init();
  80011be:	f7ff fe99 	bl	8000ef4 <MX_I2S2_Init>
   /* USER CODE BEGIN 2 */
-  Overdrive_Init(&od, 41666.0f, 800.0f, 4000.0f, OD_GAIN);
+  Overdrive_Init(&od, 41666.0f, 200.0f, 5000.0f, OD_GAIN);
  80011c2:	eddf 1a91 	vldr	s3, [pc, #580]	@ 8001408 <main+0x270>
  80011c6:	ed9f 1a91 	vldr	s2, [pc, #580]	@ 800140c <main+0x274>
  80011ca:	eddf 0a91 	vldr	s1, [pc, #580]	@ 8001410 <main+0x278>
@@ -2270,9 +2270,9 @@ int main(void)
  8001402:	f009 fed5 	bl	800b1b0 <MX_USB_HOST_Process>
 	  if (callback_state != 0) {
  8001406:	e6ee      	b.n	80011e6 <main+0x4e>
- 8001408:	42c80000 	.word	0x42c80000
- 800140c:	457a0000 	.word	0x457a0000
- 8001410:	44480000 	.word	0x44480000
+ 8001408:	42480000 	.word	0x42480000
+ 800140c:	459c4000 	.word	0x459c4000
+ 8001410:	43480000 	.word	0x43480000
  8001414:	4722c200 	.word	0x4722c200
  8001418:	200021f8 	.word	0x200021f8
  800141c:	200001f8 	.word	0x200001f8

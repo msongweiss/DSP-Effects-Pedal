@@ -11,6 +11,7 @@
 "./Core/Src/syscalls.o"
 "./Core/Src/sysmem.o"
 "./Core/Src/system_stm32f4xx.o"
+"./Core/Src/tremolo.o"
 "./Core/Src/usart.o"
 "./Core/Startup/startup_stm32f407vgtx.o"
 "./Drivers/BSP/Components/cs43l22/cs43l22.o"
