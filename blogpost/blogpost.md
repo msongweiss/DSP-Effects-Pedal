@@ -11,6 +11,10 @@ In this project, we built a real-time digital guitar pedal on an STM32 microcont
 
 > **Figure 1.** _Block diagram of our real-time DSP guitar pedal system._  
 
+![setup](setup.jpg)
+> **Figure 2.** _A picture of our setup._  
+
+
 ## Problem Statement: Digital Effects Without the Digital Harshness
 
 The challenge in digital guitar effects is avoiding artifacts that make the sound feel brittle or unnatural.
@@ -109,10 +113,11 @@ By carefully choosing LFO frequency (typically 3–8 Hz) and depth, we created a
 
 ### Limitations
 
--   We used fixed filter parameters; a future version could have user-adjustable tone controls
+-   We used fixed filter parameters; a future version could have user-adjustable tone controls.
     
--   More advanced anti-aliasing (e.g., oversampling) could further improve clipping quality
+-   Different kinds of clipping characteristics could be experimented with.
     
+-   We could not get a working version of a FIR filter. 
 
 ### Ideas for Future Work
 
@@ -120,10 +125,6 @@ By carefully choosing LFO frequency (typically 3–8 Hz) and depth, we created a
     
 -   Adding other modulation effects (e.g., chorus) using delay lines
     
--   Exploring dynamic tremolo that reacts to playing intensity
-    
-
-## References
 
 ## Supplemental Materials
 
